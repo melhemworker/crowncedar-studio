@@ -1,0 +1,3231 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CrownCedar Studio — Websites for Lebanese Businesses in 48 Hours</title>
+  <meta name="description" content="Premium one-page websites for Lebanese businesses. Mobile-friendly, WhatsApp-connected, and delivered with a first draft in 48 hours." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+
+  <style>
+    :root {
+      --navy: #0B1D2B;
+      --navy-2: #07131d;
+      --black: #05080d;
+      --black-2: #090d14;
+      --gold: #C9A96E;
+      --gold-2: #e6cf96;
+      --blue: #2563EB;
+      --white: #ffffff;
+      --text: #f6f7fb;
+      --muted: #a7b0bf;
+      --muted-2: #788292;
+      --border: rgba(255, 255, 255, 0.11);
+      --glass: rgba(255, 255, 255, 0.065);
+      --glass-2: rgba(255, 255, 255, 0.095);
+      --shadow: 0 28px 90px rgba(0, 0, 0, 0.45);
+      --radius: 28px;
+      --radius-sm: 18px;
+      --max: 1180px;
+      --ease: cubic-bezier(.2,.9,.2,1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 92px;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 18% 6%, rgba(201, 169, 110, 0.13), transparent 28%),
+        radial-gradient(circle at 84% 10%, rgba(37, 99, 235, 0.12), transparent 24%),
+        linear-gradient(180deg, var(--navy) 0%, var(--black) 42%, #06111b 100%);
+      overflow-x: hidden;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    section {
+      position: relative;
+      padding: 96px 20px;
+    }
+
+    .container {
+      width: min(100%, var(--max));
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border: 1px solid rgba(201, 169, 110, 0.28);
+      border-radius: 999px;
+      color: var(--gold-2);
+      background: rgba(201, 169, 110, 0.07);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2.15rem, 5vw, 4.4rem);
+      line-height: 0.98;
+      letter-spacing: -0.055em;
+      max-width: 880px;
+      margin-bottom: 18px;
+    }
+
+    .section-subtitle {
+      color: var(--muted);
+      font-size: clamp(1rem, 2vw, 1.16rem);
+      line-height: 1.75;
+      max-width: 760px;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 32px;
+      margin-bottom: 44px;
+    }
+
+    .section-head .section-subtitle {
+      max-width: 440px;
+    }
+
+    .gold {
+      color: var(--gold-2);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 14px 20px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 800;
+      font-size: 0.94rem;
+      transition: transform .25s var(--ease), box-shadow .25s var(--ease), background .25s var(--ease), border-color .25s var(--ease);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      color: #07131d;
+      background: linear-gradient(135deg, var(--gold-2), var(--gold));
+      box-shadow: 0 18px 45px rgba(201, 169, 110, 0.24);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 24px 70px rgba(201, 169, 110, 0.34);
+    }
+
+    .btn-secondary {
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.07);
+      border-color: var(--border);
+      backdrop-filter: blur(16px);
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-3px);
+      border-color: rgba(201, 169, 110, 0.38);
+      background: rgba(255, 255, 255, 0.11);
+    }
+
+    .btn-dark {
+      color: var(--white);
+      background: rgba(5, 8, 13, 0.72);
+      border-color: var(--border);
+    }
+
+    .btn-dark:hover {
+      transform: translateY(-3px);
+      border-color: rgba(201, 169, 110, 0.35);
+      background: rgba(201, 169, 110, 0.11);
+    }
+
+    .card {
+      background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.095), rgba(255, 255, 255, 0.035));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 22px 70px rgba(0, 0, 0, 0.27);
+      backdrop-filter: blur(20px);
+      transition: transform .28s var(--ease), border-color .28s var(--ease), background .28s var(--ease), box-shadow .28s var(--ease);
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(201, 169, 110, 0.32);
+      background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.125), rgba(255, 255, 255, 0.045));
+      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.38);
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .8s var(--ease), transform .8s var(--ease);
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 18px 20px;
+      transition: padding .25s var(--ease), background .25s var(--ease), border-color .25s var(--ease), backdrop-filter .25s var(--ease);
+    }
+
+    .site-header.scrolled {
+      padding: 10px 20px;
+      background: rgba(7, 19, 29, 0.78);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(24px);
+    }
+
+    .nav-shell {
+      width: min(100%, var(--max));
+      margin: 0 auto;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 0 10px 0 18px;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.055);
+      backdrop-filter: blur(22px);
+      box-shadow: 0 16px 55px rgba(0,0,0,0.22);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: max-content;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 30% 20%, var(--gold-2), var(--gold) 46%, #8a6935 100%);
+      color: #06111b;
+      font-weight: 900;
+      box-shadow: 0 10px 30px rgba(201,169,110,0.28);
+    }
+
+    .brand-name {
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      line-height: 1;
+    }
+
+    .brand-location {
+      display: block;
+      color: var(--gold-2);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    .desktop-nav {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .nav-link {
+      color: rgba(255,255,255,0.72);
+      padding: 10px 11px;
+      border-radius: 999px;
+      font-size: 0.86rem;
+      font-weight: 800;
+      transition: color .2s var(--ease), background .2s var(--ease);
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.08);
+      color: var(--white);
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+
+    .mobile-menu {
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      background:
+        radial-gradient(circle at 20% 10%, rgba(201,169,110,0.16), transparent 30%),
+        linear-gradient(145deg, rgba(7,19,29,0.98), rgba(5,8,13,0.98));
+      backdrop-filter: blur(28px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 18px;
+      opacity: 0;
+      pointer-events: none;
+      transform: scale(1.02);
+      transition: opacity .25s var(--ease), transform .25s var(--ease);
+    }
+
+    .mobile-menu.open {
+      opacity: 1;
+      pointer-events: auto;
+      transform: scale(1);
+    }
+
+    .mobile-menu a {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2rem, 9vw, 4rem);
+      letter-spacing: -0.045em;
+      color: var(--white);
+    }
+
+    .mobile-menu .btn {
+      margin-top: 14px;
+      font-family: "Inter", sans-serif;
+      font-size: 1rem;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 150px;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: -20% -10% auto -10%;
+      height: 760px;
+      background:
+        radial-gradient(circle at 26% 30%, rgba(201,169,110,0.2), transparent 28%),
+        radial-gradient(circle at 72% 24%, rgba(37,99,235,0.18), transparent 25%);
+      filter: blur(20px);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.02fr .98fr;
+      gap: 54px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(3.1rem, 8vw, 7.6rem);
+      line-height: .9;
+      letter-spacing: -0.075em;
+      max-width: 780px;
+      margin-bottom: 24px;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2.1vw, 1.28rem);
+      line-height: 1.78;
+      max-width: 670px;
+      margin-bottom: 30px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .trust-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      max-width: 720px;
+    }
+
+    .trust-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 12px;
+      border-radius: 999px;
+      color: rgba(255,255,255,0.84);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border);
+      font-size: 0.84rem;
+      font-weight: 800;
+    }
+
+    .trust-badge i {
+      color: var(--gold-2);
+    }
+
+    .hero-visual {
+      min-height: 610px;
+      position: relative;
+      display: grid;
+      place-items: center;
+    }
+
+    .device-stage {
+      position: relative;
+      width: min(100%, 520px);
+      height: 560px;
+    }
+
+    .laptop {
+      position: absolute;
+      left: 0;
+      bottom: 64px;
+      width: 430px;
+      padding: 14px;
+      border-radius: 28px;
+      background: linear-gradient(145deg, rgba(255,255,255,0.16), rgba(255,255,255,0.055));
+      border: 1px solid rgba(255,255,255,0.18);
+      box-shadow: var(--shadow);
+      transform: rotate(-4deg);
+    }
+
+    .laptop-screen {
+      overflow: hidden;
+      border-radius: 19px;
+      background: #0b1420;
+      border: 1px solid rgba(255,255,255,0.12);
+      min-height: 270px;
+    }
+
+    .mock-topbar {
+      height: 34px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 0 12px;
+      background: rgba(255,255,255,0.055);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.25);
+    }
+
+    .mock-hero-img {
+      height: 120px;
+      background:
+        linear-gradient(180deg, rgba(11,29,43,0.12), rgba(11,29,43,0.92)),
+        url("https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=80");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .mock-content {
+      padding: 18px;
+    }
+
+    .mock-kicker {
+      width: 100px;
+      height: 9px;
+      border-radius: 99px;
+      background: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .mock-title {
+      height: 18px;
+      width: 72%;
+      border-radius: 99px;
+      background: rgba(255,255,255,0.85);
+      margin-bottom: 11px;
+    }
+
+    .mock-line {
+      height: 8px;
+      border-radius: 99px;
+      background: rgba(255,255,255,0.22);
+      margin-bottom: 8px;
+    }
+
+    .mock-line.short {
+      width: 55%;
+    }
+
+    .mock-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 17px;
+    }
+
+    .mock-btn {
+      height: 31px;
+      flex: 1;
+      border-radius: 999px;
+      background: rgba(201,169,110,0.9);
+    }
+
+    .mock-btn.dark {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .phone {
+      position: absolute;
+      right: 2px;
+      top: 24px;
+      width: 218px;
+      padding: 12px;
+      border-radius: 38px;
+      background: linear-gradient(145deg, rgba(255,255,255,0.22), rgba(255,255,255,0.06));
+      border: 1px solid rgba(255,255,255,0.22);
+      box-shadow: 0 34px 100px rgba(0,0,0,0.48);
+      transform: rotate(5deg);
+    }
+
+    .phone-screen {
+      overflow: hidden;
+      border-radius: 29px;
+      min-height: 430px;
+      background: #07131d;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .phone-hero {
+      height: 152px;
+      background:
+        linear-gradient(180deg, rgba(11,29,43,0.05), rgba(7,19,29,0.95)),
+        url("https://images.unsplash.com/photo-1562141961-052bb2bff7a8?auto=format&fit=crop&w=700&q=80");
+      background-size: cover;
+      background-position: center;
+      padding: 16px;
+      display: flex;
+      align-items: end;
+    }
+
+    .phone-pill {
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(201,169,110,0.9);
+      color: #07131d;
+      font-size: .68rem;
+      font-weight: 900;
+    }
+
+    .phone-body {
+      padding: 14px;
+    }
+
+    .phone-title {
+      font-family: "Playfair Display", serif;
+      font-size: 1.35rem;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .phone-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 13px;
+    }
+
+    .phone-tile {
+      min-height: 64px;
+      padding: 10px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.08);
+      font-size: .68rem;
+      color: var(--muted);
+    }
+
+    .phone-tile i {
+      display: block;
+      color: var(--gold-2);
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+    }
+
+    .phone-whatsapp {
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: #25D366;
+      color: #03130a;
+      font-weight: 900;
+      font-size: .78rem;
+    }
+
+    .float-card {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 14px;
+      border-radius: 18px;
+      background: rgba(7, 19, 29, 0.72);
+      border: 1px solid rgba(255,255,255,0.13);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.32);
+      backdrop-filter: blur(18px);
+      color: var(--white);
+      font-size: .83rem;
+      font-weight: 850;
+      animation: drift 5s ease-in-out infinite;
+    }
+
+    .float-card i {
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(201,169,110,0.14);
+      color: var(--gold-2);
+      font-size: 1rem;
+    }
+
+    .float-1 { top: 76px; left: 12px; }
+    .float-2 { top: 210px; right: -4px; animation-delay: .7s; }
+    .float-3 { bottom: 130px; left: 24px; animation-delay: 1.3s; }
+    .float-4 { bottom: 42px; right: 46px; animation-delay: 2s; }
+
+    @keyframes drift {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .split-section {
+      background: linear-gradient(180deg, rgba(5,8,13,0.1), rgba(5,8,13,0.78));
+    }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .problem-card {
+      padding: 34px;
+      min-height: 320px;
+    }
+
+    .problem-card h3 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2rem, 4vw, 3.15rem);
+      letter-spacing: -0.045em;
+      line-height: 1;
+      margin-bottom: 18px;
+    }
+
+    .problem-card p {
+      color: var(--muted);
+      line-height: 1.78;
+      margin-bottom: 18px;
+    }
+
+    .question-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .question-list span,
+    .solution-list span {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255,255,255,0.84);
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.055);
+      border: 1px solid rgba(255,255,255,0.08);
+      font-weight: 750;
+    }
+
+    .question-list i,
+    .solution-list i {
+      color: var(--gold-2);
+      font-size: 1.1rem;
+    }
+
+    .niches-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .niche-card {
+      padding: 26px;
+      min-height: 260px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .icon-box {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border-radius: 18px;
+      background: rgba(201,169,110,0.12);
+      border: 1px solid rgba(201,169,110,0.22);
+      color: var(--gold-2);
+      font-size: 1.65rem;
+      margin-bottom: 20px;
+    }
+
+    .niche-card h3,
+    .feature-card h3,
+    .demo-card h3,
+    .price-card h3,
+    .testimonial-card h3 {
+      font-size: 1.2rem;
+      letter-spacing: -0.035em;
+      margin-bottom: 10px;
+    }
+
+    .niche-card p,
+    .feature-card p,
+    .demo-card p,
+    .price-card p,
+    .testimonial-card p {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .niche-card .btn {
+      margin-top: auto;
+      min-height: 42px;
+      padding: 11px 15px;
+      font-size: .84rem;
+    }
+
+    .demos {
+      background: linear-gradient(180deg, rgba(9,13,20,0.92), rgba(5,8,13,0.62));
+    }
+
+    .demo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .demo-card {
+      padding: 18px;
+      overflow: hidden;
+    }
+
+    .demo-visual {
+      height: 310px;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: #07131d;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .demo-visual::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(7,19,29,0.94));
+      pointer-events: none;
+    }
+
+    .demo-img {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      transform: scale(1.02);
+      transition: transform .45s var(--ease);
+    }
+
+    .demo-card:hover .demo-img {
+      transform: scale(1.08);
+    }
+
+    .demo-phone {
+      position: absolute;
+      left: 50%;
+      bottom: -24px;
+      width: 168px;
+      height: 282px;
+      transform: translateX(-50%);
+      border-radius: 32px;
+      background: rgba(255,255,255,0.13);
+      border: 1px solid rgba(255,255,255,0.22);
+      padding: 10px;
+      z-index: 2;
+      box-shadow: 0 30px 70px rgba(0,0,0,.45);
+    }
+
+    .demo-phone-inner {
+      height: 100%;
+      border-radius: 24px;
+      overflow: hidden;
+      background: rgba(7,19,29,0.96);
+    }
+
+    .demo-phone-img {
+      height: 110px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .demo-phone-content {
+      padding: 12px;
+    }
+
+    .demo-phone-content div {
+      height: 9px;
+      border-radius: 99px;
+      background: rgba(255,255,255,0.22);
+      margin-bottom: 8px;
+    }
+
+    .demo-phone-content div:first-child {
+      width: 72%;
+      height: 14px;
+      background: rgba(255,255,255,0.82);
+    }
+
+    .demo-phone-content div:last-child {
+      width: 80%;
+      height: 28px;
+      margin-top: 14px;
+      background: rgba(201,169,110,0.9);
+    }
+
+    .niche-label {
+      display: inline-flex;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(201,169,110,0.12);
+      color: var(--gold-2);
+      border: 1px solid rgba(201,169,110,0.22);
+      font-size: .72rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 13px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 16px 0 18px;
+    }
+
+    .tag {
+      padding: 7px 9px;
+      border-radius: 999px;
+      color: rgba(255,255,255,0.82);
+      background: rgba(255,255,255,0.065);
+      border: 1px solid rgba(255,255,255,0.08);
+      font-size: .75rem;
+      font-weight: 800;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .feature-card {
+      padding: 22px;
+      min-height: 190px;
+    }
+
+    .feature-card .icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      font-size: 1.35rem;
+      margin-bottom: 16px;
+    }
+
+    .pricing {
+      background:
+        radial-gradient(circle at 20% 0%, rgba(201,169,110,0.15), transparent 28%),
+        linear-gradient(180deg, rgba(5,8,13,0.65), rgba(7,19,29,0.8));
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .price-card {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .price-card.featured {
+      border-color: rgba(201,169,110,0.48);
+      transform: translateY(-10px);
+      background:
+        linear-gradient(145deg, rgba(201,169,110,0.14), rgba(255,255,255,0.055));
+    }
+
+    .price-card.featured:hover {
+      transform: translateY(-17px);
+    }
+
+    .popular-badge {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      padding: 8px 11px;
+      border-radius: 999px;
+      color: #07131d;
+      background: var(--gold-2);
+      font-size: .72rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+
+    .price {
+      font-family: "Playfair Display", serif;
+      font-size: 3.25rem;
+      line-height: 1;
+      letter-spacing: -0.07em;
+      margin: 16px 0 12px;
+    }
+
+    .price span {
+      color: var(--muted);
+      font-family: "Inter", sans-serif;
+      font-size: 1rem;
+      letter-spacing: 0;
+      font-weight: 800;
+    }
+
+    .includes {
+      display: grid;
+      gap: 11px;
+      margin: 24px 0;
+    }
+
+    .includes li {
+      list-style: none;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: rgba(255,255,255,0.84);
+      line-height: 1.45;
+      font-size: .94rem;
+    }
+
+    .includes i {
+      color: var(--gold-2);
+      font-size: 1rem;
+      margin-top: 2px;
+    }
+
+    .price-card .btn {
+      margin-top: auto;
+    }
+
+    .payment-box {
+      margin-top: 22px;
+      padding: 26px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(201,169,110,0.34);
+      background:
+        linear-gradient(145deg, rgba(201,169,110,0.13), rgba(255,255,255,0.05));
+      box-shadow: 0 22px 70px rgba(0,0,0,0.24);
+    }
+
+    .payment-box strong {
+      color: var(--gold-2);
+    }
+
+    .payment-box p {
+      color: var(--muted);
+      line-height: 1.75;
+      margin-top: 10px;
+    }
+
+    .process-timeline {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      position: relative;
+    }
+
+    .step-card {
+      padding: 28px;
+      position: relative;
+    }
+
+    .step-number {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--gold);
+      color: #06111b;
+      font-weight: 950;
+      margin-bottom: 18px;
+    }
+
+    .step-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+      letter-spacing: -0.035em;
+    }
+
+    .step-card p {
+      color: var(--muted);
+      line-height: 1.72;
+    }
+
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .compare-card {
+      padding: 30px;
+    }
+
+    .compare-card h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 2rem;
+      letter-spacing: -0.04em;
+      margin-bottom: 20px;
+    }
+
+    .compare-list {
+      display: grid;
+      gap: 13px;
+    }
+
+    .compare-list li {
+      list-style: none;
+      display: flex;
+      gap: 10px;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.48;
+    }
+
+    .compare-list i {
+      margin-top: 2px;
+    }
+
+    .negative i {
+      color: #f87171;
+    }
+
+    .positive i {
+      color: var(--gold-2);
+    }
+
+    .care {
+      background:
+        linear-gradient(135deg, rgba(201,169,110,0.13), rgba(37,99,235,0.08)),
+        rgba(5,8,13,0.78);
+    }
+
+    .care-box {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 24px;
+      padding: 42px;
+      border-radius: 34px;
+      border: 1px solid rgba(201,169,110,0.28);
+      background:
+        radial-gradient(circle at 12% 10%, rgba(201,169,110,0.18), transparent 25%),
+        linear-gradient(145deg, rgba(255,255,255,0.105), rgba(255,255,255,0.04));
+      box-shadow: var(--shadow);
+    }
+
+    .care-box h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2.2rem, 5vw, 4.2rem);
+      letter-spacing: -0.06em;
+      line-height: 1;
+      margin-bottom: 14px;
+    }
+
+    .care-box p {
+      color: var(--muted);
+      line-height: 1.78;
+      max-width: 720px;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .testimonial-card {
+      padding: 28px;
+    }
+
+    .stars {
+      display: flex;
+      gap: 4px;
+      color: var(--gold-2);
+      margin-bottom: 18px;
+    }
+
+    .testimonial-label {
+      display: block;
+      color: var(--muted);
+      font-size: .88rem;
+      font-weight: 800;
+      margin-top: 18px;
+    }
+
+    .faq {
+      background: linear-gradient(180deg, rgba(5,8,13,0.82), rgba(7,19,29,0.85));
+    }
+
+    .faq-wrap {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 34px;
+      align-items: start;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.055);
+      backdrop-filter: blur(18px);
+    }
+
+    .faq-question {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 20px;
+      color: var(--white);
+      background: transparent;
+      border: none;
+      text-align: left;
+      cursor: pointer;
+      font-weight: 900;
+    }
+
+    .faq-question i {
+      color: var(--gold-2);
+      font-size: 1.15rem;
+      transition: transform .25s var(--ease);
+      min-width: 18px;
+    }
+
+    .faq-item.active .faq-question i {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .3s var(--ease);
+    }
+
+    .faq-answer p {
+      padding: 0 20px 20px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .92fr 1.08fr;
+      gap: 30px;
+      align-items: start;
+    }
+
+    .contact-card {
+      padding: 32px;
+    }
+
+    .contact-info {
+      display: grid;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .contact-info div {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: rgba(255,255,255,0.82);
+      padding: 14px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.055);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .contact-info i {
+      color: var(--gold-2);
+      font-size: 1.35rem;
+    }
+
+    .form-card {
+      padding: 28px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .form-group {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      color: rgba(255,255,255,0.78);
+      font-size: .86rem;
+      font-weight: 850;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      color: var(--white);
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.11);
+      border-radius: 16px;
+      padding: 14px 15px;
+      outline: none;
+      transition: border-color .2s var(--ease), background .2s var(--ease), box-shadow .2s var(--ease);
+    }
+
+    select {
+      appearance: none;
+      background-image:
+        linear-gradient(45deg, transparent 50%, var(--gold-2) 50%),
+        linear-gradient(135deg, var(--gold-2) 50%, transparent 50%);
+      background-position:
+        calc(100% - 19px) calc(50% + 1px),
+        calc(100% - 14px) calc(50% + 1px);
+      background-size: 5px 5px, 5px 5px;
+      background-repeat: no-repeat;
+    }
+
+    option {
+      color: #07131d;
+      background: #ffffff;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 130px;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: rgba(201,169,110,0.5);
+      background: rgba(255,255,255,0.095);
+      box-shadow: 0 0 0 4px rgba(201,169,110,0.1);
+    }
+
+    .form-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .form-message {
+      display: none;
+      margin-top: 16px;
+      padding: 14px;
+      border-radius: 16px;
+      background: rgba(37, 211, 102, 0.12);
+      border: 1px solid rgba(37, 211, 102, 0.24);
+      color: #b8ffd2;
+      font-weight: 800;
+      line-height: 1.5;
+    }
+
+    .form-message.show {
+      display: block;
+    }
+
+    .form-error {
+      display: none;
+      margin-top: 16px;
+      padding: 14px;
+      border-radius: 16px;
+      background: rgba(248, 113, 113, 0.12);
+      border: 1px solid rgba(248, 113, 113, 0.24);
+      color: #fecaca;
+      font-weight: 800;
+      line-height: 1.5;
+    }
+
+    .form-error.show {
+      display: block;
+    }
+
+    .footer {
+      padding: 46px 20px 90px;
+      background: #05080d;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-grid {
+      width: min(100%, var(--max));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 30px;
+      align-items: start;
+    }
+
+    .footer h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 2.1rem;
+      letter-spacing: -0.05em;
+      margin-bottom: 10px;
+    }
+
+    .footer p {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 10px;
+      justify-items: end;
+    }
+
+    .footer-links a,
+    .footer-links span {
+      color: rgba(255,255,255,0.76);
+      font-weight: 750;
+    }
+
+    .final-line {
+      margin-top: 22px;
+      color: var(--gold-2) !important;
+      font-weight: 900;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 990;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 14px 18px;
+      border-radius: 999px;
+      background: #25D366;
+      color: #03130a;
+      font-weight: 950;
+      box-shadow: 0 18px 50px rgba(37, 211, 102, 0.34);
+      animation: pulseWhatsApp 2.1s ease-in-out infinite;
+      transition: transform .25s var(--ease);
+    }
+
+    .whatsapp-float:hover {
+      transform: translateY(-4px) scale(1.02);
+    }
+
+    .whatsapp-float i {
+      font-size: 1.35rem;
+    }
+
+    @keyframes pulseWhatsApp {
+      0%, 100% {
+        box-shadow: 0 18px 50px rgba(37, 211, 102, 0.34), 0 0 0 0 rgba(37, 211, 102, 0.3);
+      }
+      50% {
+        box-shadow: 0 18px 50px rgba(37, 211, 102, 0.38), 0 0 0 12px rgba(37, 211, 102, 0);
+      }
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      background: rgba(0, 0, 0, 0.82);
+      backdrop-filter: blur(18px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .lightbox.open {
+      display: flex;
+    }
+
+    .lightbox-content {
+      width: min(100%, 980px);
+      max-height: 90vh;
+      overflow: auto;
+      border-radius: 32px;
+      background:
+        linear-gradient(145deg, rgba(11,29,43,0.96), rgba(5,8,13,0.98));
+      border: 1px solid rgba(255,255,255,0.14);
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(0,0,0,0.35);
+      color: var(--white);
+      font-size: 1.4rem;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      z-index: 5;
+    }
+
+    .lightbox-image {
+      height: 430px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 32px 32px 0 0;
+      position: relative;
+    }
+
+    .lightbox-image::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(5,8,13,0.96));
+    }
+
+    .lightbox-body {
+      padding: 28px;
+    }
+
+    .lightbox-body h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 2.8rem;
+      line-height: 1;
+      letter-spacing: -0.055em;
+      margin-bottom: 12px;
+    }
+
+    .lightbox-body p {
+      color: var(--muted);
+      line-height: 1.75;
+      max-width: 760px;
+    }
+
+    .lightbox-tags {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .demo-frame-wrap {
+      margin: 0 28px 28px;
+      height: min(68vh, 720px);
+      overflow: hidden;
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(0,0,0,0.28);
+      box-shadow: 0 24px 70px rgba(0,0,0,0.35);
+    }
+
+    .demo-frame {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+      background: #ffffff;
+    }
+
+    .lightbox-body {
+      border-bottom: 1px solid rgba(255,255,255,0.09);
+    }
+
+    .lightbox-body p strong {
+      color: var(--gold-2);
+    }
+
+
+    @media (max-width: 1080px) {
+      .desktop-nav {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: grid;
+        place-items: center;
+      }
+
+      .header-actions .btn {
+        display: none;
+      }
+
+      .hero-grid,
+      .problem-grid,
+      .contact-grid,
+      .faq-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        min-height: 560px;
+      }
+
+      .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .pricing-grid,
+      .demo-grid,
+      .niches-grid,
+      .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .price-card.featured {
+        transform: none;
+      }
+
+      .care-box {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      section {
+        padding: 76px 16px;
+      }
+
+      .site-header {
+        padding: 12px;
+      }
+
+      .site-header.scrolled {
+        padding: 8px 12px;
+      }
+
+      .nav-shell {
+        height: 62px;
+        padding-left: 12px;
+      }
+
+      .brand-mark {
+        width: 38px;
+        height: 38px;
+      }
+
+      .brand-name {
+        font-size: .95rem;
+      }
+
+      .brand-location {
+        font-size: .65rem;
+      }
+
+      .hero {
+        padding-top: 120px;
+      }
+
+      .hero-grid {
+        gap: 28px;
+      }
+
+      .hero h1 {
+        font-size: clamp(3.15rem, 16vw, 5.1rem);
+      }
+
+      .hero p {
+        font-size: 1.02rem;
+      }
+
+      .hero-ctas .btn {
+        width: 100%;
+      }
+
+      .trust-badges {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .trust-badge {
+        border-radius: 16px;
+        font-size: .76rem;
+        align-items: flex-start;
+      }
+
+      .section-head {
+        display: block;
+        margin-bottom: 30px;
+      }
+
+      .section-subtitle {
+        font-size: .98rem;
+      }
+
+      .device-stage {
+        height: 500px;
+      }
+
+      .laptop {
+        width: 330px;
+        bottom: 56px;
+        left: -6px;
+      }
+
+      .laptop-screen {
+        min-height: 224px;
+      }
+
+      .phone {
+        width: 184px;
+        right: -2px;
+        top: 20px;
+      }
+
+      .phone-screen {
+        min-height: 365px;
+      }
+
+      .phone-hero {
+        height: 124px;
+      }
+
+      .float-card {
+        font-size: .72rem;
+        padding: 9px 10px;
+        border-radius: 14px;
+      }
+
+      .float-card i {
+        width: 26px;
+        height: 26px;
+      }
+
+      .float-1 { top: 36px; left: 0; }
+      .float-2 { top: 188px; right: -10px; }
+      .float-3 { bottom: 122px; left: -5px; }
+      .float-4 { bottom: 34px; right: 12px; }
+
+      .problem-card,
+      .contact-card,
+      .form-card,
+      .payment-box,
+      .compare-card,
+      .care-box {
+        padding: 24px;
+        border-radius: 24px;
+      }
+
+      .niches-grid,
+      .pricing-grid,
+      .demo-grid,
+      .features-grid,
+      .process-timeline,
+      .comparison-grid,
+      .testimonials-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-card,
+      .niche-card,
+      .price-card,
+      .testimonial-card,
+      .step-card {
+        border-radius: 22px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-actions .btn {
+        width: 100%;
+      }
+
+      .footer-links {
+        justify-items: start;
+      }
+
+      .whatsapp-float {
+        width: 56px;
+        height: 56px;
+        padding: 0;
+        display: grid;
+        place-items: center;
+        right: 16px;
+        bottom: 16px;
+      }
+
+      .whatsapp-float span {
+        display: none;
+      }
+
+      .lightbox-image {
+        height: 270px;
+      }
+
+      .lightbox-body h3 {
+        font-size: 2.15rem;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .trust-badges {
+        grid-template-columns: 1fr;
+      }
+
+      .device-stage {
+        transform: scale(.92);
+        transform-origin: top center;
+        height: 455px;
+      }
+
+      .section-title {
+        font-size: 2.45rem;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="nav-shell">
+      <a href="#home" class="brand" aria-label="CrownCedar Studio home">
+        <div class="brand-mark">CC</div>
+        <div>
+          <div class="brand-name">CrownCedar Studio</div>
+          <span class="brand-location">Lebanon</span>
+        </div>
+      </a>
+
+  <nav class="desktop-nav" aria-label="Primary navigation">
+    <a class="nav-link active" href="#home">Home</a>
+    <a class="nav-link" href="#niches">Niches</a>
+    <a class="nav-link" href="#demos">Demos</a>
+    <a class="nav-link" href="#packages">Packages</a>
+    <a class="nav-link" href="#process">Process</a>
+    <a class="nav-link" href="#faq">FAQ</a>
+    <a class="nav-link" href="#contact">Contact</a>
+  </nav>
+
+  <div class="header-actions">
+    <a class="btn btn-primary" href="https://wa.me/96171698012" target="_blank" rel="noopener">
+      <i class="ph ph-whatsapp-logo"></i>
+      WhatsApp Us
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+      <i class="ph ph-list"></i>
+    </button>
+  </div>
+</div>
+
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="#home">Home</a>
+    <a href="#niches">Niches</a>
+    <a href="#demos">Demos</a>
+    <a href="#packages">Packages</a>
+    <a href="#process">Process</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+    <a class="btn btn-primary" href="https://wa.me/96171698012" target="_blank" rel="noopener">
+      <i class="ph ph-whatsapp-logo"></i>
+      WhatsApp Us
+    </a>
+  </div>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy fade-in">
+          <span class="eyebrow"><i class="ph ph-crown"></i> Premium Lebanese Web Studio</span>
+          <h1>Websites for Lebanese Businesses in <span class="gold">48 Hours</span></h1>
+          <p>
+            Look professional. Build trust. Get more inquiries directly to your WhatsApp with a clean,
+            mobile-friendly website built for local businesses.
+          </p>
+
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#packages">
+          See Packages
+          <i class="ph ph-arrow-right"></i>
+        </a>
+        <a class="btn btn-secondary" href="https://wa.me/96171698012" target="_blank" rel="noopener">
+          <i class="ph ph-whatsapp-logo"></i>
+          Message on WhatsApp
+        </a>
+      </div>
+
+      <div class="trust-badges">
+        <span class="trust-badge"><i class="ph ph-clock-countdown"></i> First draft in 48 hours</span>
+        <span class="trust-badge"><i class="ph ph-lock-key"></i> $100 deposit to start</span>
+        <span class="trust-badge"><i class="ph ph-whatsapp-logo"></i> WhatsApp-connected</span>
+        <span class="trust-badge"><i class="ph ph-device-mobile"></i> Mobile-first design</span>
+        <span class="trust-badge"><i class="ph ph-hand-coins"></i> Lebanon-friendly payments</span>
+      </div>
+    </div>
+
+    <div class="hero-visual fade-in">
+      <div class="device-stage">
+        <div class="laptop" aria-label="Website laptop mockup">
+          <div class="laptop-screen">
+            <div class="mock-topbar">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+            <div class="mock-hero-img"></div>
+            <div class="mock-content">
+              <div class="mock-kicker"></div>
+              <div class="mock-title"></div>
+              <div class="mock-line"></div>
+              <div class="mock-line"></div>
+              <div class="mock-line short"></div>
+              <div class="mock-actions">
+                <div class="mock-btn"></div>
+                <div class="mock-btn dark"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="phone" aria-label="Mobile website phone mockup">
+          <div class="phone-screen">
+            <div class="phone-hero">
+              <span class="phone-pill">Premium Car Dealer</span>
+            </div>
+            <div class="phone-body">
+              <div class="phone-title">Elite Motors Lebanon</div>
+              <div class="phone-grid">
+                <div class="phone-tile"><i class="ph ph-car"></i> Inventory</div>
+                <div class="phone-tile"><i class="ph ph-map-pin"></i> Location</div>
+                <div class="phone-tile"><i class="ph ph-camera"></i> Photos</div>
+                <div class="phone-tile"><i class="ph ph-phone"></i> Contact</div>
+              </div>
+              <div class="phone-whatsapp">WhatsApp Dealer</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="float-card float-1"><i class="ph ph-whatsapp-logo"></i> New WhatsApp inquiry</div>
+        <div class="float-card float-2"><i class="ph ph-map-trifold"></i> Google Maps included</div>
+        <div class="float-card float-3"><i class="ph ph-timer"></i> 48h first draft</div>
+        <div class="float-card float-4"><i class="ph ph-device-mobile-camera"></i> Mobile ready</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="split-section" id="problem">
+  <div class="container">
+    <div class="problem-grid">
+      <div class="problem-card card fade-in">
+        <span class="eyebrow"><i class="ph ph-instagram-logo"></i> Problem</span>
+        <h3>Your Instagram works, but customers still need clarity.</h3>
+        <p>
+          Many local businesses have active Instagram pages, but customers still ask the same questions:
+          what services you offer, where you are located, how to book, what your prices are, and how to contact you fast.
+        </p>
+        <div class="question-list">
+          <span><i class="ph ph-question"></i> What services do you offer?</span>
+          <span><i class="ph ph-question"></i> Where exactly are you located?</span>
+          <span><i class="ph ph-question"></i> How can I book or ask fast?</span>
+        </div>
+      </div>
+
+      <div class="problem-card card fade-in">
+        <span class="eyebrow"><i class="ph ph-sparkle"></i> Solution</span>
+        <h3>One clean page fixes that.</h3>
+        <p>
+          CrownCedar Studio organizes your services, photos, location, Google Maps, Instagram, and WhatsApp
+          inside one professional page designed to make your business look polished and easier to contact.
+        </p>
+        <div class="solution-list">
+          <span><i class="ph ph-check-circle"></i> Services and photos organized clearly</span>
+          <span><i class="ph ph-check-circle"></i> WhatsApp button always easy to find</span>
+          <span><i class="ph ph-check-circle"></i> One link for ads, QR codes, and business cards</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="niches">
+  <div class="container">
+    <div class="section-head fade-in">
+      <div>
+        <span class="eyebrow"><i class="ph ph-buildings"></i> Niches</span>
+        <h2 class="section-title">Built for businesses where trust and image matter.</h2>
+      </div>
+      <p class="section-subtitle">
+        Premium local websites for businesses that need a clean first impression and fast WhatsApp contact.
+      </p>
+    </div>
+
+    <div class="niches-grid">
+      <div class="niche-card card fade-in">
+        <div class="icon-box"><i class="ph ph-tooth"></i></div>
+        <h3>Clinics & Dentists</h3>
+        <p>Show treatments, doctors, location, working hours, and booking through WhatsApp.</p>
+        <a class="btn btn-dark" href="#contact">Request Demo</a>
+      </div>
+
+      <div class="niche-card card fade-in">
+        <div class="icon-box"><i class="ph ph-car-profile"></i></div>
+        <h3>Car Dealers</h3>
+        <p>Display cars, photos, features, availability, location, and direct buyer inquiries.</p>
+        <a class="btn btn-dark" href="#contact">Request Demo</a>
+      </div>
+
+      <div class="niche-card card fade-in">
+        <div class="icon-box"><i class="ph ph-barbell"></i></div>
+        <h3>Gyms</h3>
+        <p>Present memberships, trainers, classes, transformations, and easy joining messages.</p>
+        <a class="btn btn-dark" href="#contact">Request Demo</a>
+      </div>
+
+      <div class="niche-card card fade-in">
+        <div class="icon-box"><i class="ph ph-house-line"></i></div>
+        <h3>Real Estate</h3>
+        <p>Organize properties, photos, areas, prices, maps, and serious client inquiries.</p>
+        <a class="btn btn-dark" href="#contact">Request Demo</a>
+      </div>
+
+      <div class="niche-card card fade-in">
+        <div class="icon-box"><i class="ph ph-fork-knife"></i></div>
+        <h3>Restaurants & Cafes</h3>
+        <p>Show your menu, atmosphere, location, opening hours, and reservation contact.</p>
+        <a class="btn btn-dark" href="#contact">Request Demo</a>
+      </div>
+
+      <div class="niche-card card fade-in">
+        <div class="icon-box"><i class="ph ph-scissors"></i></div>
+        <h3>Salons</h3>
+        <p>Show services, prices, before/after photos, Instagram, and booking through WhatsApp.</p>
+        <a class="btn btn-dark" href="#contact">Request Demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="demos" id="demos">
+  <div class="container">
+    <div class="section-head fade-in">
+      <div>
+        <span class="eyebrow"><i class="ph ph-devices"></i> Demo Showcase</span>
+        <h2 class="section-title">See what your business could look like.</h2>
+      </div>
+      <p class="section-subtitle">
+        Click any demo to open a working one-page sample inside this site. Your final version is adjusted to your brand, photos, and offer.
+      </p>
+    </div>
+
+    <div class="demo-grid">
+      <article class="demo-card card fade-in">
+        <div class="demo-visual">
+          <div class="demo-img" style="background-image:url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=80')"></div>
+          <div class="demo-phone">
+            <div class="demo-phone-inner">
+              <div class="demo-phone-img" style="background-image:url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=500&q=80')"></div>
+              <div class="demo-phone-content"><div></div><div></div><div></div><div></div></div>
+            </div>
+          </div>
+        </div>
+        <span class="niche-label">Clinic Website</span>
+        <h3>Smile Dental Clinic</h3>
+        <p>Elegant clinic page with services, appointment CTA, trust sections, and Google Maps.</p>
+        <div class="tags">
+          <span class="tag">Treatments</span>
+          <span class="tag">Booking</span>
+          <span class="tag">Maps</span>
+        </div>
+        <button class="btn btn-secondary demo-open" data-title="Smile Dental Clinic" data-niche="Clinic Website" data-image="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1400&q=85" data-tags="Treatments,WhatsApp Booking,Doctor Profile,Google Maps">Open Working Demo</button>
+      </article>
+
+      <article class="demo-card card fade-in">
+        <div class="demo-visual">
+          <div class="demo-img" style="background-image:url('https://images.unsplash.com/photo-1562141961-052bb2bff7a8?auto=format&fit=crop&w=1000&q=80')"></div>
+          <div class="demo-phone">
+            <div class="demo-phone-inner">
+              <div class="demo-phone-img" style="background-image:url('https://images.unsplash.com/photo-1562141961-052bb2bff7a8?auto=format&fit=crop&w=500&q=80')"></div>
+              <div class="demo-phone-content"><div></div><div></div><div></div><div></div></div>
+            </div>
+          </div>
+        </div>
+        <span class="niche-label">Car Dealer Website</span>
+        <h3>Elite Motors Lebanon</h3>
+        <p>Luxury car dealer page with inventory highlights, feature tags, car photos, and inquiry buttons.</p>
+        <div class="tags">
+          <span class="tag">Inventory</span>
+          <span class="tag">Photos</span>
+          <span class="tag">WhatsApp</span>
+        </div>
+        <button class="btn btn-secondary demo-open" data-title="Elite Motors Lebanon" data-niche="Car Dealer Website" data-image="https://images.unsplash.com/photo-1562141961-052bb2bff7a8?auto=format&fit=crop&w=1400&q=85" data-tags="Inventory,Car Photos,Availability,Direct Inquiry">Open Working Demo</button>
+      </article>
+
+      <article class="demo-card card fade-in">
+        <div class="demo-visual">
+          <div class="demo-img" style="background-image:url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1000&q=80')"></div>
+          <div class="demo-phone">
+            <div class="demo-phone-inner">
+              <div class="demo-phone-img" style="background-image:url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=500&q=80')"></div>
+              <div class="demo-phone-content"><div></div><div></div><div></div><div></div></div>
+            </div>
+          </div>
+        </div>
+        <span class="niche-label">Gym Website</span>
+        <h3>FitHouse Gym</h3>
+        <p>Strong gym page with memberships, trainer sections, transformation gallery, and join CTA.</p>
+        <div class="tags">
+          <span class="tag">Plans</span>
+          <span class="tag">Trainers</span>
+          <span class="tag">Join CTA</span>
+        </div>
+        <button class="btn btn-secondary demo-open" data-title="FitHouse Gym" data-niche="Gym Website" data-image="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1400&q=85" data-tags="Memberships,Trainers,Class Schedule,WhatsApp Joining">Open Working Demo</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="features">
+  <div class="container">
+    <div class="section-head fade-in">
+      <div>
+        <span class="eyebrow"><i class="ph ph-squares-four"></i> Included Features</span>
+        <h2 class="section-title">Everything your business needs to look professional online.</h2>
+      </div>
+      <p class="section-subtitle">
+        Built to be simple for your customer, clean for your brand, and easy to use on mobile.
+      </p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card card fade-in"><div class="icon-box"><i class="ph ph-device-mobile"></i></div><h3>Mobile-friendly design</h3><p>Looks polished on phones first, because most local customers browse on mobile.</p></div>
+      <div class="feature-card card fade-in"><div class="icon-box"><i class="ph ph-whatsapp-logo"></i></div><h3>WhatsApp button</h3><p>Direct contact buttons placed where customers naturally want to ask questions.</p></div>
+      <div class="feature-card card fade-in"><div class="icon-box"><i class="ph ph-map-pin"></i></div><h3>Google Maps section</h3><p>Make your location clear with an embedded map area and address section.</p></div>
+      <div class="feature-card card fade-in"><div class="icon-box"><i class="ph ph-list-checks"></i></div><h3>Services section</h3><p>Organize your services so people understand what you offer quickly.</p></div>
+      <div class="feature-card card fade-in"><div class="icon-box"><i class="ph ph-images"></i></div><h3>Photo gallery</h3><p>Show your place, work, products, cars, food, or transformations professionally.</p></div>
+      <div class="feature-card card fade-in"><div class="icon-box"><i class="ph ph-instagram-logo"></i></div><h3>Instagram link</h3><p>Connect your active social page without forcing customers to search for details.</p></div>
+      <div class="feature-card card fade-in"><div class="icon-box"><i class="ph ph-envelope-simple"></i></div><h3>Contact form</h3><p>Add a clean inquiry form for customers who prefer writing details.</p></div>
+      <div class="feature-card card fade-in"><div class="icon-box"><i class="ph ph-gauge"></i></div><h3>Fast loading</h3><p>Clean code and focused sections help the page feel smooth and responsive.</p></div>
+      <div class="feature-card card fade-in"><div class="icon-box"><i class="ph ph-layout"></i></div><h3>Clean visual layout</h3><p>Premium spacing, readable text, and a structure that feels trustworthy.</p></div>
+      <div class="feature-card card fade-in"><div class="icon-box"><i class="ph ph-magnifying-glass"></i></div><h3>Basic SEO structure</h3><p>Proper titles, sections, headings, and page structure for a stronger foundation.</p></div>
+      <div class="feature-card card fade-in"><div class="icon-box"><i class="ph ph-clock"></i></div><h3>First draft in 48 hours</h3><p>After deposit and content collection, the first draft is sent within 48 hours.</p></div>
+      <div class="feature-card card fade-in"><div class="icon-box"><i class="ph ph-pencil-simple"></i></div><h3>2 revisions included</h3><p>Fine-tune your page before launch so it feels right for your business.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="packages">
+  <div class="container">
+    <div class="section-head fade-in">
+      <div>
+        <span class="eyebrow"><i class="ph ph-tag"></i> Packages</span>
+        <h2 class="section-title">Simple packages. Fast delivery. Clear payment.</h2>
+      </div>
+      <p class="section-subtitle">
+        Choose the level that fits your business now. Upgrade later when you need more sections or care.
+      </p>
+    </div>
+
+    <div class="pricing-grid">
+      <article class="price-card card fade-in">
+        <h3>Starter Website</h3>
+        <div class="price">$199</div>
+        <p>For small businesses that need a clean online presence fast.</p>
+        <ul class="includes">
+          <li><i class="ph ph-check-circle"></i> One-page website</li>
+          <li><i class="ph ph-check-circle"></i> Services section</li>
+          <li><i class="ph ph-check-circle"></i> Photo gallery</li>
+          <li><i class="ph ph-check-circle"></i> WhatsApp button</li>
+          <li><i class="ph ph-check-circle"></i> Google Maps</li>
+          <li><i class="ph ph-check-circle"></i> Instagram link</li>
+          <li><i class="ph ph-check-circle"></i> Contact form</li>
+          <li><i class="ph ph-check-circle"></i> Mobile-friendly design</li>
+          <li><i class="ph ph-check-circle"></i> First draft in 48 hours</li>
+          <li><i class="ph ph-check-circle"></i> 2 revisions</li>
+        </ul>
+        <a class="btn btn-secondary" href="#contact">Start Starter Website</a>
+      </article>
+
+      <article class="price-card card featured fade-in">
+        <span class="popular-badge">Most Popular</span>
+        <h3>Business Website</h3>
+        <div class="price">$349</div>
+        <p>For businesses that want a stronger, more premium presentation.</p>
+        <ul class="includes">
+          <li><i class="ph ph-check-circle"></i> Everything in Starter</li>
+          <li><i class="ph ph-check-circle"></i> More advanced design</li>
+          <li><i class="ph ph-check-circle"></i> More content sections</li>
+          <li><i class="ph ph-check-circle"></i> Advanced gallery or inventory section</li>
+          <li><i class="ph ph-check-circle"></i> FAQ section</li>
+          <li><i class="ph ph-check-circle"></i> Testimonials section</li>
+          <li><i class="ph ph-check-circle"></i> Better conversion layout</li>
+          <li><i class="ph ph-check-circle"></i> Basic SEO structure</li>
+          <li><i class="ph ph-check-circle"></i> Priority delivery</li>
+        </ul>
+        <a class="btn btn-primary" href="#contact">Start Business Website</a>
+      </article>
+
+      <article class="price-card card fade-in">
+        <h3>Website Care Plan</h3>
+        <div class="price">$25–$50<span>/month</span></div>
+        <p>For businesses that want their website maintained.</p>
+        <ul class="includes">
+          <li><i class="ph ph-check-circle"></i> Small edits</li>
+          <li><i class="ph ph-check-circle"></i> Hosting management</li>
+          <li><i class="ph ph-check-circle"></i> Updates</li>
+          <li><i class="ph ph-check-circle"></i> Backups</li>
+          <li><i class="ph ph-check-circle"></i> Basic support</li>
+          <li><i class="ph ph-check-circle"></i> Keeping the site fresh</li>
+        </ul>
+        <a class="btn btn-secondary" href="#care">Add Care Plan</a>
+      </article>
+    </div>
+
+    <div class="payment-box fade-in">
+      <h3><strong>$100 deposit reserves your spot.</strong></h3>
+      <p>
+        We start after the deposit, send the first draft within 48 hours, and the rest is paid after approval before launch.
+      </p>
+      <p>
+        Payment available by cash, bank transfer, Whish, OMT, Western Union, or your preferred local method.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="container">
+    <div class="section-head fade-in">
+      <div>
+        <span class="eyebrow"><i class="ph ph-rocket-launch"></i> Process</span>
+        <h2 class="section-title">From WhatsApp message to first draft in 48 hours.</h2>
+      </div>
+      <p class="section-subtitle">
+        A clear, direct process made for busy business owners who want the website handled properly.
+      </p>
+    </div>
+
+    <div class="process-timeline">
+      <div class="step-card card fade-in">
+        <div class="step-number">1</div>
+        <div class="icon-box"><i class="ph ph-hand-coins"></i></div>
+        <h3>$100 Deposit & Info</h3>
+        <p>You send your business type, photos, Instagram, location, services, and deposit to reserve the slot.</p>
+      </div>
+
+      <div class="step-card card fade-in">
+        <div class="step-number">2</div>
+        <div class="icon-box"><i class="ph ph-clock-countdown"></i></div>
+        <h3>First Draft in 48 Hours</h3>
+        <p>We build the first clean version and send it for your review within 48 hours after starting.</p>
+      </div>
+
+      <div class="step-card card fade-in">
+        <div class="step-number">3</div>
+        <div class="icon-box"><i class="ph ph-rocket"></i></div>
+        <h3>Revisions & Launch</h3>
+        <p>You request final edits, approve the website, pay the remaining balance, and we launch it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="comparison">
+  <div class="container">
+    <div class="section-head fade-in">
+      <div>
+        <span class="eyebrow"><i class="ph ph-scales"></i> Website Advantage</span>
+        <h2 class="section-title">Instagram is useful. A website makes you easier to trust and contact.</h2>
+      </div>
+      <p class="section-subtitle">
+        Your Instagram can stay active. The website becomes the clean page customers visit when they need details fast.
+      </p>
+    </div>
+
+    <div class="comparison-grid">
+      <div class="compare-card card fade-in">
+        <h3>Instagram Only</h3>
+        <ul class="compare-list negative">
+          <li><i class="ph ph-x-circle"></i> Posts disappear quickly</li>
+          <li><i class="ph ph-x-circle"></i> Services are hard to organize</li>
+          <li><i class="ph ph-x-circle"></i> Customers must search for information</li>
+          <li><i class="ph ph-x-circle"></i> No clear structure</li>
+          <li><i class="ph ph-x-circle"></i> Harder to use on business cards and ads</li>
+          <li><i class="ph ph-x-circle"></i> Less professional for serious clients</li>
+        </ul>
+      </div>
+
+      <div class="compare-card card fade-in">
+        <h3>Website + Instagram</h3>
+        <ul class="compare-list positive">
+          <li><i class="ph ph-check-circle"></i> One clear page</li>
+          <li><i class="ph ph-check-circle"></i> Services organized</li>
+          <li><i class="ph ph-check-circle"></i> WhatsApp button always visible</li>
+          <li><i class="ph ph-check-circle"></i> Google Maps included</li>
+          <li><i class="ph ph-check-circle"></i> More trust</li>
+          <li><i class="ph ph-check-circle"></i> Better for ads, QR codes, and business cards</li>
+          <li><i class="ph ph-check-circle"></i> Easier for customers to contact you</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="care" id="care">
+  <div class="container">
+    <div class="care-box fade-in">
+      <div>
+        <span class="eyebrow"><i class="ph ph-shield-check"></i> Monthly Care</span>
+        <h2>Keep Your Site Fresh — From $25/month</h2>
+        <p>
+          After launch, we can manage small edits, updates, backups, hosting support, and simple changes
+          so your website stays clean and professional.
+        </p>
+      </div>
+      <a class="btn btn-primary" href="#contact">Add Care Plan to My Website</a>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials">
+  <div class="container">
+    <div class="section-head fade-in">
+      <div>
+        <span class="eyebrow"><i class="ph ph-chat-centered-text"></i> Testimonials</span>
+        <h2 class="section-title">Built for local businesses that move fast.</h2>
+      </div>
+      <p class="section-subtitle">
+        Realistic examples of the kind of business owners this service is designed for.
+      </p>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card card fade-in">
+        <div class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+        <p>“The page made our services, location, and booking button much clearer. It feels more serious than sending people only to Instagram.”</p>
+        <span class="testimonial-label">Dental Clinic Owner, Jounieh</span>
+      </div>
+
+      <div class="testimonial-card card fade-in">
+        <div class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+        <p>“The car photos, availability, and WhatsApp inquiry button are organized in one place. It gives the business a cleaner image.”</p>
+        <span class="testimonial-label">Car Dealer, Tripoli</span>
+      </div>
+
+      <div class="testimonial-card card fade-in">
+        <div class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+        <p>“People can see our memberships, trainers, location, and message us without asking for every detail again.”</p>
+        <span class="testimonial-label">Gym Manager, Beirut</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="container faq-wrap">
+    <div class="fade-in">
+      <span class="eyebrow"><i class="ph ph-question"></i> FAQ</span>
+      <h2 class="section-title">Questions business owners ask before starting.</h2>
+      <p class="section-subtitle">
+        Clear answers before you send the deposit and start the website.
+      </p>
+    </div>
+
+    <div class="faq-list fade-in">
+      <div class="faq-item active">
+        <button class="faq-question" type="button">How fast can you build the website? <i class="ph ph-plus"></i></button>
+        <div class="faq-answer"><p>The first draft is sent within 48 hours after the $100 deposit is paid and the needed business information is received.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">What do you need from me? <i class="ph ph-plus"></i></button>
+        <div class="faq-answer"><p>Your business name, niche, services, photos, location, WhatsApp number, Instagram link, and any text you want included. If your content is not ready, we can help organize it.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">Do I need a domain and hosting? <i class="ph ph-plus"></i></button>
+        <div class="faq-answer"><p>Not before we start. We can guide you with domain and hosting options, then help connect the website when it is ready to launch.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">Can I pay locally in Lebanon? <i class="ph ph-plus"></i></button>
+        <div class="faq-answer"><p>Yes. Payment can be made by cash, bank transfer, Whish, OMT, Western Union, or your preferred local method.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">Can you connect WhatsApp? <i class="ph ph-plus"></i></button>
+        <div class="faq-answer"><p>Yes. The website can include visible WhatsApp buttons, a floating WhatsApp button, and direct message links throughout the page.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">Do I get revisions? <i class="ph ph-plus"></i></button>
+        <div class="faq-answer"><p>Yes. The Starter and Business packages include 2 revisions so we can adjust text, photos, sections, and layout details before launch.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">Do you build online stores? <i class="ph ph-plus"></i></button>
+        <div class="faq-answer"><p>This offer focuses on premium one-page business websites. Online stores can be discussed separately depending on products, payment method, delivery, and management needs.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">Is the $100 deposit refundable? <i class="ph ph-plus"></i></button>
+        <div class="faq-answer"><p>The deposit reserves your spot and starts the work. Once design work begins, it is not refundable, but it is deducted from your final website price.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container contact-grid">
+    <div class="contact-card card fade-in">
+      <span class="eyebrow"><i class="ph ph-paper-plane-tilt"></i> Start the Work</span>
+      <h2 class="section-title">Ready to look professional online this week?</h2>
+      <p class="section-subtitle">
+        Send your business name, niche, Instagram page, and photos. We’ll tell you what website fits you best
+        and can send a free quick visual preview. The working website starts after the $100 deposit.
+      </p>
+
+      <div class="contact-info">
+        <div><i class="ph ph-whatsapp-logo"></i> WhatsApp: https://wa.me/96171698012</div>
+        <div><i class="ph ph-instagram-logo"></i> Instagram: @crowncedarstudio</div>
+        <div><i class="ph ph-envelope-simple"></i> Email: hello@crowncedarstudio.com</div>
+        <div><i class="ph ph-map-pin"></i> Lebanon</div>
+      </div>
+    </div>
+
+    <form class="form-card card fade-in" id="contactForm" novalidate>
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="businessType">Business type</label>
+          <select id="businessType" name="businessType" required>
+            <option value="">Choose type</option>
+            <option>Clinic/Dentist</option>
+            <option>Car Dealer</option>
+            <option>Gym</option>
+            <option>Real Estate</option>
+            <option>Restaurant/Cafe</option>
+            <option>Salon</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="whatsapp">WhatsApp number</label>
+          <input id="whatsapp" name="whatsapp" type="tel" placeholder="+961..." required />
+        </div>
+
+        <div class="form-group">
+          <label for="instagram">Instagram link</label>
+          <input id="instagram" name="instagram" type="url" placeholder="https://instagram.com/..." />
+        </div>
+
+        <div class="form-group full">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell us about your business, services, photos, and what you need." required></textarea>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button class="btn btn-primary" type="submit">
+          Open WhatsApp Inquiry
+          <i class="ph ph-arrow-right"></i>
+        </button>
+        <a class="btn btn-secondary" href="https://wa.me/96171698012" target="_blank" rel="noopener">
+          <i class="ph ph-whatsapp-logo"></i>
+          Chat on WhatsApp Now
+        </a>
+      </div>
+
+      <div class="form-message" id="formMessage">Thanks! We’ll contact you within a few hours.</div>
+      <div class="form-error" id="formError">Please fill in your name, business type, WhatsApp number, and message.</div>
+    </form>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h2>CrownCedar Studio</h2>
+        <p>Websites for Lebanese Businesses in 48 Hours.</p>
+        <p>Lebanon</p>
+        <p class="final-line">We can start today.</p>
+      </div>
+
+  <div class="footer-links">
+    <a href="https://wa.me/96171698012" target="_blank" rel="noopener">WhatsApp: https://wa.me/96171698012</a>
+    <a href="#" aria-label="Instagram placeholder">Instagram: @crowncedarstudio</a>
+    <a href="mailto:hello@crowncedarstudio.com">Email: hello@crowncedarstudio.com</a>
+    <span>Privacy note: No data shared, ever.</span>
+  </div>
+</div>
+
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/96171698012" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <i class="ph ph-whatsapp-logo"></i>
+    <span>WhatsApp</span>
+  </a>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Working demo preview">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close demo preview">
+        <i class="ph ph-x"></i>
+      </button>
+      <div class="lightbox-body">
+        <span class="niche-label" id="lightboxNiche">Working Demo</span>
+        <h3 id="lightboxTitle">Demo Title</h3>
+        <p>
+          <strong>This is a real working demo preview.</strong> It opens as a complete one-page sample inside this site,
+          with sections, navigation, service cards, gallery, location area, and WhatsApp call-to-action.
+        </p>
+        <div class="lightbox-tags" id="lightboxTags"></div>
+      </div>
+      <div class="demo-frame-wrap">
+        <iframe class="demo-frame" id="demoFrame" title="Working website demo preview"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const header = document.getElementById("siteHeader");
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const mobileLinks = mobileMenu.querySelectorAll("a");
+    const navLinks = document.querySelectorAll(".nav-link");
+    const sections = document.querySelectorAll("main section[id]");
+    const fadeItems = document.querySelectorAll(".fade-in");
+    const faqItems = document.querySelectorAll(".faq-item");
+    const demoButtons = document.querySelectorAll(".demo-open");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxClose = document.getElementById("lightboxClose");
+    const demoFrame = document.getElementById("demoFrame");
+    const lightboxTitle = document.getElementById("lightboxTitle");
+    const lightboxNiche = document.getElementById("lightboxNiche");
+    const lightboxTags = document.getElementById("lightboxTags");
+    const contactForm = document.getElementById("contactForm");
+    const formMessage = document.getElementById("formMessage");
+    const formError = document.getElementById("formError");
+
+    function handleHeaderScroll() {
+      if (window.scrollY > 24) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    }
+
+    window.addEventListener("scroll", handleHeaderScroll);
+    handleHeaderScroll();
+
+    function openMenu() {
+      mobileMenu.classList.add("open");
+      document.body.classList.add("menu-open");
+      menuToggle.setAttribute("aria-expanded", "true");
+      mobileMenu.setAttribute("aria-hidden", "false");
+      menuToggle.innerHTML = '<i class="ph ph-x"></i>';
+    }
+
+    function closeMenu() {
+      mobileMenu.classList.remove("open");
+      document.body.classList.remove("menu-open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      mobileMenu.setAttribute("aria-hidden", "true");
+      menuToggle.innerHTML = '<i class="ph ph-list"></i>';
+    }
+
+    menuToggle.addEventListener("click", () => {
+      mobileMenu.classList.contains("open") ? closeMenu() : openMenu();
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    const fadeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          fadeObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    fadeItems.forEach(item => fadeObserver.observe(item));
+
+    const activeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute("id");
+          navLinks.forEach(link => {
+            link.classList.toggle("active", link.getAttribute("href") === "#" + id);
+          });
+        }
+      });
+    }, {
+      rootMargin: "-38% 0px -55% 0px",
+      threshold: 0
+    });
+
+    sections.forEach(section => activeObserver.observe(section));
+
+    faqItems.forEach(item => {
+      const question = item.querySelector(".faq-question");
+      const answer = item.querySelector(".faq-answer");
+
+      if (item.classList.contains("active")) {
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      }
+
+      question.addEventListener("click", () => {
+        const isActive = item.classList.contains("active");
+
+        faqItems.forEach(otherItem => {
+          otherItem.classList.remove("active");
+          otherItem.querySelector(".faq-answer").style.maxHeight = 0;
+        });
+
+        if (!isActive) {
+          item.classList.add("active");
+          answer.style.maxHeight = answer.scrollHeight + "px";
+        }
+      });
+    });
+
+
+    function buildDemoPage(config) {
+      const services = config.services.map(item => `
+        <article class="service-card">
+          <div class="service-icon">${item.icon}</div>
+          <h3>${item.title}</h3>
+          <p>${item.text}</p>
+        </article>
+      `).join("");
+
+      const gallery = config.gallery.map(url => `
+        <div class="gallery-item" style="background-image:url('${url}')"></div>
+      `).join("");
+
+      const features = config.features.map(item => `<span>${item}</span>`).join("");
+
+      return `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${config.name} Demo</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: Inter, system-ui, sans-serif;
+    color: #f8fafc;
+    background: #07131d;
+    overflow-x: hidden;
+  }
+  a { color: inherit; text-decoration: none; }
+  .demo-site {
+    min-height: 100vh;
+    background:
+      radial-gradient(circle at 20% 8%, ${config.accentSoft}, transparent 30%),
+      radial-gradient(circle at 85% 15%, rgba(37,99,235,.18), transparent 28%),
+      linear-gradient(180deg, #0B1D2B, #05080d 72%);
+  }
+  .demo-nav {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    padding: 18px clamp(18px, 5vw, 58px);
+    background: rgba(7,19,29,.74);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(255,255,255,.1);
+  }
+  .demo-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 900;
+    letter-spacing: -.04em;
+  }
+  .demo-logo-mark {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: ${config.accent};
+    color: #07131d;
+    font-weight: 950;
+  }
+  .demo-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: rgba(255,255,255,.72);
+    font-size: .88rem;
+    font-weight: 800;
+  }
+  .demo-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,.13);
+    padding: 12px 16px;
+    background: ${config.accent};
+    color: #07131d;
+    font-weight: 900;
+    box-shadow: 0 14px 36px ${config.glow};
+  }
+  .demo-hero {
+    display: grid;
+    grid-template-columns: 1.04fr .96fr;
+    align-items: center;
+    gap: 38px;
+    padding: 76px clamp(18px, 5vw, 58px) 54px;
+  }
+  .demo-kicker {
+    display: inline-flex;
+    margin-bottom: 16px;
+    padding: 8px 11px;
+    border-radius: 999px;
+    color: ${config.accentText};
+    border: 1px solid ${config.border};
+    background: ${config.accentSoft};
+    font-size: .75rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+  }
+  h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(3rem, 8vw, 6.8rem);
+    line-height: .9;
+    letter-spacing: -.075em;
+    max-width: 760px;
+    margin-bottom: 20px;
+  }
+  .demo-hero p {
+    color: #a7b0bf;
+    font-size: 1.08rem;
+    line-height: 1.75;
+    max-width: 640px;
+    margin-bottom: 26px;
+  }
+  .demo-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .demo-btn.secondary {
+    background: rgba(255,255,255,.07);
+    color: #ffffff;
+    box-shadow: none;
+  }
+  .hero-card {
+    min-height: 430px;
+    border-radius: 34px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.14);
+    background:
+      linear-gradient(180deg, transparent 35%, rgba(5,8,13,.96)),
+      url('${config.heroImage}');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 28px 90px rgba(0,0,0,.46);
+    display: flex;
+    align-items: end;
+    padding: 24px;
+  }
+  .hero-card-panel {
+    width: 100%;
+    padding: 18px;
+    border-radius: 24px;
+    background: rgba(7,19,29,.78);
+    border: 1px solid rgba(255,255,255,.14);
+    backdrop-filter: blur(16px);
+  }
+  .hero-card-panel h2 {
+    font-size: 1.45rem;
+    letter-spacing: -.04em;
+    margin-bottom: 8px;
+  }
+  .feature-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+  }
+  .feature-row span {
+    padding: 7px 9px;
+    border-radius: 999px;
+    background: rgba(255,255,255,.09);
+    border: 1px solid rgba(255,255,255,.1);
+    color: rgba(255,255,255,.82);
+    font-size: .75rem;
+    font-weight: 800;
+  }
+  .section {
+    padding: 58px clamp(18px, 5vw, 58px);
+  }
+  .section-head {
+    max-width: 820px;
+    margin-bottom: 26px;
+  }
+  .section-head h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(2.2rem, 5vw, 4.1rem);
+    line-height: .98;
+    letter-spacing: -.06em;
+    margin-bottom: 12px;
+  }
+  .section-head p {
+    color: #a7b0bf;
+    line-height: 1.75;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  .service-card {
+    padding: 24px;
+    border-radius: 24px;
+    background: rgba(255,255,255,.065);
+    border: 1px solid rgba(255,255,255,.11);
+  }
+  .service-icon {
+    width: 46px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+    border-radius: 16px;
+    background: ${config.accentSoft};
+    color: ${config.accentText};
+    margin-bottom: 15px;
+    font-size: 1.35rem;
+  }
+  .service-card h3 {
+    margin-bottom: 8px;
+    letter-spacing: -.03em;
+  }
+  .service-card p {
+    color: #a7b0bf;
+    line-height: 1.65;
+    font-size: .94rem;
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr .8fr;
+    gap: 14px;
+  }
+  .gallery-item {
+    min-height: 230px;
+    border-radius: 24px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid rgba(255,255,255,.12);
+  }
+  .gallery-item:first-child {
+    grid-row: span 2;
+    min-height: 474px;
+  }
+  .info-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  .info-box {
+    padding: 22px;
+    border-radius: 22px;
+    border: 1px solid rgba(255,255,255,.11);
+    background: rgba(255,255,255,.06);
+  }
+  .info-box strong {
+    display: block;
+    margin-bottom: 8px;
+    color: ${config.accentText};
+  }
+  .info-box span {
+    color: #a7b0bf;
+    line-height: 1.6;
+  }
+  .map-box {
+    min-height: 260px;
+    border-radius: 28px;
+    border: 1px solid rgba(255,255,255,.12);
+    background:
+      linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,.03)),
+      repeating-linear-gradient(45deg, rgba(255,255,255,.045) 0 1px, transparent 1px 18px);
+    display: grid;
+    place-items: center;
+    text-align: center;
+    color: #a7b0bf;
+    padding: 24px;
+  }
+  .map-box strong {
+    display: block;
+    color: #fff;
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+  }
+  .demo-footer {
+    padding: 34px clamp(18px, 5vw, 58px);
+    border-top: 1px solid rgba(255,255,255,.1);
+    color: #a7b0bf;
+    background: rgba(5,8,13,.84);
+  }
+  @media (max-width: 820px) {
+    .demo-nav-links { display: none; }
+    .demo-hero,
+    .services-grid,
+    .info-strip,
+    .gallery-grid {
+      grid-template-columns: 1fr;
+    }
+    .gallery-item:first-child {
+      grid-row: auto;
+      min-height: 260px;
+    }
+    .hero-card {
+      min-height: 360px;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="demo-site">
+    <nav class="demo-nav">
+      <a class="demo-logo" href="#top">
+        <span class="demo-logo-mark">${config.logo}</span>
+        <span>${config.name}</span>
+      </a>
+      <div class="demo-nav-links">
+        <a href="#services">Services</a>
+        <a href="#gallery">Photos</a>
+        <a href="#location">Location</a>
+      </div>
+      <a class="demo-btn" href="https://wa.me/96171698012?text=${encodeURIComponent(config.whatsappText)}" target="_blank">WhatsApp</a>
+    </nav>
+
+    <main id="top">
+      <section class="demo-hero">
+        <div>
+          <span class="demo-kicker">${config.kicker}</span>
+          <h1>${config.headline}</h1>
+          <p>${config.description}</p>
+          <div class="demo-actions">
+            <a class="demo-btn" href="https://wa.me/96171698012?text=${encodeURIComponent(config.whatsappText)}" target="_blank">${config.primaryCta}</a>
+            <a class="demo-btn secondary" href="#services">View Services</a>
+          </div>
+        </div>
+        <aside class="hero-card">
+          <div class="hero-card-panel">
+            <h2>${config.panelTitle}</h2>
+            <p>${config.panelText}</p>
+            <div class="feature-row">${features}</div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section" id="services">
+        <div class="section-head">
+          <h2>${config.servicesTitle}</h2>
+          <p>${config.servicesIntro}</p>
+        </div>
+        <div class="services-grid">${services}</div>
+      </section>
+
+      <section class="section" id="gallery">
+        <div class="section-head">
+          <h2>${config.galleryTitle}</h2>
+          <p>${config.galleryIntro}</p>
+        </div>
+        <div class="gallery-grid">${gallery}</div>
+      </section>
+
+      <section class="section" id="location">
+        <div class="section-head">
+          <h2>${config.locationTitle}</h2>
+          <p>${config.locationIntro}</p>
+        </div>
+        <div class="info-strip">
+          <div class="info-box"><strong>Address</strong><span>${config.address}</span></div>
+          <div class="info-box"><strong>Hours</strong><span>${config.hours}</span></div>
+          <div class="info-box"><strong>Contact</strong><span>WhatsApp-connected inquiry button</span></div>
+        </div>
+        <div class="map-box" style="margin-top:14px;">
+          <div><strong>Google Maps Area</strong><span>Map embed placeholder for ${config.name}</span></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="demo-footer">
+      ${config.name} — Working demo preview by CrownCedar Studio.
+    </footer>
+  </div>
+</body>
+</html>`;
+    }
+
+    const demoPages = {
+      "Smile Dental Clinic": buildDemoPage({
+        name: "Smile Dental Clinic",
+        logo: "SD",
+        kicker: "Dental Clinic • Jounieh",
+        headline: "A calmer way to book your dental visit.",
+        description: "A premium clinic page that presents treatments, doctor trust, location, opening hours, and a direct WhatsApp booking path.",
+        primaryCta: "Book on WhatsApp",
+        panelTitle: "Clean clinic presentation",
+        panelText: "Designed for patients who want quick information before booking.",
+        servicesTitle: "Treatments organized clearly.",
+        servicesIntro: "No searching through posts. Patients see your main treatments in one professional section.",
+        galleryTitle: "Clinic photos and trust signals.",
+        galleryIntro: "Show the clinic environment, equipment, team, and before/after style visuals.",
+        locationTitle: "Easy to find and contact.",
+        locationIntro: "Location, working hours, and WhatsApp contact stay simple and visible.",
+        address: "Jounieh, Lebanon — exact map added before launch",
+        hours: "Mon–Sat • 10:00 AM–7:00 PM",
+        whatsappText: "Hello Smile Dental Clinic, I want to book an appointment.",
+        accent: "#C9A96E",
+        accentText: "#e6cf96",
+        accentSoft: "rgba(201,169,110,.16)",
+        border: "rgba(201,169,110,.32)",
+        glow: "rgba(201,169,110,.25)",
+        heroImage: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1400&q=85",
+        features: ["Appointments", "Treatments", "Location", "WhatsApp"],
+        services: [
+          { icon: "🦷", title: "Dental Checkups", text: "Present routine visits, cleaning, and consultation details in a simple way." },
+          { icon: "✨", title: "Whitening", text: "Show cosmetic treatments with premium visuals and clear inquiry buttons." },
+          { icon: "🛡️", title: "Implants & Care", text: "Give serious patients confidence with organized treatment information." }
+        ],
+        gallery: [
+          "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=900&q=80",
+          "https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=900&q=80",
+          "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=80",
+          "https://images.unsplash.com/photo-1588776814546-daab30f310ce?auto=format&fit=crop&w=900&q=80",
+          "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=900&q=80"
+        ]
+      }),
+
+      "Elite Motors Lebanon": buildDemoPage({
+        name: "Elite Motors Lebanon",
+        logo: "EM",
+        kicker: "Car Dealer • Tripoli",
+        headline: "Luxury cars presented with confidence.",
+        description: "A high-end car dealer page with featured vehicles, availability, gallery, location, and direct WhatsApp buyer inquiries.",
+        primaryCta: "Ask About a Car",
+        panelTitle: "Premium inventory display",
+        panelText: "Built for buyers who want photos, details, availability, and fast contact.",
+        servicesTitle: "Vehicle information made simple.",
+        servicesIntro: "The page can highlight cars, financing, trade-ins, inspections, and dealership trust.",
+        galleryTitle: "Car photos that sell the feeling.",
+        galleryIntro: "Show exterior, interior, details, and showroom atmosphere with a luxury layout.",
+        locationTitle: "Bring buyers to the showroom.",
+        locationIntro: "Make your showroom location, hours, and WhatsApp contact clear from one page.",
+        address: "Tripoli, Lebanon — exact showroom map added before launch",
+        hours: "Mon–Sat • 9:00 AM–8:00 PM",
+        whatsappText: "Hello Elite Motors Lebanon, I want to ask about an available car.",
+        accent: "#C9A96E",
+        accentText: "#e6cf96",
+        accentSoft: "rgba(201,169,110,.16)",
+        border: "rgba(201,169,110,.32)",
+        glow: "rgba(201,169,110,.25)",
+        heroImage: "https://images.unsplash.com/photo-1562141961-052bb2bff7a8?auto=format&fit=crop&w=1400&q=85",
+        features: ["Inventory", "Availability", "Showroom", "WhatsApp"],
+        services: [
+          { icon: "🚘", title: "Available Cars", text: "Feature vehicles with photos, model year, price range, and status." },
+          { icon: "📸", title: "Car Gallery", text: "Present clean exterior, interior, dashboard, and feature photos." },
+          { icon: "📍", title: "Showroom Visit", text: "Help serious buyers find the location and message before visiting." }
+        ],
+        gallery: [
+          "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=80",
+          "https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=900&q=80",
+          "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=900&q=80",
+          "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=900&q=80",
+          "https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&w=900&q=80"
+        ]
+      }),
+
+      "FitHouse Gym": buildDemoPage({
+        name: "FitHouse Gym",
+        logo: "FH",
+        kicker: "Gym • Beirut",
+        headline: "A stronger first impression for your fitness brand.",
+        description: "A premium gym page with memberships, coaches, class info, transformation visuals, location, and direct WhatsApp joining.",
+        primaryCta: "Join on WhatsApp",
+        panelTitle: "Built for quick signups",
+        panelText: "Designed to help visitors understand the gym and message fast.",
+        servicesTitle: "Programs and memberships upfront.",
+        servicesIntro: "Show your memberships, coaching options, classes, and transformation focus clearly.",
+        galleryTitle: "Show the energy of the gym.",
+        galleryIntro: "Use strong visuals for equipment, training, coaches, and atmosphere.",
+        locationTitle: "Make joining easier.",
+        locationIntro: "The demo keeps location, hours, and WhatsApp contact visible for new members.",
+        address: "Beirut, Lebanon — exact branch map added before launch",
+        hours: "Mon–Sun • 6:00 AM–11:00 PM",
+        whatsappText: "Hello FitHouse Gym, I want to ask about memberships.",
+        accent: "#C9A96E",
+        accentText: "#e6cf96",
+        accentSoft: "rgba(201,169,110,.16)",
+        border: "rgba(201,169,110,.32)",
+        glow: "rgba(201,169,110,.25)",
+        heroImage: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1400&q=85",
+        features: ["Memberships", "Coaches", "Classes", "WhatsApp"],
+        services: [
+          { icon: "💪", title: "Gym Memberships", text: "Show monthly plans, student offers, and premium membership options." },
+          { icon: "🏋️", title: "Personal Training", text: "Present trainers, goals, and coaching packages in a clean layout." },
+          { icon: "🔥", title: "Classes", text: "Display class types, schedule highlights, and joining information." }
+        ],
+        gallery: [
+          "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=900&q=80",
+          "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80",
+          "https://images.unsplash.com/photo-1571019613914-85f342c6a11e?auto=format&fit=crop&w=900&q=80",
+          "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=900&q=80",
+          "https://images.unsplash.com/photo-1593079831268-3381b0db4a77?auto=format&fit=crop&w=900&q=80"
+        ]
+      })
+    };
+
+    demoButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const title = button.dataset.title;
+        const niche = button.dataset.niche;
+        const tags = button.dataset.tags.split(",");
+
+        lightboxTitle.textContent = title;
+        lightboxNiche.textContent = niche + " • Working Demo";
+        lightboxTags.innerHTML = "";
+
+        tags.forEach(tag => {
+          const span = document.createElement("span");
+          span.className = "tag";
+          span.textContent = tag.trim();
+          lightboxTags.appendChild(span);
+        });
+
+        demoFrame.srcdoc = demoPages[title] || "";
+
+        lightbox.classList.add("open");
+        lightbox.setAttribute("aria-hidden", "false");
+        document.body.classList.add("menu-open");
+      });
+    });
+
+
+    function closeLightbox() {
+      lightbox.classList.remove("open");
+      lightbox.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("menu-open");
+      if (demoFrame) {
+        demoFrame.srcdoc = "";
+      }
+    }
+
+    lightboxClose.addEventListener("click", closeLightbox);
+
+    lightbox.addEventListener("click", event => {
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape") {
+        closeLightbox();
+        closeMenu();
+      }
+    });
+
+   
+  const WHATSAPP_NUMBER = "96171698012"; // Replace with your real number, example: 96170123456
+
+  contactForm.addEventListener("submit", event => {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const businessType = document.getElementById("businessType").value.trim();
+    const whatsapp = document.getElementById("whatsapp").value.trim();
+    const instagram = document.getElementById("instagram").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    formMessage.classList.remove("show");
+    formError.classList.remove("show");
+
+    if (!name || !businessType || !whatsapp || !message) {
+      formError.textContent = "Please fill in your name, business type, WhatsApp number, and message.";
+      formError.classList.add("show");
+      return;
+    }
+
+    const inquiryText = `
+Hello CrownCedar Studio, I want a website.
+
+Name: ${name}
+Business Type: ${businessType}
+WhatsApp Number: ${whatsapp}
+Instagram: ${instagram || "Not provided"}
+
+Message:
+${message}
+
+I want the free quick visual preview. I understand the working website starts after the $100 deposit.
+    `.trim();
+
+    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(inquiryText)}`;
+
+    formMessage.textContent = "WhatsApp is opening with your inquiry. Press Send there to submit it.";
+    formMessage.classList.add("show");
+
+    const opened = window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+
+    if (!opened) {
+      window.location.href = whatsappUrl;
+    }
+  });
+
+  </script>
+
+</body>
+</html>
