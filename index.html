@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CrownCedar Studio — Websites for Lebanese Businesses in 48 Hours</title>
-  <meta name="description" content="Premium one-page websites for Lebanese businesses. Mobile-friendly, WhatsApp-connected, and delivered with a first draft in 48 hours." />
+  <title>CrownCedar Studio — Trusted Websites for Lebanese Businesses in 48 Hours</title>
+  <meta name="description" content="Professional 48-hour websites for Lebanese businesses that need to look trusted, show services clearly, and receive customer inquiries on WhatsApp." />
   <meta name="theme-color" content="#0B1D2B" />
   <meta name="color-scheme" content="dark" />
 
@@ -1657,6 +1657,101 @@
     }
 
 
+    .package-kicker {
+      display: inline-flex;
+      width: fit-content;
+      margin-bottom: 10px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      color: var(--gold-2);
+      background: rgba(201,169,110,0.1);
+      border: 1px solid rgba(201,169,110,0.22);
+      font-size: .72rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .package-section-label {
+      display: block;
+      margin-top: 22px;
+      color: var(--gold-2);
+      font-size: .88rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+
+    .package-bonus,
+    .package-best,
+    .package-guarantee {
+      display: grid;
+      gap: 7px;
+      margin-bottom: 18px;
+      padding: 14px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.055);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.82);
+      line-height: 1.55;
+      font-size: .9rem;
+    }
+
+    .package-bonus strong,
+    .package-best strong,
+    .package-guarantee strong {
+      color: var(--gold-2);
+    }
+
+    .package-bonus span,
+    .package-best span,
+    .package-guarantee span {
+      color: var(--muted);
+    }
+
+    .package-cta-note {
+      display: block;
+      margin-top: 12px;
+      color: var(--gold-2);
+      font-size: .86rem;
+      font-weight: 850;
+      line-height: 1.45;
+      text-align: center;
+      transition: color .2s var(--ease);
+    }
+
+    .package-cta-note:hover {
+      color: var(--white);
+    }
+
+    .package-helper {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 24px;
+      margin-top: 22px;
+      padding: 28px;
+    }
+
+    .package-helper h3 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(1.85rem, 3vw, 2.8rem);
+      line-height: 1;
+      letter-spacing: -0.05em;
+      margin-bottom: 14px;
+    }
+
+    .package-helper p {
+      color: var(--muted);
+      line-height: 1.65;
+      margin-top: 8px;
+    }
+
+    .package-helper p strong {
+      color: var(--gold-2);
+    }
+
+
     @media (max-width: 1080px) {
       .desktop-nav {
         display: none;
@@ -1913,6 +2008,40 @@
       }
     }
   
+    @media (max-width: 1080px) {
+      .package-helper {
+        grid-template-columns: 1fr;
+      }
+
+      .package-helper .btn {
+        width: fit-content;
+      }
+
+      .popular-badge {
+        position: static;
+        width: fit-content;
+        margin-bottom: 12px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .package-helper {
+        padding: 24px;
+        border-radius: 24px;
+      }
+
+      .package-helper .btn {
+        width: 100%;
+      }
+
+      .package-bonus,
+      .package-best,
+      .package-guarantee {
+        font-size: .88rem;
+      }
+    }
+
+
     @media (prefers-reduced-motion: reduce) {
       html {
         scroll-behavior: auto;
@@ -1932,6 +2061,268 @@
       }
     }
 
+
+
+/* =========================================================
+   SAFE PREMIUM STYLE PATCH — no functionality changes
+   Fixes visible hero + replaces initials with logo image
+   ========================================================= */
+:root {
+  --premium-glow: 0 28px 88px rgba(0, 0, 0, 0.42);
+  --premium-ring: 0 0 0 1px rgba(230, 207, 150, 0.16);
+}
+
+::selection {
+  background: var(--gold-2);
+  color: #07131d;
+}
+
+body {
+  background:
+    radial-gradient(circle at 16% 3%, rgba(230, 207, 150, 0.17), transparent 31rem),
+    radial-gradient(circle at 86% 8%, rgba(37, 99, 235, 0.16), transparent 28rem),
+    radial-gradient(circle at 52% 94%, rgba(201, 169, 110, 0.08), transparent 30rem),
+    linear-gradient(180deg, #081b2a 0%, #05080d 42%, #06111b 100%);
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+}
+
+.hero {
+  min-height: auto !important;
+  padding-top: 128px !important;
+  padding-bottom: 88px !important;
+}
+
+.hero .hero-copy,
+.hero .hero-visual,
+.hero .fade-in {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
+
+.hero-grid {
+  align-items: center !important;
+}
+
+.hero h1,
+.section-title,
+.founder-card h2,
+.problem-card h3,
+.compare-card h3,
+.package-helper h3,
+.footer h2 {
+  text-wrap: balance;
+}
+
+.hero h1,
+.section-title {
+  text-shadow: 0 18px 54px rgba(0, 0, 0, 0.36);
+}
+
+.gold {
+  color: transparent;
+  background: linear-gradient(135deg, #fff2bd, var(--gold-2) 36%, var(--gold) 76%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.nav-shell {
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.11), rgba(255,255,255,0.045)),
+    rgba(7, 19, 29, 0.48);
+  border-color: rgba(255,255,255,0.14);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.10),
+    0 18px 58px rgba(0,0,0,0.30);
+}
+
+.site-header.scrolled {
+  background: rgba(7, 19, 29, 0.84);
+  box-shadow: 0 18px 54px rgba(0,0,0,0.28);
+}
+
+.brand-mark,
+.founder-avatar {
+  padding: 0 !important;
+  overflow: hidden !important;
+  background: transparent !important;
+  border: 1px solid rgba(255,255,255,0.24) !important;
+  flex: 0 0 auto;
+}
+
+.brand-mark {
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 16px !important;
+  box-shadow: 0 12px 34px rgba(201,169,110,0.24);
+}
+
+.founder-avatar {
+  width: 88px !important;
+  height: 88px !important;
+  border-radius: 28px !important;
+  box-shadow: 0 18px 46px rgba(201,169,110,0.22);
+}
+
+.logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: inherit;
+}
+
+.btn {
+  position: relative;
+  overflow: hidden;
+  letter-spacing: -0.01em;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #fff0ba 0%, var(--gold-2) 24%, var(--gold) 62%, #9a7439 100%);
+  border-color: rgba(255,255,255,0.22);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.38),
+    0 18px 46px rgba(201,169,110,0.28);
+}
+
+.btn-secondary,
+.btn-dark {
+  background: linear-gradient(145deg, rgba(255,255,255,0.11), rgba(255,255,255,0.045));
+  border-color: rgba(255,255,255,0.14);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 14px 38px rgba(0,0,0,0.20);
+}
+
+.card,
+.faq-item,
+.form-card,
+.footer-grid {
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.08),
+    0 22px 62px rgba(0,0,0,0.28);
+}
+
+.card:hover {
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.11),
+    0 30px 86px rgba(0,0,0,0.38),
+    var(--premium-ring);
+}
+
+.trust-badge,
+.question-list span,
+.package-bonus,
+.package-best,
+.package-guarantee,
+.tag {
+  background: linear-gradient(135deg, rgba(255,255,255,0.085), rgba(255,255,255,0.035));
+}
+
+.device-stage {
+  filter: drop-shadow(0 34px 82px rgba(0,0,0,0.38));
+}
+
+.laptop,
+.phone,
+.demo-phone {
+  border-color: rgba(255,255,255,0.22);
+}
+
+.icon-box,
+.niche-label,
+.package-kicker,
+.step-number {
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+.price-card.featured {
+  border-color: rgba(230,207,150,0.50);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.12),
+    0 34px 92px rgba(0,0,0,0.42),
+    0 0 0 1px rgba(230,207,150,0.12);
+}
+
+.price {
+  color: transparent;
+  background: linear-gradient(135deg, #ffffff, var(--gold-2) 42%, var(--gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+#features .features-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+#features .container > h2 {
+  margin-top: 28px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+
+#features .container > p {
+  color: var(--muted);
+  line-height: 1.75;
+  max-width: 760px;
+}
+
+#contact .contact-grid {
+  grid-template-columns: minmax(0, 860px);
+  justify-content: center;
+}
+
+.form-card {
+  border-color: rgba(230,207,150,0.20);
+}
+
+.footer-grid {
+  padding: 28px;
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 30px;
+  background: linear-gradient(145deg, rgba(255,255,255,0.07), rgba(255,255,255,0.025));
+}
+
+.footer-links a:hover {
+  color: var(--gold-2);
+}
+
+@media (max-width: 1080px) {
+  .hero {
+    padding-top: 116px !important;
+    padding-bottom: 74px !important;
+  }
+
+  #features .features-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .hero {
+    padding-top: 104px !important;
+    padding-bottom: 64px !important;
+  }
+
+  .brand-mark {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 14px !important;
+  }
+
+  .founder-avatar {
+    width: 76px !important;
+    height: 76px !important;
+    border-radius: 24px !important;
+  }
+
+  #features .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 </style>
 
 </head>
@@ -1940,7 +2331,7 @@
   <header class="site-header" id="siteHeader">
     <div class="nav-shell">
       <a href="#home" class="brand" aria-label="CrownCedar Studio home">
-        <div class="brand-mark">CC</div>
+        <div class="brand-mark"><img class="logo-img" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4IiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IkNyb3duQ2VkYXIgU3R1ZGlvIGxvZ28iPgogIDxkZWZzPgogICAgPHJhZGlhbEdyYWRpZW50IGlkPSJiZyIgY3g9IjMwJSIgY3k9IjIwJSIgcj0iODUlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjRkZGMEJCIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMC4zOCIgc3RvcC1jb2xvcj0iI0U3Qzc4MCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjAuNzIiIHN0b3AtY29sb3I9IiNDOUE5NkUiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjOEI2NjMzIi8+CiAgICA8L3JhZGlhbEdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJpbmsiIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMDYxNjI1Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzAyMDcwQyIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3QgeD0iNiIgeT0iNiIgd2lkdGg9IjExNiIgaGVpZ2h0PSIxMTYiIHJ4PSIzNCIgZmlsbD0idXJsKCNiZykiLz4KICA8cGF0aCBkPSJNMzEgNDVMNDQgMzBMNTYgNDVMNjQgMjVMNzIgNDVMODQgMzBMOTcgNDVMOTEgNTdIMzdMMzEgNDVaIiBmaWxsPSJ1cmwoI2luaykiIG9wYWNpdHk9Ii45NiIvPgogIDxwYXRoIGQ9Ik0zOCA2NEg5MCIgc3Ryb2tlPSJ1cmwoI2luaykiIHN0cm9rZS13aWR0aD0iNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBvcGFjaXR5PSIuOTYiLz4KICA8cGF0aCBkPSJNNjQgNjdDNTIgNzUgNDQgODYgNDEgMTAxQzUyIDk0IDU5IDg1IDY0IDczQzY5IDg1IDc2IDk0IDg3IDEwMUM4NCA4NiA3NiA3NSA2NCA2N1oiIGZpbGw9InVybCgjaW5rKSIgb3BhY2l0eT0iLjk2Ii8+CiAgPHBhdGggZD0iTTY0IDY3VjEwMSIgc3Ryb2tlPSIjRTdDNzgwIiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgb3BhY2l0eT0iLjciLz4KICA8cGF0aCBkPSJNNDkgODVDNTcgODMgNjIgNzkgNjQgNzNNNzkgODVDNzEgODMgNjYgNzkgNjQgNzMiIHN0cm9rZT0iI0U3Qzc4MCIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiIG9wYWNpdHk9Ii41NSIvPgo8L3N2Zz4=" alt="CrownCedar Studio logo" /></div>
         <div>
           <div class="brand-name">CrownCedar Studio</div>
           <span class="brand-location">Lebanon</span>
@@ -1958,9 +2349,9 @@
   </nav>
 
   <div class="header-actions">
-    <a class="btn btn-primary" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20a%20website%20for%20my%20business." target="_blank" rel="noopener noreferrer">
+    <a class="btn btn-primary" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20my%20business%20to%20look%20more%20trusted%20online%20and%20get%20more%20WhatsApp%20inquiries.%20Please%20tell%20me%20the%20best%20website%20package%20for%20my%20business." target="_blank" rel="noopener noreferrer">
       <i class="ph ph-whatsapp-logo"></i>
-      WhatsApp Us
+      Get Website Review
     </a>
     <button type="button" class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
       <i class="ph ph-list"></i>
@@ -1978,9 +2369,9 @@
     <a href="#process">Process</a>
     <a href="#faq">FAQ</a>
     <a href="#contact">Contact</a>
-    <a class="btn btn-primary" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20a%20website%20for%20my%20business." target="_blank" rel="noopener noreferrer">
+    <a class="btn btn-primary" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20my%20business%20to%20look%20more%20trusted%20online%20and%20get%20more%20WhatsApp%20inquiries.%20Please%20tell%20me%20the%20best%20website%20package%20for%20my%20business." target="_blank" rel="noopener noreferrer">
       <i class="ph ph-whatsapp-logo"></i>
-      WhatsApp Us
+      Get Website Review
     </a>
   </div>
 
@@ -1988,30 +2379,30 @@
     <section class="hero" id="home">
       <div class="container hero-grid">
         <div class="hero-copy fade-in">
-          <span class="eyebrow"><i class="ph ph-crown"></i> Premium Lebanese Web Studio</span>
-          <h1>Websites for Lebanese Businesses in <span class="gold">48 Hours</span></h1>
+          <span class="eyebrow"><i class="ph ph-crown"></i> 48-Hour Website Launch for Lebanon</span>
+          <h1>Get a Website That Makes Your Business Look <span class="gold">Trusted in 48 Hours</span></h1>
           <p>
-            Look professional. Build trust. Get more inquiries directly to your WhatsApp with a clean,
-            mobile-friendly website built for local businesses.
+            A clean, mobile-first website for Lebanese businesses that explains your services, shows your work,
+            and makes it easy for serious customers to contact you on WhatsApp.
           </p>
 
       <div class="hero-ctas">
         <a class="btn btn-primary" href="#packages">
-          See Packages
+          See Website Packages
           <i class="ph ph-arrow-right"></i>
         </a>
-        <a class="btn btn-secondary" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20a%20website%20for%20my%20business." target="_blank" rel="noopener noreferrer">
+        <a class="btn btn-secondary" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20my%20business%20to%20look%20more%20trusted%20online%20and%20get%20more%20WhatsApp%20inquiries.%20Please%20tell%20me%20the%20best%20website%20package%20for%20my%20business." target="_blank" rel="noopener noreferrer">
           <i class="ph ph-whatsapp-logo"></i>
-          Message on WhatsApp
+          Get Free Recommendation
         </a>
       </div>
 
       <div class="trust-badges">
         <span class="trust-badge"><i class="ph ph-clock-countdown"></i> First draft in 48 hours</span>
-        <span class="trust-badge"><i class="ph ph-lock-key"></i> $100 deposit to start</span>
-        <span class="trust-badge"><i class="ph ph-whatsapp-logo"></i> WhatsApp-connected</span>
+        <span class="trust-badge"><i class="ph ph-lock-key"></i> $100 to reserve your build</span>
+        <span class="trust-badge"><i class="ph ph-whatsapp-logo"></i> Built for WhatsApp inquiries</span>
         <span class="trust-badge"><i class="ph ph-device-mobile"></i> Mobile-first design</span>
-        <span class="trust-badge"><i class="ph ph-hand-coins"></i> Lebanon-friendly payments</span>
+        <span class="trust-badge"><i class="ph ph-hand-coins"></i> Local payment options</span>
       </div>
     </div>
 
@@ -2058,7 +2449,7 @@
         </div>
 
         <div class="float-card float-1"><i class="ph ph-whatsapp-logo"></i> New WhatsApp inquiry</div>
-        <div class="float-card float-2"><i class="ph ph-map-trifold"></i> Google Maps included</div>
+        <div class="float-card float-2"><i class="ph ph-map-trifold"></i> Google Maps and contact details included</div>
         <div class="float-card float-3"><i class="ph ph-timer"></i> 48h first draft</div>
         <div class="float-card float-4"><i class="ph ph-device-mobile-camera"></i> Mobile ready</div>
       </div>
@@ -2071,64 +2462,46 @@
     <div class="problem-grid">
       <div class="problem-card card fade-in">
         <span class="eyebrow"><i class="ph ph-instagram-logo"></i> Problem</span>
-        <h3>Your Instagram works, but customers still need clarity.</h3>
+        <h3>Your Instagram may look active, but customers still leave confused.</h3>
         <p>
-          Many local businesses have active Instagram pages, but customers still ask the same questions:
-          what services you offer, where you are located, how to book, what your prices are, and how to contact you fast.
+          People do not want to dig through posts, highlights, and old captions. If they cannot quickly understand
+          your services, location, proof, prices, or booking path, they move to a business that looks easier to trust.
         </p>
         <div class="question-list">
-          <span><i class="ph ph-question"></i> What services do you offer?</span>
-          <span><i class="ph ph-question"></i> Where exactly are you located?</span>
-          <span><i class="ph ph-question"></i> How can I book or ask fast?</span>
+          <span><i class="ph ph-question"></i> What exactly do you offer?</span>
+          <span><i class="ph ph-question"></i> Where are you located and when are you open?</span>
+          <span><i class="ph ph-question"></i> How do I contact you without wasting time?</span>
         </div>
       </div>
 
       <div class="problem-card card fade-in">
         <span class="eyebrow"><i class="ph ph-sparkle"></i> Solution</span>
-        <h3>One clean page fixes that.</h3>
+        <h3>One clean page turns confusion into action.</h3>
         <p>
-          CrownCedar Studio organizes your services, photos, location, Google Maps, Instagram, and WhatsApp
-          inside one professional page designed to make your business look polished and easier to contact.
+          CrownCedar Studio turns your services, photos, location, Google Maps, Instagram, and WhatsApp into
+          one polished page that gives customers the information they need and one clear next step: message you.
         </p>
-        <div class="solution-list">
-          <span><i class="ph ph-check-circle"></i> Services and photos organized clearly</span>
-          <span><i class="ph ph-check-circle"></i> WhatsApp button always easy to find</span>
-          <span><i class="ph ph-check-circle"></i> One link for ads, QR codes, and business cards</span>
+        <div class="question-list">
+          <span><i class="ph ph-check-circle"></i> Services, photos, and proof organized clearly</span>
+          <span><i class="ph ph-check-circle"></i> WhatsApp buttons placed where buyers are ready</span>
+          <span><i class="ph ph-check-circle"></i> One professional link for Instagram, ads, QR codes, and business cards</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="founder-section">
-  <div class="container">
-    <div class="founder-card fade-in">
-      <div class="founder-avatar">M</div>
-      <div>
-        <span class="eyebrow"><i class="ph ph-user-circle"></i> Founder</span>
-        <h2>Built by Melhem<sup>&trade;</sup> — Lebanon</h2>
-        <p>
-          I help local businesses get a professional website connected to WhatsApp, Instagram, and Google Maps.
-          The goal is simple: make your business look trustworthy, organized, and easy to contact from one clean page.
-        </p>
-      </div>
-      <a class="btn btn-primary" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20a%20website%20for%20my%20business." target="_blank" rel="noopener noreferrer">
-        <i class="ph ph-whatsapp-logo"></i>
-        Message CrownCedar Studio
-      </a>
-    </div>
-  </div>
-</section>
+
 
 <section id="niches">
   <div class="container">
     <div class="section-head fade-in">
       <div>
         <span class="eyebrow"><i class="ph ph-buildings"></i> Niches</span>
-        <h2 class="section-title">Built for businesses where trust and image matter.</h2>
+        <h2 class="section-title">Built for local businesses customers judge before they call.</h2>
       </div>
       <p class="section-subtitle">
-        Premium local websites for businesses that need a clean first impression and fast WhatsApp contact.
+        Professional local websites for businesses that need trust, clarity, and fast WhatsApp contact before the customer chooses someone else.
       </p>
     </div>
 
@@ -2136,43 +2509,43 @@
       <div class="niche-card card fade-in">
         <div class="icon-box"><i class="ph ph-tooth"></i></div>
         <h3>Clinics & Dentists</h3>
-        <p>Show treatments, doctors, location, working hours, and booking through WhatsApp.</p>
-        <a class="btn btn-dark" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20a%20free%20quick%20visual%20preview%20for%20my%20clinic%20or%20dental%20business." target="_blank" rel="noopener noreferrer">Request Demo</a>
+        <p>Show treatments, doctors, trust signals, location, working hours, and easy WhatsApp booking.</p>
+        <a class="btn btn-dark" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20a%20free%20quick%20visual%20preview%20for%20my%20clinic%20or%20dental%20business." target="_blank" rel="noopener noreferrer">Request My Preview</a>
       </div>
 
       <div class="niche-card card fade-in">
         <div class="icon-box"><i class="ph ph-car-profile"></i></div>
         <h3>Car Dealers</h3>
-        <p>Display cars, photos, features, availability, location, and direct buyer inquiries.</p>
-        <a class="btn btn-dark" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20a%20free%20quick%20visual%20preview%20for%20my%20car%20dealer%20business." target="_blank" rel="noopener noreferrer">Request Demo</a>
+        <p>Display inventory, photos, features, availability, showroom details, and direct buyer inquiries.</p>
+        <a class="btn btn-dark" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20a%20free%20quick%20visual%20preview%20for%20my%20car%20dealer%20business." target="_blank" rel="noopener noreferrer">Request My Preview</a>
       </div>
 
       <div class="niche-card card fade-in">
         <div class="icon-box"><i class="ph ph-barbell"></i></div>
         <h3>Gyms</h3>
-        <p>Present memberships, trainers, classes, transformations, and easy joining messages.</p>
-        <a class="btn btn-dark" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20a%20free%20quick%20visual%20preview%20for%20my%20gym%20business." target="_blank" rel="noopener noreferrer">Request Demo</a>
+        <p>Present memberships, trainers, classes, transformations, location, and easy joining messages.</p>
+        <a class="btn btn-dark" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20a%20free%20quick%20visual%20preview%20for%20my%20gym%20business." target="_blank" rel="noopener noreferrer">Request My Preview</a>
       </div>
 
       <div class="niche-card card fade-in">
         <div class="icon-box"><i class="ph ph-house-line"></i></div>
         <h3>Real Estate</h3>
-        <p>Organize properties, photos, areas, prices, maps, and serious client inquiries.</p>
-        <a class="btn btn-dark" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20a%20free%20quick%20visual%20preview%20for%20my%20real%20estate%20business." target="_blank" rel="noopener noreferrer">Request Demo</a>
+        <p>Organize listings, photos, areas, prices, maps, and serious client inquiries in one clean page.</p>
+        <a class="btn btn-dark" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20a%20free%20quick%20visual%20preview%20for%20my%20real%20estate%20business." target="_blank" rel="noopener noreferrer">Request My Preview</a>
       </div>
 
       <div class="niche-card card fade-in">
         <div class="icon-box"><i class="ph ph-fork-knife"></i></div>
         <h3>Restaurants & Cafes</h3>
-        <p>Show your menu, atmosphere, location, opening hours, and reservation contact.</p>
-        <a class="btn btn-dark" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20a%20free%20quick%20visual%20preview%20for%20my%20restaurant%20or%20cafe%20business." target="_blank" rel="noopener noreferrer">Request Demo</a>
+        <p>Show your menu, atmosphere, location, opening hours, and direct reservation contact.</p>
+        <a class="btn btn-dark" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20a%20free%20quick%20visual%20preview%20for%20my%20restaurant%20or%20cafe%20business." target="_blank" rel="noopener noreferrer">Request My Preview</a>
       </div>
 
       <div class="niche-card card fade-in">
         <div class="icon-box"><i class="ph ph-scissors"></i></div>
         <h3>Salons</h3>
-        <p>Show services, prices, before/after photos, Instagram, and booking through WhatsApp.</p>
-        <a class="btn btn-dark" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20a%20free%20quick%20visual%20preview%20for%20my%20salon%20business." target="_blank" rel="noopener noreferrer">Request Demo</a>
+        <p>Show services, prices, before/after photos, trust signals, and WhatsApp booking.</p>
+        <a class="btn btn-dark" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20a%20free%20quick%20visual%20preview%20for%20my%20salon%20business." target="_blank" rel="noopener noreferrer">Request My Preview</a>
       </div>
     </div>
   </div>
@@ -2183,10 +2556,10 @@
     <div class="section-head fade-in">
       <div>
         <span class="eyebrow"><i class="ph ph-devices"></i> Demo Showcase</span>
-        <h2 class="section-title">See what your business could look like.</h2>
+        <h2 class="section-title">Preview the trust your business can create online.</h2>
       </div>
       <p class="section-subtitle">
-        Click any demo to open a working one-page sample inside this site. Your final version is adjusted to your brand, photos, and offer.
+        Open a working sample and imagine your own photos, services, location, and WhatsApp contact inside the same clear structure.
       </p>
     </div>
 
@@ -2203,13 +2576,13 @@
         </div>
         <span class="niche-label">Clinic Website</span>
         <h3>Smile Dental Clinic</h3>
-        <p>Elegant clinic page with services, appointment CTA, trust sections, and Google Maps.</p>
+        <p>A clinic page built to show treatments, trust, location, and WhatsApp booking without making patients search.</p>
         <div class="tags">
           <span class="tag">Treatments</span>
           <span class="tag">Booking</span>
           <span class="tag">Maps</span>
         </div>
-        <button type="button" class="btn btn-secondary demo-open" data-title="Smile Dental Clinic" data-niche="Clinic Website" data-image="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1400&q=85" data-tags="Treatments,WhatsApp Booking,Doctor Profile,Google Maps">Open Working Demo</button>
+        <button type="button" class="btn btn-secondary demo-open" data-title="Smile Dental Clinic" data-niche="Clinic Website" data-image="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1400&q=85" data-tags="Treatments,WhatsApp Booking,Doctor Profile,Google Maps">Open Live Preview</button>
       </article>
 
       <article class="demo-card card fade-in">
@@ -2224,13 +2597,13 @@
         </div>
         <span class="niche-label">Car Dealer Website</span>
         <h3>Elite Motors Lebanon</h3>
-        <p>Luxury car dealer page with inventory highlights, feature tags, car photos, and inquiry buttons.</p>
+        <p>A car dealer page built to make inventory feel premium and help serious buyers inquire faster.</p>
         <div class="tags">
           <span class="tag">Inventory</span>
           <span class="tag">Photos</span>
           <span class="tag">WhatsApp</span>
         </div>
-        <button type="button" class="btn btn-secondary demo-open" data-title="Elite Motors Lebanon" data-niche="Car Dealer Website" data-image="https://images.unsplash.com/photo-1562141961-052bb2bff7a8?auto=format&fit=crop&w=1400&q=85" data-tags="Inventory,Car Photos,Availability,Direct Inquiry">Open Working Demo</button>
+        <button type="button" class="btn btn-secondary demo-open" data-title="Elite Motors Lebanon" data-niche="Car Dealer Website" data-image="https://images.unsplash.com/photo-1562141961-052bb2bff7a8?auto=format&fit=crop&w=1400&q=85" data-tags="Inventory,Car Photos,Availability,Direct Inquiry">Open Live Preview</button>
       </article>
 
       <article class="demo-card card fade-in">
@@ -2245,13 +2618,13 @@
         </div>
         <span class="niche-label">Gym Website</span>
         <h3>FitHouse Gym</h3>
-        <p>Strong gym page with memberships, trainer sections, transformation gallery, and join CTA.</p>
+        <p>A gym page built to explain memberships, show transformations, and turn interested visitors into WhatsApp leads.</p>
         <div class="tags">
           <span class="tag">Plans</span>
           <span class="tag">Trainers</span>
           <span class="tag">Join CTA</span>
         </div>
-        <button type="button" class="btn btn-secondary demo-open" data-title="FitHouse Gym" data-niche="Gym Website" data-image="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1400&q=85" data-tags="Memberships,Trainers,Class Schedule,WhatsApp Joining">Open Working Demo</button>
+        <button type="button" class="btn btn-secondary demo-open" data-title="FitHouse Gym" data-niche="Gym Website" data-image="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1400&q=85" data-tags="Memberships,Trainers,Class Schedule,WhatsApp Joining">Open Live Preview</button>
       </article>
     </div>
   </div>
@@ -2261,28 +2634,23 @@
   <div class="container">
     <div class="section-head fade-in">
       <div>
-        <span class="eyebrow"><i class="ph ph-squares-four"></i> Included Features</span>
-        <h2 class="section-title">Everything your business needs to look professional online.</h2>
+        <span class="eyebrow"><i class="ph ph-squares-four"></i> What You Get</span>
+        <h2 class="section-title">Everything your business needs to look trusted online.</h2>
       </div>
       <p class="section-subtitle">
-        Built to be simple for your customer, clean for your brand, and easy to use on mobile.
+        No bloated website. Just the sections that help customers understand you, trust you, and contact you fast.
       </p>
     </div>
 
     <div class="features-grid">
-      <div class="feature-card card fade-in"><div class="icon-box"><i class="ph ph-device-mobile"></i></div><h3>Mobile-friendly design</h3><p>Looks polished on phones first, because most local customers browse on mobile.</p></div>
-      <div class="feature-card card fade-in"><div class="icon-box"><i class="ph ph-whatsapp-logo"></i></div><h3>WhatsApp button</h3><p>Direct contact buttons placed where customers naturally want to ask questions.</p></div>
-      <div class="feature-card card fade-in"><div class="icon-box"><i class="ph ph-map-pin"></i></div><h3>Google Maps section</h3><p>Make your location clear with an embedded map area and address section.</p></div>
-      <div class="feature-card card fade-in"><div class="icon-box"><i class="ph ph-list-checks"></i></div><h3>Services section</h3><p>Organize your services so people understand what you offer quickly.</p></div>
-      <div class="feature-card card fade-in"><div class="icon-box"><i class="ph ph-images"></i></div><h3>Photo gallery</h3><p>Show your place, work, products, cars, food, or transformations professionally.</p></div>
-      <div class="feature-card card fade-in"><div class="icon-box"><i class="ph ph-instagram-logo"></i></div><h3>Instagram link</h3><p>Connect your active social page without forcing customers to search for details.</p></div>
-      <div class="feature-card card fade-in"><div class="icon-box"><i class="ph ph-envelope-simple"></i></div><h3>Contact form</h3><p>Add a clean inquiry form for customers who prefer writing details.</p></div>
-      <div class="feature-card card fade-in"><div class="icon-box"><i class="ph ph-gauge"></i></div><h3>Fast loading</h3><p>Clean code and focused sections help the page feel smooth and responsive.</p></div>
-      <div class="feature-card card fade-in"><div class="icon-box"><i class="ph ph-layout"></i></div><h3>Clean visual layout</h3><p>Premium spacing, readable text, and a structure that feels trustworthy.</p></div>
-      <div class="feature-card card fade-in"><div class="icon-box"><i class="ph ph-magnifying-glass"></i></div><h3>Basic SEO structure</h3><p>Proper titles, sections, headings, and page structure for a stronger foundation.</p></div>
-      <div class="feature-card card fade-in"><div class="icon-box"><i class="ph ph-clock"></i></div><h3>First draft in 48 hours</h3><p>After deposit and content collection, the first draft is sent within 48 hours.</p></div>
-      <div class="feature-card card fade-in"><div class="icon-box"><i class="ph ph-pencil-simple"></i></div><h3>2 revisions included</h3><p>Fine-tune your page before launch so it feels right for your business.</p></div>
+      <div class="feature-card card fade-in"><div class="icon-box"><i class="ph ph-device-mobile"></i></div><h3>Mobile-first website</h3><p>Your business looks clean and serious on the phones where most customers will first see you.</p></div>
+      <div class="feature-card card fade-in"><div class="icon-box"><i class="ph ph-whatsapp-logo"></i></div><h3>WhatsApp inquiry flow</h3><p>Clear buttons guide visitors to message you the moment they are ready to ask or book.</p></div>
+      <div class="feature-card card fade-in"><div class="icon-box"><i class="ph ph-map-pin"></i></div><h3>Google Maps location section</h3><p>Make your address, area, and visit path obvious so customers do not need to ask twice.</p></div>
+      <div class="feature-card card fade-in"><div class="icon-box"><i class="ph ph-images"></i></div><h3>Professional photo gallery</h3><p>Show your place, work, products, cars, food, or transformations in a way that builds confidence.</p></div>
+      <div class="feature-card card fade-in"><div class="icon-box"><i class="ph ph-clock"></i></div><h3>First draft in 48 hours</h3><p>After deposit and content collection, you receive the first version fast so you can review and launch sooner.</p></div>
     </div>
+    <h2> <br>&nbsp; Also included:</h2>
+    <p> <br> &nbsp; Instagram connection, optional contact form, basic speed cleanup, and simple copy improvement.</p>
   </div>
 </section>
 
@@ -2291,85 +2659,162 @@
     <div class="section-head fade-in">
       <div>
         <span class="eyebrow"><i class="ph ph-tag"></i> Packages</span>
-        <h2 class="section-title">Simple packages. Fast delivery. Clear payment.</h2>
+        <h2 class="section-title">Choose the website package that makes your business easier to trust and contact.</h2>
       </div>
       <p class="section-subtitle">
-        Choose the level that fits your business now. Upgrade later when you need more sections or care.
+        Simple packages for Lebanese businesses that need a clean online presence, clearer services, stronger presentation, and more WhatsApp inquiries.
       </p>
-    </div>
-
-    <div class="launch-offer fade-in">
-      <div>
-        <strong>Launch offer: 3 spots this week.</strong>
-        <span>we are taking 3 businesses this week at the starter price before increasing prices.</span>
-      </div>
-      <a class="btn btn-primary" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20to%20start%20the%20Starter%20Website%20package." target="_blank" rel="noopener noreferrer">Claim Starter Price</a>
     </div>
 
     <div class="pricing-grid">
       <article class="price-card card fade-in">
-        <h3>Starter Website</h3>
+        <span class="package-kicker">Fast Launch</span>
+        <h3>Launch Website</h3>
         <div class="price">$199</div>
-        <p>For small businesses that need a clean online presence fast.</p>
+        <p>For small businesses that need to look legitimate online fast — without paying agency prices.</p>
+        <p>
+          Get a clean one-page website that explains what you do, shows your work, builds basic trust, and gives customers one obvious next step: message you on WhatsApp.
+        </p>
+
+        <span class="package-section-label">What’s included:</span>
         <ul class="includes">
-          <li><i class="ph ph-check-circle"></i> One-page website</li>
-          <li><i class="ph ph-check-circle"></i> Services section</li>
-          <li><i class="ph ph-check-circle"></i> Photo gallery</li>
-          <li><i class="ph ph-check-circle"></i> WhatsApp button</li>
-          <li><i class="ph ph-check-circle"></i> Google Maps</li>
-          <li><i class="ph ph-check-circle"></i> Instagram link</li>
-          <li><i class="ph ph-check-circle"></i> Contact form</li>
-          <li><i class="ph ph-check-circle"></i> Mobile-friendly design</li>
+          <li><i class="ph ph-check-circle"></i> Professional one-page website</li>
+          <li><i class="ph ph-check-circle"></i> Hero section that makes your offer clear</li>
+          <li><i class="ph ph-check-circle"></i> Services section written clearly</li>
+          <li><i class="ph ph-check-circle"></i> Photo gallery to show your work or products</li>
+          <li><i class="ph ph-check-circle"></i> WhatsApp click-to-chat buttons</li>
+          <li><i class="ph ph-check-circle"></i> Google Maps location section</li>
+          <li><i class="ph ph-check-circle"></i> Instagram connection</li>
+          <li><i class="ph ph-check-circle"></i> Optional contact form</li>
+          <li><i class="ph ph-check-circle"></i> Mobile-first design</li>
+          <li><i class="ph ph-check-circle"></i> Clean, focused page structure</li>
           <li><i class="ph ph-check-circle"></i> First draft in 48 hours</li>
-          <li><i class="ph ph-check-circle"></i> 2 revisions</li>
+          <li><i class="ph ph-check-circle"></i> 2 rounds of revision included</li>
         </ul>
-        <a class="btn btn-secondary" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20to%20start%20the%20Starter%20Website%20package." target="_blank" rel="noopener noreferrer">Start Starter Website</a>
+
+        <div class="package-bonus">
+          <strong>Bonus included:</strong>
+          <span>Simple copy cleanup so your business sounds clearer and more serious.</span>
+          <span>WhatsApp CTA wording that makes contacting you easy.</span>
+          <span>Trust section to reduce hesitation before customers message you.</span>
+        </div>
+
+        <div class="package-best">
+          <strong>Best for:</strong>
+          <span>Small shops, salons, barbers, cafés, clinics, freelancers, local service providers, and new businesses that need credibility fast.</span>
+        </div>
+
+        <div class="package-guarantee">
+          <strong>Safe guarantee:</strong>
+          <span>If the first draft does not make your business look clearer and more professional than your current online presence, I will improve it within the included revision rounds.</span>
+        </div>
+
+        <a class="btn btn-secondary" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20to%20launch%20my%20website%20with%20the%20Launch%20Website%20package." target="_blank" rel="noopener noreferrer">Launch My Website</a>
+        <a class="package-cta-note" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20am%20interested%20in%20the%20Launch%20Website%20package.%20Message%20me%20now%20and%20tell%20me%20if%20this%20package%20fits%20my%20business." target="_blank" rel="noopener noreferrer">Message me now and I’ll tell you which package fits your business.</a>
       </article>
 
       <article class="price-card card featured fade-in">
-        <span class="popular-badge">Most Popular</span>
-        <h3>Business Website</h3>
+        <span class="popular-badge">Most Popular — Best for serious businesses</span>
+        <span class="package-kicker">Business Website</span>
+        <h3>Client-Ready Business Website</h3>
         <div class="price">$349</div>
-        <p>For businesses that want a stronger, more premium presentation.</p>
+        <p>For businesses that want a stronger, more premium presentation designed to create trust before the customer contacts you.</p>
+        <p>
+          This package gives your business more sections, better structure, stronger trust-building, and a clearer path from visitor to WhatsApp inquiry.
+        </p>
+
+        <span class="package-section-label">Everything in Launch Website, plus:</span>
         <ul class="includes">
-          <li><i class="ph ph-check-circle"></i> Everything in Starter</li>
-          <li><i class="ph ph-check-circle"></i> More advanced design</li>
-          <li><i class="ph ph-check-circle"></i> More content sections</li>
-          <li><i class="ph ph-check-circle"></i> Advanced gallery or inventory section</li>
-          <li><i class="ph ph-check-circle"></i> FAQ section</li>
-          <li><i class="ph ph-check-circle"></i> Example results section</li>
-          <li><i class="ph ph-check-circle"></i> Better conversion layout</li>
-          <li><i class="ph ph-check-circle"></i> Basic SEO structure</li>
-          <li><i class="ph ph-check-circle"></i> Priority delivery</li>
+          <li><i class="ph ph-check-circle"></i> More premium custom design direction</li>
+          <li><i class="ph ph-check-circle"></i> More sections to answer customer questions</li>
+          <li><i class="ph ph-check-circle"></i> Stronger page structure for trust and clarity</li>
+          <li><i class="ph ph-check-circle"></i> Services, products, or inventory showcase</li>
+          <li><i class="ph ph-check-circle"></i> Advanced gallery, menu, or inventory section</li>
+          <li><i class="ph ph-check-circle"></i> FAQ section to reduce customer hesitation</li>
+          <li><i class="ph ph-check-circle"></i> Testimonials or reviews section</li>
+          <li><i class="ph ph-check-circle"></i> Conversion-focused layout</li>
+          <li><i class="ph ph-check-circle"></i> Basic SEO-friendly structure</li>
+          <li><i class="ph ph-check-circle"></i> Priority build queue</li>
+          <li><i class="ph ph-check-circle"></i> Stronger WhatsApp inquiry flow</li>
         </ul>
-        <a class="btn btn-primary" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20to%20start%20the%20Business%20Website%20package." target="_blank" rel="noopener noreferrer">Start Business Website</a>
+
+        <div class="package-bonus">
+          <strong>Bonus included:</strong>
+          <span>Website copy improved for clarity and trust.</span>
+          <span>FAQ or objection-handling section to reduce hesitation.</span>
+          <span>Google Maps, Instagram, and WhatsApp integrated clearly.</span>
+          <span>Simple lead tracking sheet to measure inquiries.</span>
+          <span>WhatsApp follow-up template for new inquiries.</span>
+        </div>
+
+        <div class="package-best">
+          <strong>Best for:</strong>
+          <span>Businesses that already have customers and want to look more serious online: clinics, real estate agents, restaurants, gyms, beauty centers, repair services, agencies, and local service businesses.</span>
+        </div>
+
+        <div class="package-guarantee">
+          <strong>Safe guarantee:</strong>
+          <span>If your new website does not look more professional, clearer, and more trustworthy than your current online presence, I will improve it within the included revision rounds.</span>
+        </div>
+
+        <a class="btn btn-primary" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20to%20build%20my%20business%20website%20with%20the%20Client-Ready%20Business%20Website%20package." target="_blank" rel="noopener noreferrer">Build My Client-Ready Website</a>
+        <a class="package-cta-note" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20am%20interested%20in%20the%20Client-Ready%20Business%20Website%20package.%20Message%20me%20now%20and%20tell%20me%20if%20this%20package%20fits%20my%20business." target="_blank" rel="noopener noreferrer">Message me now and I’ll tell you which package fits your business.</a>
       </article>
 
       <article class="price-card card fade-in">
+        <span class="package-kicker">Maintenance</span>
         <h3>Website Care Plan</h3>
-        <div class="price">$25–$50<span>/month</span></div>
-        <p>For businesses that want their website maintained.</p>
+        <div class="price">$35<span>/month</span></div>
+        <p>For business owners who want their website kept fresh, working, and updated without chasing a developer each time.</p>
+        <p>
+          Your website should not become outdated after launch. This plan keeps small edits, updates, backups, and basic support handled.
+        </p>
+
+        <span class="package-section-label">What’s included:</span>
         <ul class="includes">
-          <li><i class="ph ph-check-circle"></i> Small edits</li>
-          <li><i class="ph ph-check-circle"></i> Hosting management</li>
-          <li><i class="ph ph-check-circle"></i> Updates</li>
+          <li><i class="ph ph-check-circle"></i> Small monthly text or image edits</li>
+          <li><i class="ph ph-check-circle"></i> Service, price, photo, or opening-hour updates</li>
+          <li><i class="ph ph-check-circle"></i> Basic hosting management</li>
+          <li><i class="ph ph-check-circle"></i> Website update checks</li>
           <li><i class="ph ph-check-circle"></i> Backups</li>
-          <li><i class="ph ph-check-circle"></i> Basic support</li>
-          <li><i class="ph ph-check-circle"></i> Keeping the site fresh</li>
+          <li><i class="ph ph-check-circle"></i> Basic support for small issues</li>
+          <li><i class="ph ph-check-circle"></i> Keeping your website fresh after launch</li>
+          <li><i class="ph ph-check-circle"></i> Minor issue fixes</li>
+          <li><i class="ph ph-check-circle"></i> Monthly website checkup</li>
         </ul>
-        <a class="btn btn-secondary" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20to%20add%20the%20Website%20Care%20Plan%20to%20my%20website." target="_blank" rel="noopener noreferrer">Add Care Plan</a>
+
+        <div class="package-best">
+          <strong>Best for:</strong>
+          <span>Business owners who want peace of mind after launch and do not want small website changes to become a headache.</span>
+        </div>
+
+        <div class="package-guarantee">
+          <strong>Simple terms:</strong>
+          <span>Includes small edits and basic care only. Bigger redesigns, new pages, advanced features, or major changes are quoted separately.</span>
+        </div>
+
+        <a class="btn btn-secondary" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20to%20add%20the%20Website%20Care%20Plan%20to%20my%20website." target="_blank" rel="noopener noreferrer">Add Website Care</a>
+        <a class="package-cta-note" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20am%20interested%20in%20the%20Website%20Care%20Plan.%20Message%20me%20now%20and%20tell%20me%20if%20this%20package%20fits%20my%20business." target="_blank" rel="noopener noreferrer">Message me now and I’ll tell you which package fits your business.</a>
       </article>
     </div>
 
-    <div class="payment-box fade-in">
-      <h3><strong>$100 deposit reserves your spot.</strong></h3>
-      <p>
-        We start after the deposit, send the first draft within 48 hours, and the rest is paid after approval before launch.
-      </p>
-      <p>
-        Payment available by cash, bank transfer, Whish, OMT, Western Union, or your preferred local method.
-      </p>
+    <div class="package-helper card fade-in">
+      <div>
+        <span class="eyebrow"><i class="ph ph-question"></i> Not sure which website you need?</span>
+        <h3>Not every business needs the same website. Choose based on your current goal.</h3>
+        <p>Choose <strong>Launch Website</strong> if you need credibility fast and want a clean online presence.</p>
+        <p>Choose <strong>Client-Ready Business Website</strong> if you want a stronger presentation that answers more questions and creates more serious inquiries.</p>
+        <p>Choose <strong>Website Care Plan</strong> if you want the website maintained after it goes live.</p>
+        <p>Still unsure? Send your business type on WhatsApp and I will recommend the right option honestly — even if the cheaper package fits you.</p>
+      </div>
+      <a class="btn btn-primary" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20am%20not%20sure%20which%20website%20package%20I%20need.%20Please%20recommend%20the%20right%20option%20honestly%20for%20my%20business." target="_blank" rel="noopener noreferrer">
+        <i class="ph ph-whatsapp-logo"></i>
+        Ask Which Package Fits
+      </a>
     </div>
+
+    
+
   </div>
 </section>
 
@@ -2378,10 +2823,10 @@
     <div class="section-head fade-in">
       <div>
         <span class="eyebrow"><i class="ph ph-rocket-launch"></i> Process</span>
-        <h2 class="section-title">From WhatsApp message to first draft in 48 hours.</h2>
+        <h2 class="section-title">A simple process from WhatsApp message to first draft in 48 hours.</h2>
       </div>
       <p class="section-subtitle">
-        A clear, direct process made for busy business owners who want the website handled properly.
+        No complicated meetings. No confusing tech. Send the key details, approve the direction, and get your first draft fast.
       </p>
     </div>
 
@@ -2389,22 +2834,22 @@
       <div class="step-card card fade-in">
         <div class="step-number">1</div>
         <div class="icon-box"><i class="ph ph-hand-coins"></i></div>
-        <h3>$100 Deposit & Info</h3>
-        <p>You send your business type, photos, Instagram, location, services, and deposit to reserve the slot.</p>
+        <h3>Reserve Your Build</h3>
+        <p>You send your business type, photos, Instagram, location, services, and $100 deposit so your build is reserved.</p>
       </div>
 
       <div class="step-card card fade-in">
         <div class="step-number">2</div>
         <div class="icon-box"><i class="ph ph-clock-countdown"></i></div>
         <h3>First Draft in 48 Hours</h3>
-        <p>We build the first clean version and send it for your review within 48 hours after starting.</p>
+        <p>I build the first clean version and send it for review within 48 hours after deposit and content are received.</p>
       </div>
 
       <div class="step-card card fade-in">
         <div class="step-number">3</div>
         <div class="icon-box"><i class="ph ph-rocket"></i></div>
         <h3>Revisions & Launch</h3>
-        <p>You request final edits, approve the website, pay the remaining balance, and we launch it.</p>
+        <p>You request final edits, approve the website, pay the remaining balance, and your site is launched.</p>
       </div>
     </div>
   </div>
@@ -2415,10 +2860,10 @@
     <div class="section-head fade-in">
       <div>
         <span class="eyebrow"><i class="ph ph-scales"></i> Website Advantage</span>
-        <h2 class="section-title">Instagram is useful. A website makes you easier to trust and contact.</h2>
+        <h2 class="section-title">Instagram gets attention. A website turns attention into trust and contact.</h2>
       </div>
       <p class="section-subtitle">
-        Your Instagram can stay active. The website becomes the clean page customers visit when they need details fast.
+        Keep your Instagram active. The website becomes the organized page customers use when they want details, location, proof, and a fast way to message you.
       </p>
     </div>
 
@@ -2426,57 +2871,43 @@
       <div class="compare-card card fade-in">
         <h3>Instagram Only</h3>
         <ul class="compare-list negative">
-          <li><i class="ph ph-x-circle"></i> Posts disappear quickly</li>
-          <li><i class="ph ph-x-circle"></i> Services are hard to organize</li>
-          <li><i class="ph ph-x-circle"></i> Customers must search for information</li>
-          <li><i class="ph ph-x-circle"></i> No clear structure</li>
-          <li><i class="ph ph-x-circle"></i> Harder to use on business cards and ads</li>
-          <li><i class="ph ph-x-circle"></i> Less professional for serious clients</li>
+          <li><i class="ph ph-x-circle"></i> Important details get buried</li>
+          <li><i class="ph ph-x-circle"></i> Services and prices are hard to organize</li>
+          <li><i class="ph ph-x-circle"></i> Customers must search through posts and highlights</li>
+          <li><i class="ph ph-x-circle"></i> No clear customer journey</li>
+          <li><i class="ph ph-x-circle"></i> Less effective for ads, QR codes, and business cards</li>
+          <li><i class="ph ph-x-circle"></i> Can feel incomplete to serious buyers</li>
         </ul>
       </div>
 
       <div class="compare-card card fade-in">
         <h3>Website + Instagram</h3>
         <ul class="compare-list positive">
-          <li><i class="ph ph-check-circle"></i> One clear page</li>
-          <li><i class="ph ph-check-circle"></i> Services organized</li>
-          <li><i class="ph ph-check-circle"></i> WhatsApp button always visible</li>
-          <li><i class="ph ph-check-circle"></i> Google Maps included</li>
-          <li><i class="ph ph-check-circle"></i> More trust</li>
-          <li><i class="ph ph-check-circle"></i> Better for ads, QR codes, and business cards</li>
-          <li><i class="ph ph-check-circle"></i> Easier for customers to contact you</li>
+          <li><i class="ph ph-check-circle"></i> One clear page for your business</li>
+          <li><i class="ph ph-check-circle"></i> Services, proof, and location organized</li>
+          <li><i class="ph ph-check-circle"></i> WhatsApp contact always easy to find</li>
+          <li><i class="ph ph-check-circle"></i> Google Maps and contact details included</li>
+          <li><i class="ph ph-check-circle"></i> More professional first impression</li>
+          <li><i class="ph ph-check-circle"></i> Better link for Instagram bio, ads, QR codes, and business cards</li>
+          <li><i class="ph ph-check-circle"></i> Easier for customers to understand you and contact you</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<section class="care" id="care">
-  <div class="container">
-    <div class="care-box fade-in">
-      <div>
-        <span class="eyebrow"><i class="ph ph-shield-check"></i> Monthly Care</span>
-        <h2>Keep Your Site Fresh — From $25/month</h2>
-        <p>
-          After launch, we can manage small edits, updates, backups, hosting support, and simple changes
-          so your website stays clean and professional.
-        </p>
-      </div>
-      <a class="btn btn-primary" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20to%20add%20the%20Website%20Care%20Plan%20to%20my%20website." target="_blank" rel="noopener noreferrer">Add Care Plan to My Website</a>
-    </div>
-  </div>
-</section>
+
 
 <section id="examples">
   <div class="container">
     <div class="section-head fade-in">
       <div>
         <span class="eyebrow"><i class="ph ph-chart-line-up"></i> Example Outcomes</span>
-        <h2 class="section-title">Example Results We Aim For</h2>
+        <h2 class="section-title">What the website is designed to improve.</h2>
       </div>
       <p class="section-subtitle">
-        These are the practical outcomes the website is designed around. Once real client results are available,
-        this section should be replaced with real testimonials.
+        These are realistic outcomes the website is built toward. They are not fake testimonials or guaranteed sales —
+        they show the kind of clarity and trust your page should create.
       </p>
     </div>
 
@@ -2484,22 +2915,22 @@
       <div class="testimonial-card card fade-in">
         <div class="icon-box"><i class="ph ph-tooth"></i></div>
         <h3>Clinic/Dentist Example</h3>
-        <p>Patients can quickly see services, opening hours, location, and the WhatsApp booking button without searching through posts.</p>
-        <span class="testimonial-label">Target result: clearer bookings and fewer repeated questions.</span>
+        <p>Patients quickly see treatments, trust signals, opening hours, location, and the WhatsApp booking button without searching through posts.</p>
+        <span class="testimonial-label">Designed for: clearer booking path and fewer repeated questions.</span>
       </div>
 
       <div class="testimonial-card card fade-in">
         <div class="icon-box"><i class="ph ph-car-profile"></i></div>
         <h3>Car Dealer Example</h3>
-        <p>Buyers can view featured cars, photos, availability, showroom details, and message directly from one organized page.</p>
-        <span class="testimonial-label">Target result: cleaner presentation for serious buyers.</span>
+        <p>Buyers view featured cars, photos, availability, showroom details, and message directly from one organized page.</p>
+        <span class="testimonial-label">Designed for: cleaner presentation and easier serious-buyer inquiries.</span>
       </div>
 
       <div class="testimonial-card card fade-in">
         <div class="icon-box"><i class="ph ph-barbell"></i></div>
         <h3>Gym Example</h3>
-        <p>Visitors can understand memberships, trainers, location, and joining options before sending a WhatsApp message.</p>
-        <span class="testimonial-label">Target result: easier contact and stronger first impression.</span>
+        <p>Visitors understand memberships, trainers, location, and joining options before sending a WhatsApp message.</p>
+        <span class="testimonial-label">Designed for: easier contact and stronger first impression.</span>
       </div>
     </div>
   </div>
@@ -2509,26 +2940,26 @@
   <div class="container faq-wrap">
     <div class="fade-in">
       <span class="eyebrow"><i class="ph ph-question"></i> FAQ</span>
-      <h2 class="section-title">Questions business owners ask before starting.</h2>
+      <h2 class="section-title">Clear answers before you reserve your website.</h2>
       <p class="section-subtitle">
-        Clear answers before you send the deposit and start the website.
+        Know exactly what happens before you send the deposit and start the build.
       </p>
     </div>
 
     <div class="faq-list fade-in">
       <div class="faq-item active">
-        <button class="faq-question" type="button">How fast can you build the website? <i class="ph ph-plus"></i></button>
-        <div class="faq-answer"><p>The first draft is sent within 48 hours after the $100 deposit is paid and the needed business information is received.</p></div>
+        <button class="faq-question" type="button">How fast will I see the first draft? <i class="ph ph-plus"></i></button>
+        <div class="faq-answer"><p>You receive the first draft within 48 hours after the $100 deposit is paid and the needed business information is received.</p></div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question" type="button">What do you need from me? <i class="ph ph-plus"></i></button>
-        <div class="faq-answer"><p>Your business name, niche, services, photos, location, WhatsApp number, Instagram link, and any text you want included. If your content is not ready, we can help organize it.</p></div>
+        <button class="faq-question" type="button">What do you need from me to start? <i class="ph ph-plus"></i></button>
+        <div class="faq-answer"><p>Your business name, niche, services, photos, location, WhatsApp number, Instagram connection, and any text you want included. If your content is not ready, we can help organize it.</p></div>
       </div>
 
       <div class="faq-item">
         <button class="faq-question" type="button">Do I need a domain and hosting? <i class="ph ph-plus"></i></button>
-        <div class="faq-answer"><p>Not before we start. We can guide you with domain and hosting options, then help connect the website when it is ready to launch.</p></div>
+        <div class="faq-answer"><p>Not before we start. I can guide you through domain and hosting options, then help connect everything when the website is ready to launch.</p></div>
       </div>
 
       <div class="faq-item">
@@ -2538,22 +2969,22 @@
 
       <div class="faq-item">
         <button class="faq-question" type="button">Can you connect WhatsApp? <i class="ph ph-plus"></i></button>
-        <div class="faq-answer"><p>Yes. The website can include visible WhatsApp buttons, a floating WhatsApp button, and direct message links throughout the page.</p></div>
+        <div class="faq-answer"><p>Yes. The website can include visible WhatsApp buttons, a floating WhatsApp button, and direct message links placed where customers are most likely to contact you.</p></div>
       </div>
 
       <div class="faq-item">
         <button class="faq-question" type="button">Do I get revisions? <i class="ph ph-plus"></i></button>
-        <div class="faq-answer"><p>Yes. The Starter and Business packages include 2 revisions so we can adjust text, photos, sections, and layout details before launch.</p></div>
+        <div class="faq-answer"><p>Yes. The Launch Website and Client-Ready Business Website packages include 2 revision rounds so text, photos, sections, and layout details can be adjusted before launch.</p></div>
       </div>
 
       <div class="faq-item">
         <button class="faq-question" type="button">Do you build online stores? <i class="ph ph-plus"></i></button>
-        <div class="faq-answer"><p>This offer focuses on premium one-page business websites. Online stores can be discussed separately depending on products, payment method, delivery, and management needs.</p></div>
+        <div class="faq-answer"><p>This offer focuses on professional one-page business websites. Online stores can be discussed separately depending on products, payment method, delivery, and management needs.</p></div>
       </div>
 
       <div class="faq-item">
         <button class="faq-question" type="button">Is the $100 deposit refundable? <i class="ph ph-plus"></i></button>
-        <div class="faq-answer"><p>The deposit reserves your spot and starts the work. Once design work begins, it is not refundable, but it is deducted from your final website price.</p></div>
+        <div class="faq-answer"><p>The deposit reserves your build and starts the work. Once design work begins, it is not refundable, but it is deducted from your final website price.</p></div>
       </div>
     </div>
   </div>
@@ -2561,32 +2992,19 @@
 
 <section id="contact">
   <div class="container contact-grid">
-    <div class="contact-card card fade-in">
-      <span class="eyebrow"><i class="ph ph-paper-plane-tilt"></i> Start the Work</span>
-      <h2 class="section-title">Ready to look professional online this week?</h2>
-      <p class="section-subtitle">
-        Send your business name, niche, Instagram page, and photos. We’ll tell you what website fits you best
-        and can send a free quick visual preview. The working website starts after the $100 deposit.
-      </p>
-
-      <div class="contact-info">
-        <div><i class="ph ph-whatsapp-logo"></i> WhatsApp: https://wa.me/96171698012</div>
-        <div><i class="ph ph-instagram-logo"></i> Instagram: @crowncedarstudio</div>
-        <div><i class="ph ph-map-pin"></i> Lebanon</div>
-      </div>
-    </div>
+  
 
     <form class="form-card card fade-in" id="contactForm" novalidate>
       <div class="form-grid">
         <div class="form-group">
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" placeholder="Your name" required />
+          <label for="name">Your name</label>
+          <input id="name" name="name" type="text" placeholder="Example: Ahmad" required />
         </div>
 
         <div class="form-group">
           <label for="businessType">Business type</label>
           <select id="businessType" name="businessType" required>
-            <option value="">Choose type</option>
+            <option value="">Choose your business type</option>
             <option>Clinic/Dentist</option>
             <option>Car Dealer</option>
             <option>Gym</option>
@@ -2599,58 +3017,76 @@
 
         <div class="form-group">
           <label for="whatsapp">WhatsApp number</label>
-          <input id="whatsapp" name="whatsapp" type="tel" placeholder="+961..." required />
+          <input id="whatsapp" name="whatsapp" type="tel" placeholder="+961 70 000 000" required />
         </div>
 
         <div class="form-group">
-          <label for="instagram">Instagram link</label>
-          <input id="instagram" name="instagram" type="url" placeholder="https://instagram.com/..." />
+          <label for="instagram">Instagram connection</label>
+          <input id="instagram" name="instagram" type="url" placeholder="Instagram, Facebook, or current website link" />
         </div>
 
         <div class="form-group full">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Tell us about your business, services, photos, and what you need." required></textarea>
+          <label for="message">What do you want the website to do?</label>
+          <textarea id="message" name="message" placeholder="Tell me your business, main services, location, and whether you want more trust, more WhatsApp inquiries, or a cleaner online presence." required></textarea>
         </div>
       </div>
 
       <div class="form-actions">
         <button class="btn btn-primary" type="submit">
-          Open WhatsApp Inquiry
+          Send Website Inquiry
           <i class="ph ph-arrow-right"></i>
         </button>
-        <a class="btn btn-secondary" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20a%20website%20for%20my%20business." target="_blank" rel="noopener noreferrer">
+        <a class="btn btn-secondary" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20my%20business%20to%20look%20more%20trusted%20online%20and%20get%20more%20WhatsApp%20inquiries.%20Please%20tell%20me%20the%20best%20website%20package%20for%20my%20business." target="_blank" rel="noopener noreferrer">
           <i class="ph ph-whatsapp-logo"></i>
-          Chat on WhatsApp Now
+          Ask Directly on WhatsApp
         </a>
       </div>
 
-      <div class="form-message" id="formMessage">Thanks! We’ll contact you within a few hours.</div>
-      <div class="form-error" id="formError">Please fill in your name, business type, WhatsApp number, and message.</div>
+      <div class="form-message" id="formMessage">Your WhatsApp inquiry is ready. Press Send on WhatsApp to submit it.</div>
+      <div class="form-error" id="formError">Please add your name, business type, WhatsApp number, and what you need from the website.</div>
     </form>
   </div>
 </section>
-
+<section class="founder-section">
+  <div class="container">
+    <div class="founder-card fade-in">
+      <div class="founder-avatar"><img class="logo-img" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4IiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IkNyb3duQ2VkYXIgU3R1ZGlvIGxvZ28iPgogIDxkZWZzPgogICAgPHJhZGlhbEdyYWRpZW50IGlkPSJiZyIgY3g9IjMwJSIgY3k9IjIwJSIgcj0iODUlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjRkZGMEJCIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMC4zOCIgc3RvcC1jb2xvcj0iI0U3Qzc4MCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjAuNzIiIHN0b3AtY29sb3I9IiNDOUE5NkUiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjOEI2NjMzIi8+CiAgICA8L3JhZGlhbEdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJpbmsiIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMDYxNjI1Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzAyMDcwQyIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3QgeD0iNiIgeT0iNiIgd2lkdGg9IjExNiIgaGVpZ2h0PSIxMTYiIHJ4PSIzNCIgZmlsbD0idXJsKCNiZykiLz4KICA8cGF0aCBkPSJNMzEgNDVMNDQgMzBMNTYgNDVMNjQgMjVMNzIgNDVMODQgMzBMOTcgNDVMOTEgNTdIMzdMMzEgNDVaIiBmaWxsPSJ1cmwoI2luaykiIG9wYWNpdHk9Ii45NiIvPgogIDxwYXRoIGQ9Ik0zOCA2NEg5MCIgc3Ryb2tlPSJ1cmwoI2luaykiIHN0cm9rZS13aWR0aD0iNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBvcGFjaXR5PSIuOTYiLz4KICA8cGF0aCBkPSJNNjQgNjdDNTIgNzUgNDQgODYgNDEgMTAxQzUyIDk0IDU5IDg1IDY0IDczQzY5IDg1IDc2IDk0IDg3IDEwMUM4NCA4NiA3NiA3NSA2NCA2N1oiIGZpbGw9InVybCgjaW5rKSIgb3BhY2l0eT0iLjk2Ii8+CiAgPHBhdGggZD0iTTY0IDY3VjEwMSIgc3Ryb2tlPSIjRTdDNzgwIiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgb3BhY2l0eT0iLjciLz4KICA8cGF0aCBkPSJNNDkgODVDNTcgODMgNjIgNzkgNjQgNzNNNzkgODVDNzEgODMgNjYgNzkgNjQgNzMiIHN0cm9rZT0iI0U3Qzc4MCIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiIG9wYWNpdHk9Ii41NSIvPgo8L3N2Zz4=" alt="CrownCedar Studio logo" /></div>
+      <div>
+        <span class="eyebrow"><i class="ph ph-user-circle"></i> Founder</span>
+        <h2>Built by Melhem<sup>&trade;</sup> for Lebanese Businesses</h2>
+        <p>
+          I help local businesses turn scattered online information into one trusted website connected to WhatsApp,
+          Instagram, and Google Maps. The goal is simple: make your business easier to understand, easier to trust, and easier to contact.
+        </p>
+      </div>
+      <a class="btn btn-primary" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20my%20business%20to%20look%20more%20trusted%20online%20and%20get%20more%20WhatsApp%20inquiries.%20Please%20tell%20me%20the%20best%20website%20package%20for%20my%20business." target="_blank" rel="noopener noreferrer">
+        <i class="ph ph-whatsapp-logo"></i>
+        Message About My Website
+      </a>
+    </div>
+  </div>
+</section>
   </main>
 
   <footer class="footer">
     <div class="footer-grid">
       <div>
         <h2>CrownCedar Studio</h2>
-        <p>Websites for Lebanese Businesses in 48 Hours.</p>
+        <p>Get a trusted website for your Lebanese business in 48 hours.</p>
         <p>Lebanon</p>
-        <p class="final-line">We can start today.</p>
+        <p class="final-line">Send your business details today.</p>
       </div>
 
   <div class="footer-links">
-    <a href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20a%20website%20for%20my%20business." target="_blank" rel="noopener noreferrer">WhatsApp: https://wa.me/96171698012</a>
+    <a href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20my%20business%20to%20look%20more%20trusted%20online%20and%20get%20more%20WhatsApp%20inquiries.%20Please%20tell%20me%20the%20best%20website%20package%20for%20my%20business." target="_blank" rel="noopener noreferrer">WhatsApp: https://wa.me/96171698012</a>
     <a href="https://www.instagram.com/crowncedarstudio/" target="_blank" rel="noopener noreferrer" aria-label="CrownCedar Studio Instagram">Instagram: @crowncedarstudio</a>
-    <span>Privacy note: No data shared, ever.</span>
+    <span>Privacy note: your inquiry details are not shared.</span>
   </div>
 </div>
 
   </footer>
 
-  <a class="whatsapp-float" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20a%20website%20for%20my%20business." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+  <a class="whatsapp-float" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20my%20business%20to%20look%20more%20trusted%20online%20and%20get%20more%20WhatsApp%20inquiries.%20Please%20tell%20me%20the%20best%20website%20package%20for%20my%20business." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
     <i class="ph ph-whatsapp-logo"></i>
     <span>WhatsApp</span>
   </a>
@@ -2664,8 +3100,7 @@
         <span class="niche-label" id="lightboxNiche">Working Demo</span>
         <h3 id="lightboxTitle">Demo Title</h3>
         <p>
-          <strong>This is a real working demo preview.</strong> It opens as a complete one-page sample inside this site,
-          with sections, navigation, service cards, gallery, location area, and WhatsApp call-to-action.
+          <strong>This is a working preview.</strong> It shows how your business could present services, photos, location, and WhatsApp contact in one clear page.
         </p>
         <div class="lightbox-tags" id="lightboxTags"></div>
       </div>
@@ -3143,7 +3578,7 @@
           <p>${config.description}</p>
           <div class="demo-actions">
             <a class="demo-btn" href="https://wa.me/96171698012?text=${encodeURIComponent(config.whatsappText)}" target="_blank" rel="noopener noreferrer">${config.primaryCta}</a>
-            <a class="demo-btn secondary" href="#services">View Services</a>
+            <a class="demo-btn secondary" href="#services">View Details</a>
           </div>
         </div>
         <aside class="hero-card">
@@ -3179,7 +3614,7 @@
         <div class="info-strip">
           <div class="info-box"><strong>Address</strong><span>${config.address}</span></div>
           <div class="info-box"><strong>Hours</strong><span>${config.hours}</span></div>
-          <div class="info-box"><strong>Contact</strong><span>WhatsApp-connected inquiry button</span></div>
+          <div class="info-box"><strong>Contact</strong><span>Built for WhatsApp inquiries inquiry button</span></div>
         </div>
         <div class="map-box" style="margin-top:14px;">
           <div><strong>Google Maps Area</strong><span>Map embed placeholder for ${config.name}</span></div>
@@ -3200,17 +3635,17 @@
         name: "Smile Dental Clinic",
         logo: "SD",
         kicker: "Dental Clinic • Jounieh",
-        headline: "A calmer way to book your dental visit.",
-        description: "A premium clinic page that presents treatments, doctor trust, location, opening hours, and a direct WhatsApp booking path.",
+        headline: "Help patients trust your clinic before they book.",
+        description: "A premium clinic page that organizes treatments, doctor trust, location, opening hours, and a direct WhatsApp booking path.",
         primaryCta: "Book on WhatsApp",
-        panelTitle: "Clean clinic presentation",
-        panelText: "Designed for patients who want quick information before booking.",
-        servicesTitle: "Treatments organized clearly.",
-        servicesIntro: "No searching through posts. Patients see your main treatments in one professional section.",
-        galleryTitle: "Clinic photos and trust signals.",
-        galleryIntro: "Show the clinic environment, equipment, team, and before/after style visuals.",
-        locationTitle: "Easy to find and contact.",
-        locationIntro: "Location, working hours, and WhatsApp contact stay simple and visible.",
+        panelTitle: "A clearer clinic first impression",
+        panelText: "Designed for patients who want answers and reassurance before they book.",
+        servicesTitle: "Treatments organized for easier decisions.",
+        servicesIntro: "No searching through old posts. Patients see your main treatments in one professional section.",
+        galleryTitle: "Clinic photos that build trust.",
+        galleryIntro: "Show the clinic environment, equipment, team, and appropriate treatment visuals professionally.",
+        locationTitle: "Easy to find. Easy to contact.",
+        locationIntro: "Location, working hours, and WhatsApp contact stay simple, visible, and patient-friendly.",
         address: "Jounieh, Lebanon — exact map added before launch",
         hours: "Mon–Sat • 10:00 AM–7:00 PM",
         whatsappText: "Hello CrownCedar Studio, I want a website like the Smile Dental Clinic demo for my business.",
@@ -3222,8 +3657,8 @@
         heroImage: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1400&q=85",
         features: ["Appointments", "Treatments", "Location", "WhatsApp"],
         services: [
-          { icon: "🦷", title: "Dental Checkups", text: "Present routine visits, cleaning, and consultation details in a simple way." },
-          { icon: "✨", title: "Whitening", text: "Show cosmetic treatments with premium visuals and clear inquiry buttons." },
+          { icon: "🦷", title: "Dental Checkups", text: "Present routine visits, cleaning, and consultation details clearly." },
+          { icon: "✨", title: "Whitening", text: "Show cosmetic treatments with premium visuals and clear booking buttons." },
           { icon: "🛡️", title: "Implants & Care", text: "Give serious patients confidence with organized treatment information." }
         ],
         gallery: [
@@ -3239,17 +3674,17 @@
         name: "Elite Motors Lebanon",
         logo: "EM",
         kicker: "Car Dealer • Tripoli",
-        headline: "Luxury cars presented with confidence.",
-        description: "A high-end car dealer page with featured vehicles, availability, gallery, location, and direct WhatsApp buyer inquiries.",
+        headline: "Make your car inventory look serious before buyers call.",
+        description: "A high-end dealer page with featured vehicles, availability, gallery, location, and direct WhatsApp buyer inquiries.",
         primaryCta: "Ask About a Car",
-        panelTitle: "Premium inventory display",
-        panelText: "Built for buyers who want photos, details, availability, and fast contact.",
-        servicesTitle: "Vehicle information made simple.",
-        servicesIntro: "The page can highlight cars, financing, trade-ins, inspections, and dealership trust.",
+        panelTitle: "Premium inventory presentation",
+        panelText: "Built for buyers who want photos, details, availability, and a fast way to inquire.",
+        servicesTitle: "Vehicle information made easier to trust.",
+        servicesIntro: "The page can highlight available cars, financing, trade-ins, inspections, and dealership trust.",
         galleryTitle: "Car photos that sell the feeling.",
-        galleryIntro: "Show exterior, interior, details, and showroom atmosphere with a luxury layout.",
-        locationTitle: "Bring buyers to the showroom.",
-        locationIntro: "Make your showroom location, hours, and WhatsApp contact clear from one page.",
+        galleryIntro: "Show exterior, interior, details, and showroom atmosphere in a premium layout.",
+        locationTitle: "Help buyers take the next step.",
+        locationIntro: "Make your showroom location, hours, and WhatsApp contact clear from one organized page.",
         address: "Tripoli, Lebanon — exact showroom map added before launch",
         hours: "Mon–Sat • 9:00 AM–8:00 PM",
         whatsappText: "Hello CrownCedar Studio, I want a website like the Elite Motors Lebanon demo for my business.",
@@ -3261,7 +3696,7 @@
         heroImage: "https://images.unsplash.com/photo-1562141961-052bb2bff7a8?auto=format&fit=crop&w=1400&q=85",
         features: ["Inventory", "Availability", "Showroom", "WhatsApp"],
         services: [
-          { icon: "🚘", title: "Available Cars", text: "Feature vehicles with photos, model year, price range, and status." },
+          { icon: "🚘", title: "Available Cars", text: "Feature vehicles with photos, model year, price range, and availability status." },
           { icon: "📸", title: "Car Gallery", text: "Present clean exterior, interior, dashboard, and feature photos." },
           { icon: "📍", title: "Showroom Visit", text: "Help serious buyers find the location and message before visiting." }
         ],
@@ -3278,17 +3713,17 @@
         name: "FitHouse Gym",
         logo: "FH",
         kicker: "Gym • Beirut",
-        headline: "A stronger first impression for your fitness brand.",
+        headline: "Turn gym interest into clearer joining inquiries.",
         description: "A premium gym page with memberships, coaches, class info, transformation visuals, location, and direct WhatsApp joining.",
         primaryCta: "Join on WhatsApp",
-        panelTitle: "Built for quick signups",
-        panelText: "Designed to help visitors understand the gym and message fast.",
+        panelTitle: "Built for easier joining inquiries",
+        panelText: "Designed to help visitors understand the gym, trust the atmosphere, and message fast.",
         servicesTitle: "Programs and memberships upfront.",
-        servicesIntro: "Show your memberships, coaching options, classes, and transformation focus clearly.",
-        galleryTitle: "Show the energy of the gym.",
-        galleryIntro: "Use strong visuals for equipment, training, coaches, and atmosphere.",
+        servicesIntro: "Show memberships, coaching options, classes, and transformation focus clearly.",
+        galleryTitle: "Show the energy and results of the gym.",
+        galleryIntro: "Use strong visuals for equipment, training, coaches, atmosphere, and transformations.",
         locationTitle: "Make joining easier.",
-        locationIntro: "The demo keeps location, hours, and WhatsApp contact visible for new members.",
+        locationIntro: "The page keeps location, hours, and WhatsApp contact visible for new members.",
         address: "Beirut, Lebanon — exact branch map added before launch",
         hours: "Mon–Sun • 6:00 AM–11:00 PM",
         whatsappText: "Hello CrownCedar Studio, I want a website like the FitHouse Gym demo for my business.",
@@ -3385,13 +3820,13 @@
     formError.classList.remove("show");
 
     if (!name || !businessType || !whatsapp || !message) {
-      formError.textContent = "Please fill in your name, business type, WhatsApp number, and message.";
+      formError.textContent = "Please add your name, business type, WhatsApp number, and what you need from the website.";
       formError.classList.add("show");
       return;
     }
 
     const inquiryText = `
-Hello CrownCedar Studio, I want a website.
+Hello CrownCedar Studio, I want a website that makes my business look trusted and easier to contact.
 
 Name: ${name}
 Business Type: ${businessType}
@@ -3401,7 +3836,7 @@ Instagram: ${instagram || "Not provided"}
 Message:
 ${message}
 
-I want the free quick visual preview. I understand the working website starts after the $100 deposit.
+Please recommend the right package for my business. I understand the working website starts after the $100 deposit.
     `.trim();
 
     const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(inquiryText)}`;
