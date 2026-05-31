@@ -2458,6 +2458,73 @@ html.instagram-browser .mobile-menu {
   }
 }
 
+/* =========================================================
+   FOOTER SOCIAL ICON PATCH — WhatsApp + Instagram as round links
+   ========================================================= */
+.footer-socials {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.footer-icon-link {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.16);
+  color: var(--white) !important;
+  font-size: 1.45rem;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.22),
+    0 16px 38px rgba(0,0,0,0.28);
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease), border-color .25s var(--ease);
+}
+
+.footer-icon-link:hover {
+  transform: translateY(-4px) scale(1.04);
+  border-color: rgba(255,255,255,0.28);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.28),
+    0 22px 52px rgba(0,0,0,0.36);
+}
+
+.footer-whatsapp {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: #03130a !important;
+}
+
+.footer-instagram {
+  background:
+    radial-gradient(circle at 30% 108%, #fdf497 0 12%, #fd5949 42%, #d6249f 64%, #285AEB 100%);
+}
+
+.footer-privacy-note {
+  display: block;
+  margin-top: 12px;
+  color: rgba(255,255,255,0.62) !important;
+  font-size: .9rem;
+  font-weight: 750;
+  text-align: right;
+}
+
+@media (max-width: 760px) {
+  .footer-socials {
+    justify-content: flex-start;
+  }
+
+  .footer-icon-link {
+    width: 48px;
+    height: 48px;
+  }
+
+  .footer-privacy-note {
+    text-align: left;
+  }
+}
+
 </style>
 
 </head>
@@ -2827,25 +2894,10 @@ html.instagram-browser .mobile-menu {
           <li><i class="ph ph-check-circle"></i> 2 rounds of revision included</li>
         </ul>
 
-        <div class="package-bonus">
-          <strong>Bonus included:</strong>
-          <span>Simple copy cleanup so your business sounds clearer and more serious.</span>
-          <span>WhatsApp CTA wording that makes contacting you easy.</span>
-          <span>Trust section to reduce hesitation before customers message you.</span>
-        </div>
-
-        <div class="package-best">
-          <strong>Best for:</strong>
-          <span>Small shops, salons, barbers, cafés, clinics, freelancers, local service providers, and new businesses that need credibility fast.</span>
-        </div>
-
-        <div class="package-guarantee">
-          <strong>Safe guarantee:</strong>
-          <span>If the first draft does not make your business look clearer and more professional than your current online presence, I will improve it within the included revision rounds.</span>
-        </div>
+       
 
         <a class="btn btn-secondary" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20to%20launch%20my%20website%20with%20the%20Launch%20Website%20package." target="_blank" rel="noopener noreferrer">Launch My Website</a>
-        <a class="package-cta-note" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20am%20interested%20in%20the%20Launch%20Website%20package.%20Message%20me%20now%20and%20tell%20me%20if%20this%20package%20fits%20my%20business." target="_blank" rel="noopener noreferrer">Message me now and I’ll tell you which package fits your business.</a>
+        <a class="package-cta-note" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20am%20interested%20in%20the%20Launch%20Website%20package.%20Message%20me%20now%20and%20tell%20me%20if%20this%20package%20fits%20my%20business." target="_blank" rel="noopener noreferrer">Message us now and I’ll tell you which package fits your business.</a>
       </article>
 
       <article class="price-card card featured fade-in">
@@ -2873,27 +2925,14 @@ html.instagram-browser .mobile-menu {
           <li><i class="ph ph-check-circle"></i> Stronger WhatsApp inquiry flow</li>
         </ul>
 
-        <div class="package-bonus">
-          <strong>Bonus included:</strong>
-          <span>Website copy improved for clarity and trust.</span>
-          <span>FAQ or objection-handling section to reduce hesitation.</span>
-          <span>Google Maps, Instagram, and WhatsApp integrated clearly.</span>
-          <span>Simple lead tracking sheet to measure inquiries.</span>
-          <span>WhatsApp follow-up template for new inquiries.</span>
-        </div>
+     
 
-        <div class="package-best">
-          <strong>Best for:</strong>
-          <span>Businesses that already have customers and want to look more serious online: clinics, real estate agents, restaurants, gyms, beauty centers, repair services, agencies, and local service businesses.</span>
-        </div>
+        
 
-        <div class="package-guarantee">
-          <strong>Safe guarantee:</strong>
-          <span>If your new website does not look more professional, clearer, and more trustworthy than your current online presence, I will improve it within the included revision rounds.</span>
-        </div>
+        
 
         <a class="btn btn-primary" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20to%20build%20my%20business%20website%20with%20the%20Client-Ready%20Business%20Website%20package." target="_blank" rel="noopener noreferrer">Build My Client-Ready Website</a>
-        <a class="package-cta-note" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20am%20interested%20in%20the%20Client-Ready%20Business%20Website%20package.%20Message%20me%20now%20and%20tell%20me%20if%20this%20package%20fits%20my%20business." target="_blank" rel="noopener noreferrer">Message me now and I’ll tell you which package fits your business.</a>
+        <a class="package-cta-note" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20am%20interested%20in%20the%20Client-Ready%20Business%20Website%20package.%20Message%20me%20now%20and%20tell%20me%20if%20this%20package%20fits%20my%20business." target="_blank" rel="noopener noreferrer">Message us now and I’ll tell you which package fits your business.</a>
       </article>
 
       <article class="price-card card fade-in">
@@ -2918,18 +2957,10 @@ html.instagram-browser .mobile-menu {
           <li><i class="ph ph-check-circle"></i> Monthly website checkup</li>
         </ul>
 
-        <div class="package-best">
-          <strong>Best for:</strong>
-          <span>Business owners who want peace of mind after launch and do not want small website changes to become a headache.</span>
-        </div>
-
-        <div class="package-guarantee">
-          <strong>Simple terms:</strong>
-          <span>Includes small edits and basic care only. Bigger redesigns, new pages, advanced features, or major changes are quoted separately.</span>
-        </div>
+       
 
         <a class="btn btn-secondary" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20to%20add%20the%20Website%20Care%20Plan%20to%20my%20website." target="_blank" rel="noopener noreferrer">Add Website Care</a>
-        <a class="package-cta-note" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20am%20interested%20in%20the%20Website%20Care%20Plan.%20Message%20me%20now%20and%20tell%20me%20if%20this%20package%20fits%20my%20business." target="_blank" rel="noopener noreferrer">Message me now and I’ll tell you which package fits your business.</a>
+        <a class="package-cta-note" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20am%20interested%20in%20the%20Website%20Care%20Plan.%20Message%20me%20now%20and%20tell%20me%20if%20this%20package%20fits%20my%20business." target="_blank" rel="noopener noreferrer">Message us now and I’ll tell you which package fits your business.</a>
       </article>
     </div>
 
@@ -3088,7 +3119,7 @@ html.instagram-browser .mobile-menu {
       </div>
 
       <div class="faq-item">
-        <button class="faq-question" type="button">What do you need from me to start? <i class="ph ph-plus"></i></button>
+        <button class="faq-question" type="button">What do you need from us to start? <i class="ph ph-plus"></i></button>
         <div class="faq-answer"><p>Your business name, niche, services, photos, location, WhatsApp number, Instagram connection, and any text you want included. If your content is not ready, we can help organize it.</p></div>
       </div>
 
@@ -3162,7 +3193,7 @@ html.instagram-browser .mobile-menu {
 
         <div class="form-group full">
           <label for="message">What do you want the website to do?</label>
-          <textarea id="message" name="message" placeholder="Tell me your business, main services, location, and whether you want more trust, more WhatsApp inquiries, or a cleaner online presence." required></textarea>
+          <textarea id="message" name="message" placeholder="Tell us your business, main services, location, and whether you want more trust, more WhatsApp inquiries, or a cleaner online presence." required></textarea>
         </div>
       </div>
 
@@ -3213,9 +3244,15 @@ html.instagram-browser .mobile-menu {
       </div>
 
   <div class="footer-links">
-    <a href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20my%20business%20to%20look%20more%20trusted%20online%20and%20get%20more%20WhatsApp%20inquiries.%20Please%20tell%20me%20the%20best%20website%20package%20for%20my%20business." target="_blank" rel="noopener noreferrer">WhatsApp: https://wa.me/96171698012</a>
-    <a href="https://www.instagram.com/crowncedarstudio/" target="_blank" rel="noopener noreferrer" aria-label="CrownCedar Studio Instagram">Instagram: @crowncedarstudio</a>
-    <span>Privacy note: your inquiry details are not shared.</span>
+    <div class="footer-socials" aria-label="CrownCedar Studio social links">
+      <a class="footer-icon-link footer-whatsapp" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20my%20business%20to%20look%20more%20trusted%20online%20and%20get%20more%20WhatsApp%20inquiries.%20Please%20tell%20me%20the%20best%20website%20package%20for%20my%20business." target="_blank" rel="noopener noreferrer" aria-label="Chat with CrownCedar Studio on WhatsApp" title="WhatsApp">
+        <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
+      </a>
+      <a class="footer-icon-link footer-instagram" href="https://www.instagram.com/crowncedarstudio/" target="_blank" rel="noopener noreferrer" aria-label="Visit CrownCedar Studio on Instagram" title="Instagram">
+        <i class="ph ph-instagram-logo" aria-hidden="true"></i>
+      </a>
+    </div>
+    <span class="footer-privacy-note">Privacy note: your inquiry details are not shared.</span>
   </div>
 </div>
 
