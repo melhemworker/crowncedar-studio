@@ -6,9 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CrownCedar Studio — Websites for Lebanese Businesses in 48 Hours</title>
   <meta name="description" content="Premium one-page websites for Lebanese businesses. Mobile-friendly, WhatsApp-connected, and delivered with a first draft in 48 hours." />
+  <meta name="theme-color" content="#0B1D2B" />
+  <meta name="color-scheme" content="dark" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://unpkg.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="dns-prefetch" href="//wa.me" />
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=80" fetchpriority="high" />
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1562141961-052bb2bff7a8?auto=format&fit=crop&w=700&q=80" fetchpriority="high" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css" />
@@ -169,6 +176,7 @@
       color: var(--text);
       background: rgba(255, 255, 255, 0.07);
       border-color: var(--border);
+      -webkit-backdrop-filter: blur(16px);
       backdrop-filter: blur(16px);
     }
 
@@ -196,6 +204,7 @@
       border: 1px solid var(--border);
       border-radius: var(--radius);
       box-shadow: 0 22px 70px rgba(0, 0, 0, 0.27);
+      -webkit-backdrop-filter: blur(20px);
       backdrop-filter: blur(20px);
       transition: transform .28s var(--ease), border-color .28s var(--ease), background .28s var(--ease), box-shadow .28s var(--ease);
     }
@@ -233,6 +242,7 @@
       padding: 10px 20px;
       background: rgba(7, 19, 29, 0.78);
       border-bottom: 1px solid var(--border);
+      -webkit-backdrop-filter: blur(24px);
       backdrop-filter: blur(24px);
     }
 
@@ -248,6 +258,7 @@
       border: 1px solid rgba(255,255,255,0.1);
       border-radius: 999px;
       background: rgba(255, 255, 255, 0.055);
+      -webkit-backdrop-filter: blur(22px);
       backdrop-filter: blur(22px);
       box-shadow: 0 16px 55px rgba(0,0,0,0.22);
     }
@@ -334,6 +345,7 @@
       background:
         radial-gradient(circle at 20% 10%, rgba(201,169,110,0.16), transparent 30%),
         linear-gradient(145deg, rgba(7,19,29,0.98), rgba(5,8,13,0.98));
+      -webkit-backdrop-filter: blur(28px);
       backdrop-filter: blur(28px);
       display: flex;
       flex-direction: column;
@@ -647,6 +659,7 @@
       background: rgba(7, 19, 29, 0.72);
       border: 1px solid rgba(255,255,255,0.13);
       box-shadow: 0 20px 50px rgba(0,0,0,0.32);
+      -webkit-backdrop-filter: blur(18px);
       backdrop-filter: blur(18px);
       color: var(--white);
       font-size: .83rem;
@@ -915,6 +928,79 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 14px;
+    }
+
+    .founder-section {
+      background:
+        radial-gradient(circle at 12% 20%, rgba(201,169,110,0.12), transparent 26%),
+        linear-gradient(180deg, rgba(5,8,13,0.2), rgba(7,19,29,0.68));
+    }
+
+    .founder-card {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 26px;
+      padding: 34px;
+      border-radius: 34px;
+      border: 1px solid rgba(201,169,110,0.28);
+      background:
+        linear-gradient(145deg, rgba(255,255,255,0.105), rgba(255,255,255,0.04));
+      box-shadow: var(--shadow);
+    }
+
+    .founder-avatar {
+      width: 82px;
+      height: 82px;
+      display: grid;
+      place-items: center;
+      border-radius: 28px;
+      background:
+        radial-gradient(circle at 30% 20%, var(--gold-2), var(--gold) 48%, #8a6935);
+      color: #07131d;
+      font-size: 1.75rem;
+      font-weight: 950;
+      box-shadow: 0 18px 45px rgba(201,169,110,0.25);
+    }
+
+    .founder-card h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1;
+      letter-spacing: -0.055em;
+      margin-bottom: 10px;
+    }
+
+    .founder-card p {
+      color: var(--muted);
+      line-height: 1.72;
+      max-width: 650px;
+    }
+
+    .launch-offer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 22px;
+      padding: 22px 24px;
+      border-radius: 26px;
+      border: 1px solid rgba(201,169,110,0.36);
+      background:
+        linear-gradient(135deg, rgba(201,169,110,0.16), rgba(37,99,235,0.08));
+      box-shadow: 0 20px 60px rgba(0,0,0,0.24);
+    }
+
+    .launch-offer strong {
+      display: block;
+      color: var(--gold-2);
+      font-size: 1.05rem;
+      margin-bottom: 5px;
+    }
+
+    .launch-offer span {
+      color: var(--muted);
+      line-height: 1.55;
     }
 
     .feature-card {
@@ -1195,6 +1281,7 @@
       border-radius: 20px;
       overflow: hidden;
       background: rgba(255,255,255,0.055);
+      -webkit-backdrop-filter: blur(18px);
       backdrop-filter: blur(18px);
     }
 
@@ -1462,6 +1549,7 @@
       inset: 0;
       z-index: 2000;
       background: rgba(0, 0, 0, 0.82);
+      -webkit-backdrop-filter: blur(18px);
       backdrop-filter: blur(18px);
       display: none;
       align-items: center;
@@ -1739,6 +1827,22 @@
         border-radius: 24px;
       }
 
+      .founder-card,
+      .launch-offer {
+        grid-template-columns: 1fr;
+        align-items: start;
+        padding: 24px;
+        border-radius: 24px;
+      }
+
+      .founder-card {
+        display: grid;
+      }
+
+      .launch-offer {
+        display: grid;
+      }
+
       .niches-grid,
       .pricing-grid,
       .demo-grid,
@@ -1808,7 +1912,27 @@
         font-size: 2.45rem;
       }
     }
-  </style>
+  
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .fade-in {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+</style>
 
 </head>
 
@@ -1834,11 +1958,11 @@
   </nav>
 
   <div class="header-actions">
-    <a class="btn btn-primary" href="https://wa.me/96171698012" target="_blank" rel="noopener">
+    <a class="btn btn-primary" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20a%20website%20for%20my%20business." target="_blank" rel="noopener noreferrer">
       <i class="ph ph-whatsapp-logo"></i>
       WhatsApp Us
     </a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+    <button type="button" class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
       <i class="ph ph-list"></i>
     </button>
   </div>
@@ -1854,7 +1978,7 @@
     <a href="#process">Process</a>
     <a href="#faq">FAQ</a>
     <a href="#contact">Contact</a>
-    <a class="btn btn-primary" href="https://wa.me/96171698012" target="_blank" rel="noopener">
+    <a class="btn btn-primary" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20a%20website%20for%20my%20business." target="_blank" rel="noopener noreferrer">
       <i class="ph ph-whatsapp-logo"></i>
       WhatsApp Us
     </a>
@@ -1876,7 +2000,7 @@
           See Packages
           <i class="ph ph-arrow-right"></i>
         </a>
-        <a class="btn btn-secondary" href="https://wa.me/96171698012" target="_blank" rel="noopener">
+        <a class="btn btn-secondary" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20a%20website%20for%20my%20business." target="_blank" rel="noopener noreferrer">
           <i class="ph ph-whatsapp-logo"></i>
           Message on WhatsApp
         </a>
@@ -1976,6 +2100,26 @@
   </div>
 </section>
 
+<section class="founder-section">
+  <div class="container">
+    <div class="founder-card fade-in">
+      <div class="founder-avatar">M</div>
+      <div>
+        <span class="eyebrow"><i class="ph ph-user-circle"></i> Founder</span>
+        <h2>Built by Melhem<sup>&trade;</sup> — Lebanon</h2>
+        <p>
+          I help local businesses get a professional website connected to WhatsApp, Instagram, and Google Maps.
+          The goal is simple: make your business look trustworthy, organized, and easy to contact from one clean page.
+        </p>
+      </div>
+      <a class="btn btn-primary" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20a%20website%20for%20my%20business." target="_blank" rel="noopener noreferrer">
+        <i class="ph ph-whatsapp-logo"></i>
+        Message CrownCedar Studio
+      </a>
+    </div>
+  </div>
+</section>
+
 <section id="niches">
   <div class="container">
     <div class="section-head fade-in">
@@ -1993,42 +2137,42 @@
         <div class="icon-box"><i class="ph ph-tooth"></i></div>
         <h3>Clinics & Dentists</h3>
         <p>Show treatments, doctors, location, working hours, and booking through WhatsApp.</p>
-        <a class="btn btn-dark" href="#contact">Request Demo</a>
+        <a class="btn btn-dark" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20a%20free%20quick%20visual%20preview%20for%20my%20clinic%20or%20dental%20business." target="_blank" rel="noopener noreferrer">Request Demo</a>
       </div>
 
       <div class="niche-card card fade-in">
         <div class="icon-box"><i class="ph ph-car-profile"></i></div>
         <h3>Car Dealers</h3>
         <p>Display cars, photos, features, availability, location, and direct buyer inquiries.</p>
-        <a class="btn btn-dark" href="#contact">Request Demo</a>
+        <a class="btn btn-dark" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20a%20free%20quick%20visual%20preview%20for%20my%20car%20dealer%20business." target="_blank" rel="noopener noreferrer">Request Demo</a>
       </div>
 
       <div class="niche-card card fade-in">
         <div class="icon-box"><i class="ph ph-barbell"></i></div>
         <h3>Gyms</h3>
         <p>Present memberships, trainers, classes, transformations, and easy joining messages.</p>
-        <a class="btn btn-dark" href="#contact">Request Demo</a>
+        <a class="btn btn-dark" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20a%20free%20quick%20visual%20preview%20for%20my%20gym%20business." target="_blank" rel="noopener noreferrer">Request Demo</a>
       </div>
 
       <div class="niche-card card fade-in">
         <div class="icon-box"><i class="ph ph-house-line"></i></div>
         <h3>Real Estate</h3>
         <p>Organize properties, photos, areas, prices, maps, and serious client inquiries.</p>
-        <a class="btn btn-dark" href="#contact">Request Demo</a>
+        <a class="btn btn-dark" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20a%20free%20quick%20visual%20preview%20for%20my%20real%20estate%20business." target="_blank" rel="noopener noreferrer">Request Demo</a>
       </div>
 
       <div class="niche-card card fade-in">
         <div class="icon-box"><i class="ph ph-fork-knife"></i></div>
         <h3>Restaurants & Cafes</h3>
         <p>Show your menu, atmosphere, location, opening hours, and reservation contact.</p>
-        <a class="btn btn-dark" href="#contact">Request Demo</a>
+        <a class="btn btn-dark" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20a%20free%20quick%20visual%20preview%20for%20my%20restaurant%20or%20cafe%20business." target="_blank" rel="noopener noreferrer">Request Demo</a>
       </div>
 
       <div class="niche-card card fade-in">
         <div class="icon-box"><i class="ph ph-scissors"></i></div>
         <h3>Salons</h3>
         <p>Show services, prices, before/after photos, Instagram, and booking through WhatsApp.</p>
-        <a class="btn btn-dark" href="#contact">Request Demo</a>
+        <a class="btn btn-dark" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20a%20free%20quick%20visual%20preview%20for%20my%20salon%20business." target="_blank" rel="noopener noreferrer">Request Demo</a>
       </div>
     </div>
   </div>
@@ -2065,15 +2209,15 @@
           <span class="tag">Booking</span>
           <span class="tag">Maps</span>
         </div>
-        <button class="btn btn-secondary demo-open" data-title="Smile Dental Clinic" data-niche="Clinic Website" data-image="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1400&q=85" data-tags="Treatments,WhatsApp Booking,Doctor Profile,Google Maps">Open Working Demo</button>
+        <button type="button" class="btn btn-secondary demo-open" data-title="Smile Dental Clinic" data-niche="Clinic Website" data-image="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1400&q=85" data-tags="Treatments,WhatsApp Booking,Doctor Profile,Google Maps">Open Working Demo</button>
       </article>
 
       <article class="demo-card card fade-in">
         <div class="demo-visual">
-          <div class="demo-img" style="background-image:url('https://images.unsplash.com/photo-1562141961-052bb2bff7a8?auto=format&fit=crop&w=1000&q=80')"></div>
+          <div class="demo-img" style="background-image:url('https://images.unsplash.com/photo-1743264533381-105fa7c2bcec?auto=format&fit=crop&w=1600&q=80')"></div>
           <div class="demo-phone">
             <div class="demo-phone-inner">
-              <div class="demo-phone-img" style="background-image:url('https://images.unsplash.com/photo-1562141961-052bb2bff7a8?auto=format&fit=crop&w=500&q=80')"></div>
+              <div class="demo-phone-img" style="background-image:url('https://images.unsplash.com/photo-1743264533381-105fa7c2bcec?auto=format&fit=crop&w=1600&q=80')"></div>
               <div class="demo-phone-content"><div></div><div></div><div></div><div></div></div>
             </div>
           </div>
@@ -2086,7 +2230,7 @@
           <span class="tag">Photos</span>
           <span class="tag">WhatsApp</span>
         </div>
-        <button class="btn btn-secondary demo-open" data-title="Elite Motors Lebanon" data-niche="Car Dealer Website" data-image="https://images.unsplash.com/photo-1562141961-052bb2bff7a8?auto=format&fit=crop&w=1400&q=85" data-tags="Inventory,Car Photos,Availability,Direct Inquiry">Open Working Demo</button>
+        <button type="button" class="btn btn-secondary demo-open" data-title="Elite Motors Lebanon" data-niche="Car Dealer Website" data-image="https://images.unsplash.com/photo-1562141961-052bb2bff7a8?auto=format&fit=crop&w=1400&q=85" data-tags="Inventory,Car Photos,Availability,Direct Inquiry">Open Working Demo</button>
       </article>
 
       <article class="demo-card card fade-in">
@@ -2107,7 +2251,7 @@
           <span class="tag">Trainers</span>
           <span class="tag">Join CTA</span>
         </div>
-        <button class="btn btn-secondary demo-open" data-title="FitHouse Gym" data-niche="Gym Website" data-image="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1400&q=85" data-tags="Memberships,Trainers,Class Schedule,WhatsApp Joining">Open Working Demo</button>
+        <button type="button" class="btn btn-secondary demo-open" data-title="FitHouse Gym" data-niche="Gym Website" data-image="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1400&q=85" data-tags="Memberships,Trainers,Class Schedule,WhatsApp Joining">Open Working Demo</button>
       </article>
     </div>
   </div>
@@ -2154,6 +2298,14 @@
       </p>
     </div>
 
+    <div class="launch-offer fade-in">
+      <div>
+        <strong>Launch offer: 3 spots this week.</strong>
+        <span>we are taking 3 businesses this week at the starter price before increasing prices.</span>
+      </div>
+      <a class="btn btn-primary" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20to%20start%20the%20Starter%20Website%20package." target="_blank" rel="noopener noreferrer">Claim Starter Price</a>
+    </div>
+
     <div class="pricing-grid">
       <article class="price-card card fade-in">
         <h3>Starter Website</h3>
@@ -2171,7 +2323,7 @@
           <li><i class="ph ph-check-circle"></i> First draft in 48 hours</li>
           <li><i class="ph ph-check-circle"></i> 2 revisions</li>
         </ul>
-        <a class="btn btn-secondary" href="#contact">Start Starter Website</a>
+        <a class="btn btn-secondary" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20to%20start%20the%20Starter%20Website%20package." target="_blank" rel="noopener noreferrer">Start Starter Website</a>
       </article>
 
       <article class="price-card card featured fade-in">
@@ -2185,12 +2337,12 @@
           <li><i class="ph ph-check-circle"></i> More content sections</li>
           <li><i class="ph ph-check-circle"></i> Advanced gallery or inventory section</li>
           <li><i class="ph ph-check-circle"></i> FAQ section</li>
-          <li><i class="ph ph-check-circle"></i> Testimonials section</li>
+          <li><i class="ph ph-check-circle"></i> Example results section</li>
           <li><i class="ph ph-check-circle"></i> Better conversion layout</li>
           <li><i class="ph ph-check-circle"></i> Basic SEO structure</li>
           <li><i class="ph ph-check-circle"></i> Priority delivery</li>
         </ul>
-        <a class="btn btn-primary" href="#contact">Start Business Website</a>
+        <a class="btn btn-primary" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20to%20start%20the%20Business%20Website%20package." target="_blank" rel="noopener noreferrer">Start Business Website</a>
       </article>
 
       <article class="price-card card fade-in">
@@ -2205,7 +2357,7 @@
           <li><i class="ph ph-check-circle"></i> Basic support</li>
           <li><i class="ph ph-check-circle"></i> Keeping the site fresh</li>
         </ul>
-        <a class="btn btn-secondary" href="#care">Add Care Plan</a>
+        <a class="btn btn-secondary" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20to%20add%20the%20Website%20Care%20Plan%20to%20my%20website." target="_blank" rel="noopener noreferrer">Add Care Plan</a>
       </article>
     </div>
 
@@ -2310,40 +2462,44 @@
           so your website stays clean and professional.
         </p>
       </div>
-      <a class="btn btn-primary" href="#contact">Add Care Plan to My Website</a>
+      <a class="btn btn-primary" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20to%20add%20the%20Website%20Care%20Plan%20to%20my%20website." target="_blank" rel="noopener noreferrer">Add Care Plan to My Website</a>
     </div>
   </div>
 </section>
 
-<section id="testimonials">
+<section id="examples">
   <div class="container">
     <div class="section-head fade-in">
       <div>
-        <span class="eyebrow"><i class="ph ph-chat-centered-text"></i> Testimonials</span>
-        <h2 class="section-title">Built for local businesses that move fast.</h2>
+        <span class="eyebrow"><i class="ph ph-chart-line-up"></i> Example Outcomes</span>
+        <h2 class="section-title">Example Results We Aim For</h2>
       </div>
       <p class="section-subtitle">
-        Realistic examples of the kind of business owners this service is designed for.
+        These are the practical outcomes the website is designed around. Once real client results are available,
+        this section should be replaced with real testimonials.
       </p>
     </div>
 
     <div class="testimonials-grid">
       <div class="testimonial-card card fade-in">
-        <div class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
-        <p>“The page made our services, location, and booking button much clearer. It feels more serious than sending people only to Instagram.”</p>
-        <span class="testimonial-label">Dental Clinic Owner, Jounieh</span>
+        <div class="icon-box"><i class="ph ph-tooth"></i></div>
+        <h3>Clinic/Dentist Example</h3>
+        <p>Patients can quickly see services, opening hours, location, and the WhatsApp booking button without searching through posts.</p>
+        <span class="testimonial-label">Target result: clearer bookings and fewer repeated questions.</span>
       </div>
 
       <div class="testimonial-card card fade-in">
-        <div class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
-        <p>“The car photos, availability, and WhatsApp inquiry button are organized in one place. It gives the business a cleaner image.”</p>
-        <span class="testimonial-label">Car Dealer, Tripoli</span>
+        <div class="icon-box"><i class="ph ph-car-profile"></i></div>
+        <h3>Car Dealer Example</h3>
+        <p>Buyers can view featured cars, photos, availability, showroom details, and message directly from one organized page.</p>
+        <span class="testimonial-label">Target result: cleaner presentation for serious buyers.</span>
       </div>
 
       <div class="testimonial-card card fade-in">
-        <div class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
-        <p>“People can see our memberships, trainers, location, and message us without asking for every detail again.”</p>
-        <span class="testimonial-label">Gym Manager, Beirut</span>
+        <div class="icon-box"><i class="ph ph-barbell"></i></div>
+        <h3>Gym Example</h3>
+        <p>Visitors can understand memberships, trainers, location, and joining options before sending a WhatsApp message.</p>
+        <span class="testimonial-label">Target result: easier contact and stronger first impression.</span>
       </div>
     </div>
   </div>
@@ -2416,7 +2572,6 @@
       <div class="contact-info">
         <div><i class="ph ph-whatsapp-logo"></i> WhatsApp: https://wa.me/96171698012</div>
         <div><i class="ph ph-instagram-logo"></i> Instagram: @crowncedarstudio</div>
-        <div><i class="ph ph-envelope-simple"></i> Email: hello@crowncedarstudio.com</div>
         <div><i class="ph ph-map-pin"></i> Lebanon</div>
       </div>
     </div>
@@ -2463,7 +2618,7 @@
           Open WhatsApp Inquiry
           <i class="ph ph-arrow-right"></i>
         </button>
-        <a class="btn btn-secondary" href="https://wa.me/96171698012" target="_blank" rel="noopener">
+        <a class="btn btn-secondary" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20a%20website%20for%20my%20business." target="_blank" rel="noopener noreferrer">
           <i class="ph ph-whatsapp-logo"></i>
           Chat on WhatsApp Now
         </a>
@@ -2487,23 +2642,22 @@
       </div>
 
   <div class="footer-links">
-    <a href="https://wa.me/96171698012" target="_blank" rel="noopener">WhatsApp: https://wa.me/96171698012</a>
-    <a href="#" aria-label="Instagram placeholder">Instagram: @crowncedarstudio</a>
-    <a href="mailto:hello@crowncedarstudio.com">Email: hello@crowncedarstudio.com</a>
+    <a href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20a%20website%20for%20my%20business." target="_blank" rel="noopener noreferrer">WhatsApp: https://wa.me/96171698012</a>
+    <a href="https://www.instagram.com/crowncedarstudio/" target="_blank" rel="noopener noreferrer" aria-label="CrownCedar Studio Instagram">Instagram: @crowncedarstudio</a>
     <span>Privacy note: No data shared, ever.</span>
   </div>
 </div>
 
   </footer>
 
-  <a class="whatsapp-float" href="https://wa.me/96171698012" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <a class="whatsapp-float" href="https://wa.me/96171698012?text=Hello%20CrownCedar%20Studio%2C%20I%20want%20a%20website%20for%20my%20business." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
     <i class="ph ph-whatsapp-logo"></i>
     <span>WhatsApp</span>
   </a>
 
   <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Working demo preview">
     <div class="lightbox-content">
-      <button class="lightbox-close" id="lightboxClose" aria-label="Close demo preview">
+      <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close demo preview">
         <i class="ph ph-x"></i>
       </button>
       <div class="lightbox-body">
@@ -2516,7 +2670,7 @@
         <div class="lightbox-tags" id="lightboxTags"></div>
       </div>
       <div class="demo-frame-wrap">
-        <iframe class="demo-frame" id="demoFrame" title="Working website demo preview"></iframe>
+        <iframe class="demo-frame" id="demoFrame" title="Working website demo preview" loading="lazy" referrerpolicy="no-referrer" sandbox="allow-popups allow-popups-to-escape-sandbox"></iframe>
       </div>
     </div>
   </div>
@@ -2549,7 +2703,19 @@
       }
     }
 
-    window.addEventListener("scroll", handleHeaderScroll);
+    let scrollTicking = false;
+
+    function requestHeaderScrollUpdate() {
+      if (scrollTicking) return;
+
+      scrollTicking = true;
+      window.requestAnimationFrame(() => {
+        handleHeaderScroll();
+        scrollTicking = false;
+      });
+    }
+
+    window.addEventListener("scroll", requestHeaderScrollUpdate, { passive: true });
     handleHeaderScroll();
 
     function openMenu() {
@@ -2576,36 +2742,49 @@
       link.addEventListener("click", closeMenu);
     });
 
-    const fadeObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          fadeObserver.unobserve(entry.target);
-        }
+    if ("IntersectionObserver" in window) {
+      const fadeObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            fadeObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      fadeItems.forEach(item => fadeObserver.observe(item));
+    } else {
+      fadeItems.forEach(item => item.classList.add("visible"));
+    }
+
+    if ("IntersectionObserver" in window) {
+      const activeObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute("id");
+            navLinks.forEach(link => {
+              link.classList.toggle("active", link.getAttribute("href") === "#" + id);
+            });
+          }
+        });
+      }, {
+        rootMargin: "-38% 0px -55% 0px",
+        threshold: 0
       });
-    }, { threshold: 0.12 });
 
-    fadeItems.forEach(item => fadeObserver.observe(item));
+      sections.forEach(section => activeObserver.observe(section));
+    }
 
-    const activeObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const id = entry.target.getAttribute("id");
-          navLinks.forEach(link => {
-            link.classList.toggle("active", link.getAttribute("href") === "#" + id);
-          });
-        }
-      });
-    }, {
-      rootMargin: "-38% 0px -55% 0px",
-      threshold: 0
-    });
-
-    sections.forEach(section => activeObserver.observe(section));
-
-    faqItems.forEach(item => {
+    faqItems.forEach((item, index) => {
       const question = item.querySelector(".faq-question");
       const answer = item.querySelector(".faq-answer");
+
+      if (!question || !answer) return;
+
+      const answerId = answer.id || `faq-answer-${index + 1}`;
+      answer.id = answerId;
+      question.setAttribute("aria-controls", answerId);
+      question.setAttribute("aria-expanded", item.classList.contains("active") ? "true" : "false");
 
       if (item.classList.contains("active")) {
         answer.style.maxHeight = answer.scrollHeight + "px";
@@ -2615,13 +2794,18 @@
         const isActive = item.classList.contains("active");
 
         faqItems.forEach(otherItem => {
+          const otherQuestion = otherItem.querySelector(".faq-question");
+          const otherAnswer = otherItem.querySelector(".faq-answer");
+
           otherItem.classList.remove("active");
-          otherItem.querySelector(".faq-answer").style.maxHeight = 0;
+          if (otherAnswer) otherAnswer.style.maxHeight = 0;
+          if (otherQuestion) otherQuestion.setAttribute("aria-expanded", "false");
         });
 
         if (!isActive) {
           item.classList.add("active");
           answer.style.maxHeight = answer.scrollHeight + "px";
+          question.setAttribute("aria-expanded", "true");
         }
       });
     });
@@ -2677,6 +2861,7 @@
     gap: 14px;
     padding: 18px clamp(18px, 5vw, 58px);
     background: rgba(7,19,29,.74);
+    -webkit-backdrop-filter: blur(18px);
     backdrop-filter: blur(18px);
     border-bottom: 1px solid rgba(255,255,255,.1);
   }
@@ -2784,6 +2969,7 @@
     border-radius: 24px;
     background: rgba(7,19,29,.78);
     border: 1px solid rgba(255,255,255,.14);
+    -webkit-backdrop-filter: blur(16px);
     backdrop-filter: blur(16px);
   }
   .hero-card-panel h2 {
@@ -2946,7 +3132,7 @@
         <a href="#gallery">Photos</a>
         <a href="#location">Location</a>
       </div>
-      <a class="demo-btn" href="https://wa.me/96171698012?text=${encodeURIComponent(config.whatsappText)}" target="_blank">WhatsApp</a>
+      <a class="demo-btn" href="https://wa.me/96171698012?text=${encodeURIComponent(config.whatsappText)}" target="_blank" rel="noopener noreferrer">WhatsApp</a>
     </nav>
 
     <main id="top">
@@ -2956,7 +3142,7 @@
           <h1>${config.headline}</h1>
           <p>${config.description}</p>
           <div class="demo-actions">
-            <a class="demo-btn" href="https://wa.me/96171698012?text=${encodeURIComponent(config.whatsappText)}" target="_blank">${config.primaryCta}</a>
+            <a class="demo-btn" href="https://wa.me/96171698012?text=${encodeURIComponent(config.whatsappText)}" target="_blank" rel="noopener noreferrer">${config.primaryCta}</a>
             <a class="demo-btn secondary" href="#services">View Services</a>
           </div>
         </div>
@@ -3027,7 +3213,7 @@
         locationIntro: "Location, working hours, and WhatsApp contact stay simple and visible.",
         address: "Jounieh, Lebanon — exact map added before launch",
         hours: "Mon–Sat • 10:00 AM–7:00 PM",
-        whatsappText: "Hello Smile Dental Clinic, I want to book an appointment.",
+        whatsappText: "Hello CrownCedar Studio, I want a website like the Smile Dental Clinic demo for my business.",
         accent: "#C9A96E",
         accentText: "#e6cf96",
         accentSoft: "rgba(201,169,110,.16)",
@@ -3066,7 +3252,7 @@
         locationIntro: "Make your showroom location, hours, and WhatsApp contact clear from one page.",
         address: "Tripoli, Lebanon — exact showroom map added before launch",
         hours: "Mon–Sat • 9:00 AM–8:00 PM",
-        whatsappText: "Hello Elite Motors Lebanon, I want to ask about an available car.",
+        whatsappText: "Hello CrownCedar Studio, I want a website like the Elite Motors Lebanon demo for my business.",
         accent: "#C9A96E",
         accentText: "#e6cf96",
         accentSoft: "rgba(201,169,110,.16)",
@@ -3105,7 +3291,7 @@
         locationIntro: "The demo keeps location, hours, and WhatsApp contact visible for new members.",
         address: "Beirut, Lebanon — exact branch map added before launch",
         hours: "Mon–Sun • 6:00 AM–11:00 PM",
-        whatsappText: "Hello FitHouse Gym, I want to ask about memberships.",
+        whatsappText: "Hello CrownCedar Studio, I want a website like the FitHouse Gym demo for my business.",
         accent: "#C9A96E",
         accentText: "#e6cf96",
         accentSoft: "rgba(201,169,110,.16)",
@@ -3132,7 +3318,7 @@
       button.addEventListener("click", () => {
         const title = button.dataset.title;
         const niche = button.dataset.niche;
-        const tags = button.dataset.tags.split(",");
+        const tags = (button.dataset.tags || "").split(",").filter(Boolean);
 
         lightboxTitle.textContent = title;
         lightboxNiche.textContent = niche + " • Working Demo";
@@ -3163,13 +3349,17 @@
       }
     }
 
-    lightboxClose.addEventListener("click", closeLightbox);
+    if (lightboxClose) {
+      lightboxClose.addEventListener("click", closeLightbox);
+    }
 
-    lightbox.addEventListener("click", event => {
-      if (event.target === lightbox) {
-        closeLightbox();
-      }
-    });
+    if (lightbox) {
+      lightbox.addEventListener("click", event => {
+        if (event.target === lightbox) {
+          closeLightbox();
+        }
+      });
+    }
 
     document.addEventListener("keydown", event => {
       if (event.key === "Escape") {
@@ -3181,8 +3371,9 @@
    
   const WHATSAPP_NUMBER = "96171698012"; // Replace with your real number, example: 96170123456
 
-  contactForm.addEventListener("submit", event => {
-    event.preventDefault();
+  if (contactForm) {
+    contactForm.addEventListener("submit", event => {
+      event.preventDefault();
 
     const name = document.getElementById("name").value.trim();
     const businessType = document.getElementById("businessType").value.trim();
@@ -3223,7 +3414,8 @@ I want the free quick visual preview. I understand the working website starts af
     if (!opened) {
       window.location.href = whatsappUrl;
     }
-  });
+    });
+  }
 
   </script>
 
