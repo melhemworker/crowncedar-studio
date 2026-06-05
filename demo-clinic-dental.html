@@ -1,0 +1,2018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lumière Dental Studio — luxury cosmetic dentistry in Beirut with digital smile design, implants, veneers, whitening, and advanced patient care." />
+  <meta name="theme-color" content="#071016" />
+  <title>Lumière Dental Studio | Luxury Dental Care in Beirut</title>
+
+  <style>
+    :root {
+      --bg: #05090d;
+      --bg-2: #08131a;
+      --panel: rgba(255, 255, 255, 0.075);
+      --panel-2: rgba(255, 255, 255, 0.105);
+      --line: rgba(255, 255, 255, 0.16);
+      --line-strong: rgba(201, 244, 255, 0.38);
+      --text: #f4f7f7;
+      --muted: rgba(244, 247, 247, 0.68);
+      --faint: rgba(244, 247, 247, 0.42);
+      --ice: #9feeff;
+      --ice-2: #dffaff;
+      --gold: #d7b873;
+      --silver: #dce5ea;
+      --shadow: 0 30px 100px rgba(0, 0, 0, 0.45);
+      --radius: 34px;
+      --max: 1180px;
+      --slider-pos: 50%;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--bg);
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 20% 0%, rgba(159, 238, 255, 0.16), transparent 34rem),
+        radial-gradient(circle at 85% 10%, rgba(215, 184, 115, 0.11), transparent 30rem),
+        radial-gradient(circle at 50% 85%, rgba(91, 177, 255, 0.10), transparent 44rem),
+        linear-gradient(180deg, #05090d 0%, #071118 42%, #030609 100%);
+      overflow-x: hidden;
+      cursor: default;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -2;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+      background-size: 74px 74px;
+      mask-image: radial-gradient(circle at center, black, transparent 78%);
+      opacity: 0.38;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      pointer-events: none;
+      background:
+        radial-gradient(800px circle at var(--cursor-x, 50%) var(--cursor-y, 50%), rgba(159,238,255,0.11), transparent 42%),
+        radial-gradient(250px circle at var(--cursor-x, 50%) var(--cursor-y, 50%), rgba(215,184,115,0.06), transparent 58%);
+      opacity: 0.85;
+      mix-blend-mode: screen;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    .page-loader {
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 50% 40%, rgba(159,238,255,0.16), transparent 24rem),
+        #030609;
+      transition: opacity 0.75s ease, visibility 0.75s ease;
+    }
+
+    .page-loader.is-hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .loader-mark {
+      position: relative;
+      width: 112px;
+      height: 112px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.15);
+      display: grid;
+      place-items: center;
+      box-shadow: inset 0 0 35px rgba(159,238,255,0.14), 0 0 80px rgba(159,238,255,0.13);
+      animation: pulseMark 1.7s ease-in-out infinite;
+    }
+
+    .loader-mark::before {
+      content: "";
+      position: absolute;
+      inset: -11px;
+      border-radius: 50%;
+      border: 1px solid transparent;
+      border-top-color: rgba(159,238,255,0.85);
+      border-right-color: rgba(215,184,115,0.65);
+      animation: spin 1.2s linear infinite;
+    }
+
+    .loader-mark span {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2.5rem;
+      color: var(--ice-2);
+      text-shadow: 0 0 24px rgba(159,238,255,0.45);
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes pulseMark {
+      50% { transform: scale(1.04); }
+    }
+
+    .site-header {
+      position: fixed;
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(calc(100% - 28px), 1180px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 14px 16px;
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 999px;
+      background: rgba(4, 9, 13, 0.72);
+      backdrop-filter: blur(22px);
+      box-shadow: 0 20px 80px rgba(0,0,0,0.28);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      min-width: max-content;
+    }
+
+    .brand-orb {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 30% 25%, #ffffff, #dffaff 24%, #8deeff 42%, #1a3945 80%);
+      box-shadow: 0 0 26px rgba(159,238,255,0.4), inset -10px -10px 22px rgba(3, 8, 11, 0.36);
+      color: #061016;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 800;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.05;
+    }
+
+    .brand-text strong {
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+    }
+
+    .brand-text span {
+      color: var(--muted);
+      font-size: 0.72rem;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      color: rgba(255,255,255,0.72);
+      font-size: 0.82rem;
+    }
+
+    .nav a {
+      transition: color 0.2s ease;
+    }
+
+    .nav a:hover {
+      color: white;
+    }
+
+    .header-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(159,238,255,0.38);
+      background: linear-gradient(135deg, rgba(159,238,255,0.16), rgba(215,184,115,0.12));
+      color: white;
+      min-height: 42px;
+      padding: 0 18px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 0.82rem;
+      box-shadow: 0 0 30px rgba(159,238,255,0.08);
+    }
+
+    .container {
+      width: min(calc(100% - 32px), var(--max));
+      margin-inline: auto;
+    }
+
+    .section {
+      position: relative;
+      padding: 110px 0;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 13px;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.055);
+      color: var(--ice-2);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.72rem;
+      font-weight: 900;
+    }
+
+    .section-label::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--ice);
+      box-shadow: 0 0 14px var(--ice);
+    }
+
+    .section-title {
+      margin-top: 20px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.25rem, 5vw, 5rem);
+      font-weight: 500;
+      line-height: 0.96;
+      letter-spacing: -0.055em;
+    }
+
+    .section-copy {
+      margin-top: 20px;
+      max-width: 680px;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.35vw, 1.18rem);
+      line-height: 1.75;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      align-items: center;
+      padding: 144px 0 74px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.02fr 0.98fr;
+      align-items: center;
+      gap: 48px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 13px;
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 999px;
+      color: var(--ice-2);
+      background: rgba(255,255,255,0.055);
+      backdrop-filter: blur(16px);
+      box-shadow: inset 0 1px rgba(255,255,255,0.08);
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-weight: 900;
+    }
+
+    .eyebrow span {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 18px rgba(215,184,115,0.75);
+    }
+
+    h1 {
+      margin-top: 22px;
+      max-width: 830px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3.45rem, 8.8vw, 8.6rem);
+      line-height: 0.86;
+      font-weight: 500;
+      letter-spacing: -0.075em;
+    }
+
+    .gradient-text {
+      background: linear-gradient(115deg, #fff 0%, #dffaff 38%, #93eaff 58%, #d7b873 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: none;
+    }
+
+    .hero-copy {
+      margin-top: 26px;
+      max-width: 670px;
+      color: var(--muted);
+      font-size: clamp(1.04rem, 1.55vw, 1.28rem);
+      line-height: 1.75;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .btn {
+      --mx: 50%;
+      --my: 50%;
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 54px;
+      padding: 0 24px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(255,255,255,0.06);
+      color: white;
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      overflow: hidden;
+      transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease;
+      isolation: isolate;
+    }
+
+    .btn::before {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      z-index: -1;
+      background: radial-gradient(180px circle at var(--mx) var(--my), rgba(255,255,255,0.24), transparent 42%);
+      opacity: 0;
+      transition: opacity 0.22s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      border-color: rgba(159,238,255,0.42);
+    }
+
+    .btn:hover::before { opacity: 1; }
+
+    .btn-primary {
+      color: #041014;
+      background: linear-gradient(135deg, #ffffff 0%, #dffaff 38%, #a5efff 74%, #d7b873 100%);
+      border-color: rgba(255,255,255,0.42);
+      box-shadow: 0 18px 58px rgba(159,238,255,0.21);
+    }
+
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 30px;
+    }
+
+    .trust-badge {
+      padding: 10px 13px;
+      border: 1px solid rgba(255,255,255,0.13);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.048);
+      color: rgba(255,255,255,0.76);
+      font-size: 0.78rem;
+      font-weight: 800;
+      backdrop-filter: blur(14px);
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 620px;
+      display: grid;
+      place-items: center;
+      perspective: 1100px;
+    }
+
+    .visual-ring {
+      position: absolute;
+      width: min(88vw, 560px);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.11);
+      background:
+        radial-gradient(circle at 50% 48%, rgba(159,238,255,0.13), transparent 44%),
+        conic-gradient(from 30deg, transparent, rgba(159,238,255,0.4), transparent, rgba(215,184,115,0.18), transparent);
+      filter: drop-shadow(0 0 55px rgba(159,238,255,0.16));
+      animation: slowSpin 18s linear infinite;
+      opacity: 0.74;
+    }
+
+    .visual-ring:nth-child(2) {
+      width: min(75vw, 470px);
+      animation-direction: reverse;
+      animation-duration: 24s;
+      opacity: 0.48;
+    }
+
+    @keyframes slowSpin {
+      to { transform: rotate(360deg); }
+    }
+
+    .tooth-stage {
+      position: relative;
+      width: min(78vw, 435px);
+      aspect-ratio: 0.82;
+      transform-style: preserve-3d;
+      animation: toothFloat 5.8s ease-in-out infinite;
+    }
+
+    @keyframes toothFloat {
+      0%, 100% { transform: translateY(0) rotateX(8deg) rotateY(-14deg); }
+      50% { transform: translateY(-22px) rotateX(2deg) rotateY(18deg); }
+    }
+
+    .tooth {
+      position: absolute;
+      inset: 0;
+      border-radius: 48% 48% 34% 34% / 38% 38% 58% 58%;
+      background:
+        radial-gradient(circle at 38% 18%, rgba(255,255,255,1), rgba(228,250,255,0.94) 24%, transparent 25%),
+        radial-gradient(circle at 67% 28%, rgba(215,184,115,0.42), transparent 22%),
+        linear-gradient(135deg, #ffffff 0%, #dffaff 26%, #9fc0c9 62%, #31454f 100%);
+      box-shadow:
+        inset 36px 32px 65px rgba(255,255,255,0.55),
+        inset -38px -46px 80px rgba(2,9,14,0.42),
+        0 32px 120px rgba(159,238,255,0.22);
+      clip-path: path("M 205 5 C 300 6 368 75 377 160 C 387 260 345 379 299 413 C 260 442 245 355 215 355 C 185 355 172 443 132 413 C 83 376 44 256 55 160 C 65 74 111 5 205 5 Z");
+    }
+
+    .tooth::before {
+      content: "";
+      position: absolute;
+      inset: 32px 48px auto;
+      height: 46%;
+      border-radius: 50%;
+      background: linear-gradient(180deg, rgba(255,255,255,0.72), rgba(255,255,255,0));
+      filter: blur(1px);
+      opacity: 0.8;
+    }
+
+    .tooth::after {
+      content: "";
+      position: absolute;
+      left: 8%;
+      top: 16%;
+      width: 82%;
+      height: 20%;
+      border-radius: 50%;
+      border-top: 1px solid rgba(255,255,255,0.55);
+      transform: rotate(-8deg);
+      opacity: 0.72;
+    }
+
+    .scan-line {
+      position: absolute;
+      top: -5%;
+      bottom: -5%;
+      width: 3px;
+      left: 17%;
+      border-radius: 999px;
+      background: linear-gradient(180deg, transparent, rgba(159,238,255,0.8), white, rgba(159,238,255,0.8), transparent);
+      box-shadow: 0 0 24px var(--ice), 0 0 70px rgba(159,238,255,0.62);
+      animation: scanTooth 3s ease-in-out infinite;
+    }
+
+    @keyframes scanTooth {
+      0%, 100% { left: 18%; opacity: 0.28; }
+      50% { left: 80%; opacity: 1; }
+    }
+
+    .holo-card {
+      position: absolute;
+      right: 0;
+      bottom: 10%;
+      width: 210px;
+      padding: 16px;
+      border: 1px solid rgba(159,238,255,0.24);
+      border-radius: 22px;
+      background: rgba(6, 18, 25, 0.56);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 22px 80px rgba(0,0,0,0.38);
+      animation: cardFloat 4.6s ease-in-out infinite;
+    }
+
+    .holo-card strong {
+      display: block;
+      font-size: 0.76rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ice);
+    }
+
+    .holo-card p {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      line-height: 1.5;
+    }
+
+    .scan-bars {
+      margin-top: 14px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .scan-bars span {
+      height: 5px;
+      border-radius: 99px;
+      background: linear-gradient(90deg, rgba(159,238,255,0.2), rgba(159,238,255,0.88), rgba(215,184,115,0.4));
+      animation: barPulse 1.8s ease-in-out infinite;
+    }
+
+    .scan-bars span:nth-child(2) {
+      width: 74%;
+      animation-delay: 0.18s;
+    }
+
+    .scan-bars span:nth-child(3) {
+      width: 52%;
+      animation-delay: 0.32s;
+    }
+
+    @keyframes cardFloat {
+      50% { transform: translateY(-12px); }
+    }
+
+    @keyframes barPulse {
+      50% { opacity: 0.38; transform: scaleX(0.78); transform-origin: left; }
+    }
+
+    .story-panel {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.09), rgba(255,255,255,0.035)),
+        radial-gradient(circle at 20% 20%, rgba(159,238,255,0.14), transparent 25rem),
+        rgba(255,255,255,0.04);
+      backdrop-filter: blur(24px);
+      box-shadow: var(--shadow);
+      padding: clamp(26px, 5vw, 60px);
+      min-height: 520px;
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .story-visual {
+      position: relative;
+      min-height: 420px;
+      border-radius: 32px;
+      border: 1px solid rgba(255,255,255,0.13);
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 50% 45%, rgba(159,238,255,0.20), transparent 16rem),
+        linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+    }
+
+    .story-visual::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(159,238,255,0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(159,238,255,0.08) 1px, transparent 1px);
+      background-size: 38px 38px;
+      opacity: 0.56;
+    }
+
+    .digital-mouth {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: min(72%, 420px);
+      height: 160px;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      border-bottom: 8px solid rgba(255,255,255,0.6);
+      box-shadow: 0 35px 70px rgba(159,238,255,0.13);
+      animation: mouthGlow 3.5s ease-in-out infinite;
+    }
+
+    .digital-mouth::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 70%;
+      height: 70px;
+      transform: translateX(-50%);
+      border-radius: 50%;
+      border-bottom: 18px solid rgba(255,255,255,0.42);
+      filter: blur(1px);
+    }
+
+    .digital-mouth::after {
+      content: "";
+      position: absolute;
+      inset: 28px 0 auto 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(159,238,255,0.95), transparent);
+      box-shadow: 0 0 26px var(--ice);
+      animation: horizontalScan 2.7s linear infinite;
+    }
+
+    @keyframes mouthGlow {
+      50% { filter: drop-shadow(0 0 28px rgba(159,238,255,0.6)); }
+    }
+
+    @keyframes horizontalScan {
+      0% { top: 16%; opacity: 0; }
+      20% { opacity: 1; }
+      100% { top: 78%; opacity: 0; }
+    }
+
+    .story-list {
+      display: grid;
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .story-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 22px;
+      background: rgba(255,255,255,0.045);
+    }
+
+    .story-number {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: #061016;
+      font-weight: 950;
+      background: linear-gradient(135deg, #fff, var(--ice), var(--gold));
+      flex: 0 0 auto;
+    }
+
+    .story-item strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .story-item span {
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.55;
+    }
+
+    .services-grid {
+      margin-top: 44px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .service-card {
+      position: relative;
+      min-height: 230px;
+      padding: 22px;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 28px;
+      background:
+        radial-gradient(circle at 30% 0%, rgba(159,238,255,0.11), transparent 55%),
+        rgba(255,255,255,0.052);
+      backdrop-filter: blur(18px);
+      overflow: hidden;
+      transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+      transform-style: preserve-3d;
+    }
+
+    .service-card::before {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      border-radius: inherit;
+      background: linear-gradient(135deg, transparent, rgba(159,238,255,0.25), transparent, rgba(215,184,115,0.18));
+      opacity: 0;
+      transition: opacity 0.25s ease;
+      pointer-events: none;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px) rotateX(4deg) rotateY(-5deg);
+      border-color: rgba(159,238,255,0.38);
+      background: rgba(255,255,255,0.075);
+    }
+
+    .service-card:hover::before { opacity: 1; }
+
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 30% 20%, white, var(--ice) 45%, rgba(159,238,255,0.12));
+      color: #061016;
+      font-weight: 950;
+      box-shadow: 0 0 30px rgba(159,238,255,0.22);
+      margin-bottom: 24px;
+    }
+
+    .service-card h3 {
+      font-size: 1.12rem;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      line-height: 1.62;
+      font-size: 0.92rem;
+    }
+
+    .before-after-shell {
+      margin-top: 44px;
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 36px;
+      background:
+        radial-gradient(circle at 52% 20%, rgba(159,238,255,0.08), transparent 30rem),
+        rgba(255,255,255,0.045);
+      padding: clamp(12px, 2vw, 18px);
+      box-shadow: var(--shadow);
+    }
+
+    .ba-slider {
+      --pos: 50%;
+      position: relative;
+      width: 100%;
+      height: clamp(390px, 62vw, 650px);
+      border-radius: 30px;
+      overflow: hidden;
+      background: #05090d;
+      border: 1px solid rgba(255,255,255,0.12);
+      user-select: none;
+      touch-action: none;
+      isolation: isolate;
+    }
+
+    .ba-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      pointer-events: none;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    .ba-after-img {
+      z-index: 1;
+    }
+
+    .ba-before-img {
+      z-index: 2;
+      clip-path: inset(0 calc(100% - var(--pos)) 0 0);
+    }
+
+    .ba-vignette {
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      pointer-events: none;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,0.20), transparent 18%, transparent 82%, rgba(0,0,0,0.20)),
+        radial-gradient(circle at 50% 50%, transparent 40%, rgba(0,0,0,0.26));
+    }
+
+    .ba-label {
+      position: absolute;
+      top: 18px;
+      z-index: 5;
+      padding: 10px 13px;
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 999px;
+      background: rgba(0,0,0,0.36);
+      backdrop-filter: blur(12px);
+      color: white;
+      font-size: 0.74rem;
+      font-weight: 950;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .ba-label.before { left: 18px; }
+    .ba-label.after { right: 18px; }
+
+    .ba-line {
+      position: absolute;
+      z-index: 6;
+      top: 0;
+      bottom: 0;
+      left: var(--pos);
+      width: 2px;
+      transform: translateX(-1px);
+      background: linear-gradient(180deg, transparent, white 18%, var(--ice) 50%, white 82%, transparent);
+      box-shadow: 0 0 20px rgba(159,238,255,0.65), 0 0 70px rgba(159,238,255,0.35);
+      pointer-events: none;
+    }
+
+    .ba-handle {
+      position: absolute;
+      z-index: 7;
+      left: var(--pos);
+      top: 50%;
+      width: 70px;
+      height: 70px;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 30% 22%, #fff, #dffaff 44%, #d7b873 100%);
+      color: #051015;
+      border: 1px solid rgba(255,255,255,0.55);
+      box-shadow: 0 0 35px rgba(159,238,255,0.42), 0 0 95px rgba(159,238,255,0.22);
+      font-weight: 950;
+      pointer-events: none;
+    }
+
+    .ba-handle::before {
+      content: "↔";
+      font-size: 1.15rem;
+      line-height: 1;
+    }
+
+    .ba-range {
+      position: absolute;
+      inset: 0;
+      z-index: 20;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: ew-resize;
+      appearance: none;
+      -webkit-appearance: none;
+      background: transparent;
+      touch-action: none;
+    }
+
+    .ba-range::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 70px;
+      height: 650px;
+      cursor: ew-resize;
+    }
+
+    .ba-range::-moz-range-thumb {
+      width: 70px;
+      height: 650px;
+      border: 0;
+      cursor: ew-resize;
+      background: transparent;
+    }
+
+    .ba-fallback {
+      position: absolute;
+      inset: 0;
+      z-index: 30;
+      display: none;
+      place-items: center;
+      padding: 28px;
+      text-align: center;
+      color: white;
+      background: rgba(4, 9, 13, 0.9);
+      line-height: 1.7;
+    }
+
+    .ba-fallback strong {
+      color: var(--ice);
+    }
+
+    .tech-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 42px;
+    }
+
+    .tech-card {
+      position: relative;
+      min-height: 190px;
+      padding: 24px;
+      border-radius: 30px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.085), rgba(255,255,255,0.035)),
+        radial-gradient(circle at 85% 20%, rgba(159,238,255,0.12), transparent 45%);
+      overflow: hidden;
+      backdrop-filter: blur(18px);
+    }
+
+    .tech-card::after {
+      content: "";
+      position: absolute;
+      right: -30px;
+      top: -30px;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 1px solid rgba(159,238,255,0.26);
+      box-shadow: inset 0 0 25px rgba(159,238,255,0.14), 0 0 32px rgba(159,238,255,0.09);
+    }
+
+    .tech-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.15rem;
+    }
+
+    .tech-card p {
+      color: var(--muted);
+      line-height: 1.65;
+      max-width: 84%;
+    }
+
+    .doctor-card {
+      margin-top: 44px;
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 34px;
+      min-height: 610px;
+      border-radius: 38px;
+      border: 1px solid rgba(255,255,255,0.16);
+      background:
+        radial-gradient(circle at 30% 20%, rgba(159,238,255,0.11), transparent 30rem),
+        linear-gradient(135deg, rgba(255,255,255,0.09), rgba(255,255,255,0.03));
+      box-shadow: var(--shadow);
+      padding: clamp(16px, 3vw, 28px);
+      backdrop-filter: blur(20px);
+    }
+
+    .doctor-image-wrap {
+      position: relative;
+      min-height: 540px;
+      border-radius: 30px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.14);
+      background:
+        radial-gradient(circle at 50% 25%, rgba(255,255,255,0.18), transparent 13rem),
+        linear-gradient(180deg, #15232c, #071016);
+    }
+
+    .doctor-image-wrap img {
+      width: 100%;
+      height: 100%;
+      min-height: 540px;
+      object-fit: cover;
+      object-position: center top;
+      filter: saturate(0.98) contrast(1.04);
+    }
+
+    .doctor-image-wrap::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(180deg, transparent 55%, rgba(0,0,0,0.58)),
+        radial-gradient(circle at 50% 20%, transparent, rgba(0,0,0,0.18) 68%);
+    }
+
+    .doctor-name-on-image {
+      position: absolute;
+      left: 26px;
+      bottom: 22px;
+      z-index: 2;
+      letter-spacing: 0.14em;
+      font-weight: 950;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.82);
+      text-transform: uppercase;
+    }
+
+    .doctor-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: clamp(12px, 3vw, 36px);
+    }
+
+    .doctor-content h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.4rem, 5vw, 5.8rem);
+      line-height: 0.92;
+      letter-spacing: -0.06em;
+      font-weight: 500;
+    }
+
+    .doctor-title {
+      margin-top: 18px;
+      color: var(--gold);
+      font-weight: 900;
+      letter-spacing: 0.04em;
+    }
+
+    .doctor-content p {
+      margin-top: 24px;
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 1.06rem;
+      max-width: 560px;
+    }
+
+    .doctor-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .doctor-stat {
+      padding: 18px;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 22px;
+      background: rgba(255,255,255,0.045);
+    }
+
+    .doctor-stat strong {
+      display: block;
+      font-size: 1.25rem;
+      color: var(--ice-2);
+    }
+
+    .doctor-stat span {
+      margin-top: 4px;
+      display: block;
+      color: var(--faint);
+      font-size: 0.82rem;
+    }
+
+    .journey {
+      margin-top: 46px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .journey-step {
+      position: relative;
+      display: grid;
+      grid-template-columns: 90px 1fr auto;
+      gap: 20px;
+      align-items: center;
+      min-height: 120px;
+      padding: 20px;
+      border-radius: 28px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.048);
+      overflow: hidden;
+    }
+
+    .journey-step::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(159,238,255,0.12), transparent 35%);
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .journey-step:hover::before { opacity: 1; }
+
+    .step-number {
+      position: relative;
+      width: 66px;
+      height: 66px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #fff, var(--ice), var(--gold));
+      color: #061016;
+      font-size: 1.2rem;
+      font-weight: 950;
+      box-shadow: 0 0 30px rgba(159,238,255,0.18);
+    }
+
+    .journey-step h3 {
+      position: relative;
+      font-size: 1.18rem;
+      margin-bottom: 6px;
+    }
+
+    .journey-step p {
+      position: relative;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .step-arrow {
+      position: relative;
+      color: var(--ice);
+      font-weight: 950;
+      padding-right: 10px;
+    }
+
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 44px;
+    }
+
+    .quote-card {
+      padding: 28px;
+      min-height: 250px;
+      border-radius: 30px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background:
+        radial-gradient(circle at 20% 0%, rgba(159,238,255,0.1), transparent 50%),
+        rgba(255,255,255,0.05);
+      backdrop-filter: blur(18px);
+    }
+
+    .quote-mark {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 4rem;
+      line-height: 0.75;
+      color: rgba(159,238,255,0.7);
+    }
+
+    .quote-card p {
+      color: rgba(255,255,255,0.82);
+      line-height: 1.72;
+      margin-top: 18px;
+      font-size: 1.03rem;
+    }
+
+    .quote-card strong {
+      display: block;
+      margin-top: 24px;
+      color: var(--gold);
+    }
+
+    .booking-card {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 0.86fr 1.14fr;
+      gap: 38px;
+      margin-top: 44px;
+      padding: clamp(22px, 5vw, 54px);
+      border-radius: 38px;
+      border: 1px solid rgba(255,255,255,0.15);
+      background:
+        radial-gradient(circle at 18% 8%, rgba(159,238,255,0.16), transparent 30rem),
+        radial-gradient(circle at 90% 70%, rgba(215,184,115,0.10), transparent 30rem),
+        rgba(255,255,255,0.052);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(22px);
+    }
+
+    .booking-copy h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.35rem, 5vw, 5.3rem);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+      font-weight: 500;
+    }
+
+    .booking-copy p {
+      margin-top: 20px;
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 1.05rem;
+    }
+
+    .mini-proof {
+      display: grid;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .mini-proof span {
+      padding: 14px 16px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.045);
+      color: rgba(255,255,255,0.78);
+      font-size: 0.92rem;
+    }
+
+    .booking-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .field.full { grid-column: 1 / -1; }
+
+    label {
+      color: rgba(255,255,255,0.75);
+      font-size: 0.82rem;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 18px;
+      background: rgba(0,0,0,0.22);
+      color: white;
+      min-height: 54px;
+      padding: 0 15px;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    textarea {
+      padding-top: 14px;
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: rgba(159,238,255,0.55);
+      box-shadow: 0 0 0 4px rgba(159,238,255,0.08);
+      background: rgba(255,255,255,0.045);
+    }
+
+    option { background: #071016; }
+
+    .form-note {
+      grid-column: 1 / -1;
+      color: var(--faint);
+      font-size: 0.82rem;
+      line-height: 1.5;
+    }
+
+    .site-footer {
+      padding: 56px 0 34px;
+      border-top: 1px solid rgba(255,255,255,0.09);
+      background: rgba(0,0,0,0.12);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 0.8fr 0.8fr;
+      gap: 30px;
+    }
+
+    .footer-grid h3,
+    .footer-grid h4 {
+      margin-bottom: 16px;
+    }
+
+    .footer-grid p,
+    .footer-grid a {
+      color: var(--muted);
+      line-height: 1.85;
+      display: block;
+    }
+
+    .socials {
+      display: flex;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .socials a {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255,255,255,0.13);
+      background: rgba(255,255,255,0.045);
+      color: white;
+      font-weight: 900;
+    }
+
+    .copyright {
+      margin-top: 38px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      color: var(--faint);
+      font-size: 0.88rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1060px) {
+      .nav { display: none; }
+      .hero-grid,
+      .story-panel,
+      .doctor-card,
+      .booking-card {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual { min-height: 520px; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .tech-grid { grid-template-columns: 1fr; }
+      .testimonials { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 680px) {
+      body::after { display: none; }
+
+      .site-header {
+        top: 10px;
+        width: calc(100% - 20px);
+        border-radius: 24px;
+      }
+
+      .brand-text span { display: none; }
+      .header-cta {
+        min-height: 38px;
+        padding: 0 12px;
+        font-size: 0.75rem;
+      }
+
+      .hero {
+        padding-top: 120px;
+      }
+
+      .hero-grid {
+        gap: 20px;
+      }
+
+      h1 {
+        font-size: clamp(3.1rem, 18vw, 4.8rem);
+      }
+
+      .hero-visual {
+        min-height: 420px;
+      }
+
+      .holo-card {
+        right: 8px;
+        bottom: 3%;
+        width: 186px;
+      }
+
+      .section {
+        padding: 76px 0;
+      }
+
+      .services-grid,
+      .booking-form,
+      .doctor-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .ba-slider {
+        height: 430px;
+        border-radius: 24px;
+      }
+
+      .ba-handle {
+        width: 56px;
+        height: 56px;
+      }
+
+      .doctor-image-wrap,
+      .doctor-image-wrap img {
+        min-height: 470px;
+      }
+
+      .journey-step {
+        grid-template-columns: 56px 1fr;
+      }
+
+      .step-number {
+        width: 52px;
+        height: 52px;
+      }
+
+      .step-arrow {
+        display: none;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-loader" id="pageLoader" aria-hidden="true">
+    <div class="loader-mark"><span>L</span></div>
+  </div>
+
+  <header class="site-header">
+    <a href="#top" class="brand" aria-label="Lumière Dental Studio home">
+      <span class="brand-orb">L</span>
+      <span class="brand-text">
+        <strong>Lumière Dental Studio</strong>
+        <span>Beirut · Digital Smile Design</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#treatments">Treatments</a>
+      <a href="#transformation">Before / After</a>
+      <a href="#technology">Technology</a>
+      <a href="#doctor">Doctor</a>
+      <a href="#booking">Booking</a>
+    </nav>
+
+    <a href="#booking" class="header-cta magnetic">Book Consultation</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy-wrap reveal">
+          <div class="eyebrow"><span></span> Beirut, Lebanon · Luxury Dentistry</div>
+          <h1>Luxury Dental Care, <span class="gradient-text">Reimagined in 3D.</span></h1>
+          <p class="hero-copy">
+            Experience precision dentistry in Beirut with advanced smile design, cosmetic treatments,
+            and world-class patient care — crafted for patients who expect medicine to feel premium.
+          </p>
+
+          <div class="actions">
+            <a href="#booking" class="btn btn-primary magnetic">Book a Consultation</a>
+            <a href="#treatments" class="btn magnetic">Explore Treatments</a>
+          </div>
+
+          <div class="trust-row" aria-label="Trust badges">
+            <span class="trust-badge">Digital Smile Design</span>
+            <span class="trust-badge">Cosmetic Dentistry</span>
+            <span class="trust-badge">Implants</span>
+            <span class="trust-badge">Lebanon-Based, Globally Inspired</span>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Futuristic rotating tooth visual">
+          <div class="visual-ring"></div>
+          <div class="visual-ring"></div>
+          <div class="tooth-stage" id="heroTooth">
+            <div class="tooth"></div>
+            <div class="scan-line"></div>
+          </div>
+          <div class="holo-card">
+            <strong>Smile Scan Active</strong>
+            <p>3D mapping tooth shape, symmetry, shade, bite line, and smile arc.</p>
+            <div class="scan-bars"><span></span><span></span><span></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="story">
+      <div class="container">
+        <div class="story-panel reveal">
+          <div>
+            <span class="section-label">Scan to Smile</span>
+            <h2 class="section-title">From scan to smile, every detail is designed with precision.</h2>
+            <p class="section-copy">
+              A cinematic digital workflow gives patients confidence before treatment begins:
+              scan, simulate, preview, approve, then craft the final smile with clinical accuracy.
+            </p>
+            <div class="story-list">
+              <div class="story-item">
+                <span class="story-number">1</span>
+                <div><strong>Holographic scan</strong><span>We map structure, bite, shade, symmetry, and gum line.</span></div>
+              </div>
+              <div class="story-item">
+                <span class="story-number">2</span>
+                <div><strong>Digital preview</strong><span>The treatment vision becomes visible before irreversible work begins.</span></div>
+              </div>
+              <div class="story-item">
+                <span class="story-number">3</span>
+                <div><strong>Precision result</strong><span>Cosmetic planning turns into a natural, confident final smile.</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-visual" aria-hidden="true">
+            <div class="digital-mouth"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="treatments">
+      <div class="container">
+        <span class="section-label reveal">Treatments</span>
+        <h2 class="section-title reveal">Luxury dentistry that feels clear, calm, and exact.</h2>
+        <p class="section-copy reveal">
+          Every treatment is presented with confidence, not confusion — so visitors understand the value,
+          trust the clinic, and book faster.
+        </p>
+
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <div class="service-icon">01</div>
+            <h3>Cosmetic Dentistry</h3>
+            <p>Refined aesthetic treatments designed around facial harmony and natural beauty.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon">02</div>
+            <h3>Dental Implants</h3>
+            <p>Stable, premium tooth replacement planned with precision and long-term function.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon">03</div>
+            <h3>Veneers</h3>
+            <p>Natural-looking ceramic smile design with careful shade, shape, and symmetry control.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon">04</div>
+            <h3>Teeth Whitening</h3>
+            <p>Controlled brightness enhancement for a cleaner smile without artificial excess.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon">05</div>
+            <h3>Invisalign / Clear Aligners</h3>
+            <p>Discreet alignment planning for patients who want straighter teeth without braces.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon">06</div>
+            <h3>Smile Makeover</h3>
+            <p>A complete cosmetic transformation built around expression, confidence, and detail.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon">07</div>
+            <h3>Root Canal Treatment</h3>
+            <p>Comfort-focused care that saves natural teeth using modern clinical protocols.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon">08</div>
+            <h3>Pediatric Dentistry</h3>
+            <p>Gentle, calm dental care for children in a space that feels reassuring and clean.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="transformation">
+      <div class="container">
+        <span class="section-label reveal">Before / After</span>
+        <h2 class="section-title reveal">See the Transformation Before It Happens.</h2>
+        <p class="section-copy reveal">
+          With digital smile previews, patients can visualize their future smile before treatment begins.
+          Drag the slider to compare the real before and after images.
+        </p>
+
+        <div class="before-after-shell reveal">
+          <div class="ba-slider" id="smileBeforeAfter" data-before-after>
+            <img class="ba-img ba-after-img" src="./after.png" alt="After smile transformation" draggable="false">
+            <img class="ba-img ba-before-img" src="./before.png" alt="Before smile transformation" draggable="false">
+            <div class="ba-vignette" aria-hidden="true"></div>
+            <span class="ba-label before">Before</span>
+            <span class="ba-label after">After</span>
+            <div class="ba-line" aria-hidden="true"></div>
+            <div class="ba-handle" aria-hidden="true"></div>
+            <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Before and after image comparison slider">
+            <div class="ba-fallback">
+              <p><strong>Image missing.</strong><br>Upload <strong>before.png</strong> and <strong>after.png</strong> in the same folder as <strong>index.html</strong>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="technology">
+      <div class="container">
+        <span class="section-label reveal">Technology</span>
+        <h2 class="section-title reveal">A futuristic clinic experience that explains the value instantly.</h2>
+        <p class="section-copy reveal">
+          The website turns advanced equipment into a premium story: patients do not just see technology,
+          they understand why it makes treatment safer, clearer, and more precise.
+        </p>
+
+        <div class="tech-grid">
+          <article class="tech-card reveal">
+            <h3>3D Smile Scanning</h3>
+            <p>High-resolution smile mapping for better planning and more confident treatment decisions.</p>
+          </article>
+          <article class="tech-card reveal">
+            <h3>Digital X-rays</h3>
+            <p>Cleaner diagnostics, faster analysis, and a more modern patient explanation process.</p>
+          </article>
+          <article class="tech-card reveal">
+            <h3>AI-assisted Treatment Planning</h3>
+            <p>Smart visual planning helps dentists present options with clarity and confidence.</p>
+          </article>
+          <article class="tech-card reveal">
+            <h3>Same-day Cosmetic Planning</h3>
+            <p>Patients can move from consultation to a visual direction without waiting weeks.</p>
+          </article>
+          <article class="tech-card reveal">
+            <h3>Precision Implant Workflow</h3>
+            <p>Implant placement planning based on structure, function, and long-term aesthetics.</p>
+          </article>
+          <article class="tech-card reveal">
+            <h3>Luxury Patient Interface</h3>
+            <p>Every step feels guided, private, premium, and easy to understand.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="doctor">
+      <div class="container">
+        <span class="section-label reveal">Lead Dentist</span>
+        <div class="doctor-card reveal">
+          <div class="doctor-image-wrap">
+            <img src="./doctor.png" alt="Dr. Maya Haddad, Cosmetic Dentist and Digital Smile Designer">
+            <div class="doctor-name-on-image">Dr. Maya Haddad</div>
+          </div>
+          <div class="doctor-content">
+            <h2>Dr. Maya Haddad</h2>
+            <div class="doctor-title">Cosmetic Dentist & Digital Smile Designer</div>
+            <p>
+              Combining clinical precision with artistic vision, Dr. Haddad creates natural,
+              confident smiles using advanced digital dentistry. Her approach is designed for patients
+              who want premium results without losing authenticity.
+            </p>
+            <div class="doctor-stats">
+              <div class="doctor-stat"><strong>3D</strong><span>Smile planning</span></div>
+              <div class="doctor-stat"><strong>1:1</strong><span>Private care</span></div>
+              <div class="doctor-stat"><strong>Beirut</strong><span>Global standard</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="container">
+        <span class="section-label reveal">Patient Experience</span>
+        <h2 class="section-title reveal">A clear journey from first visit to final smile.</h2>
+
+        <div class="journey">
+          <article class="journey-step reveal">
+            <div class="step-number">1</div>
+            <div><h3>Consultation</h3><p>Understand goals, concerns, timeline, and desired smile style.</p></div>
+            <div class="step-arrow">→</div>
+          </article>
+          <article class="journey-step reveal">
+            <div class="step-number">2</div>
+            <div><h3>3D Scan</h3><p>Capture structure, bite, proportions, and digital measurements.</p></div>
+            <div class="step-arrow">→</div>
+          </article>
+          <article class="journey-step reveal">
+            <div class="step-number">3</div>
+            <div><h3>Smile Preview</h3><p>Visualize the planned result before the final treatment path begins.</p></div>
+            <div class="step-arrow">→</div>
+          </article>
+          <article class="journey-step reveal">
+            <div class="step-number">4</div>
+            <div><h3>Treatment Plan</h3><p>Receive a clear, staged plan with expectations and priorities.</p></div>
+            <div class="step-arrow">→</div>
+          </article>
+          <article class="journey-step reveal">
+            <div class="step-number">5</div>
+            <div><h3>Final Smile</h3><p>Complete the transformation with natural, confident aesthetics.</p></div>
+            <div class="step-arrow">✓</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="testimonials">
+      <div class="container">
+        <span class="section-label reveal">Patient Words</span>
+        <h2 class="section-title reveal">Premium care should feel unforgettable.</h2>
+
+        <div class="testimonials">
+          <article class="quote-card reveal">
+            <div class="quote-mark">“</div>
+            <p>From the first scan to the final result, the experience felt futuristic.</p>
+            <strong>— Karim A., Beirut</strong>
+          </article>
+          <article class="quote-card reveal">
+            <div class="quote-mark">“</div>
+            <p>The clinic looked and felt more advanced than anything I’ve seen abroad.</p>
+            <strong>— Sarah M., Dubai</strong>
+          </article>
+          <article class="quote-card reveal">
+            <div class="quote-mark">“</div>
+            <p>My smile makeover was planned with incredible detail.</p>
+            <strong>— Rami K., London</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="booking">
+      <div class="container">
+        <div class="booking-card reveal">
+          <div class="booking-copy">
+            <span class="section-label">Private Consultation</span>
+            <h2>Ready to Design Your New Smile?</h2>
+            <p>
+              Book a private consultation at Lumière Dental Studio in Beirut.
+              This form is ready for design presentation and can later be connected to WhatsApp,
+              email, or a real booking system.
+            </p>
+            <div class="mini-proof">
+              <span>✓ Premium digital smile preview workflow</span>
+              <span>✓ Cosmetic and implant treatment planning</span>
+              <span>✓ Built to convert visitors into serious consultations</span>
+            </div>
+          </div>
+
+          <form class="booking-form" onsubmit="event.preventDefault(); alert('Demo form submitted. Connect this to WhatsApp, email, or a booking system.');">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your full name" required>
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" placeholder="+961 -- --- ---" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com">
+            </div>
+            <div class="field">
+              <label for="interest">Treatment Interest</label>
+              <select id="interest" name="interest" required>
+                <option value="">Select treatment</option>
+                <option>Cosmetic Dentistry</option>
+                <option>Dental Implants</option>
+                <option>Veneers</option>
+                <option>Teeth Whitening</option>
+                <option>Clear Aligners</option>
+                <option>Smile Makeover</option>
+                <option>Root Canal Treatment</option>
+                <option>Pediatric Dentistry</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="date">Preferred Date</label>
+              <input id="date" name="date" type="date">
+            </div>
+            <div class="field full">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell us what you would like to improve about your smile."></textarea>
+            </div>
+            <div class="field full">
+              <button class="btn btn-primary magnetic" type="submit">Book My Consultation</button>
+            </div>
+            <p class="form-note">Demo website notice: replace placeholder contact information and connect the form before real clinic use.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>Lumière Dental Studio</h3>
+          <p>Luxury cosmetic dentistry and digital smile design in Beirut, Lebanon.</p>
+          <div class="socials">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="TikTok">TT</a>
+            <a href="#" aria-label="LinkedIn">IN</a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+          <p>Beirut, Lebanon</p>
+          <p>+961 XX XXX XXX</p>
+          <p>hello@lumieredental.example</p>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <a href="#treatments">Treatments</a>
+          <a href="#transformation">Before / After</a>
+          <a href="#doctor">Doctor</a>
+          <a href="#booking">Booking</a>
+        </div>
+
+        <div>
+          <h4>Treatments</h4>
+          <a href="#treatments">Veneers</a>
+          <a href="#treatments">Implants</a>
+          <a href="#treatments">Whitening</a>
+          <a href="#treatments">Clear Aligners</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <span>© 2026 Lumière Dental Studio. All rights reserved.</span>
+        <span>Premium website mockup for agency portfolio presentation.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      "use strict";
+
+      // Loading screen
+      window.addEventListener("load", function () {
+        const loader = document.getElementById("pageLoader");
+        setTimeout(function () {
+          if (loader) loader.classList.add("is-hidden");
+        }, 450);
+      });
+
+      // Cursor glow
+      window.addEventListener("pointermove", function (event) {
+        document.documentElement.style.setProperty("--cursor-x", event.clientX + "px");
+        document.documentElement.style.setProperty("--cursor-y", event.clientY + "px");
+      }, { passive: true });
+
+      // Reveal on scroll
+      const revealItems = document.querySelectorAll(".reveal");
+      const revealObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.14 });
+
+      revealItems.forEach(function (item) {
+        revealObserver.observe(item);
+      });
+
+      // Magnetic button glow
+      document.querySelectorAll(".magnetic").forEach(function (button) {
+        button.addEventListener("pointermove", function (event) {
+          const rect = button.getBoundingClientRect();
+          button.style.setProperty("--mx", (event.clientX - rect.left) + "px");
+          button.style.setProperty("--my", (event.clientY - rect.top) + "px");
+        });
+      });
+
+      // Hero tooth scroll transform
+      const heroTooth = document.getElementById("heroTooth");
+      function updateHeroTooth() {
+        if (!heroTooth) return;
+        const y = window.scrollY || 0;
+        const rotate = Math.min(y * 0.08, 42);
+        const scale = 1 + Math.min(y / 4000, 0.13);
+        heroTooth.style.transform = "translateY(" + Math.min(y * 0.035, 30) + "px) rotateX(" + (8 - rotate * 0.05) + "deg) rotateY(" + (-14 + rotate) + "deg) scale(" + scale + ")";
+      }
+      window.addEventListener("scroll", updateHeroTooth, { passive: true });
+      updateHeroTooth();
+
+      // Clean before/after slider.
+      // Base layer: after.png. Top clipped layer: before.png.
+      function setupBeforeAfter(slider) {
+        const range = slider.querySelector(".ba-range");
+        const beforeImage = slider.querySelector(".ba-before-img");
+        const afterImage = slider.querySelector(".ba-after-img");
+        const fallback = slider.querySelector(".ba-fallback");
+
+        function setPosition(value) {
+          let pos = Number(value);
+          if (Number.isNaN(pos)) pos = 50;
+          pos = Math.max(0, Math.min(100, pos));
+          slider.style.setProperty("--pos", pos + "%");
+          if (range) range.value = String(pos);
+        }
+
+        function positionFromPointer(event) {
+          const rect = slider.getBoundingClientRect();
+          const x = event.clientX - rect.left;
+          const percentage = (x / rect.width) * 100;
+          setPosition(percentage);
+        }
+
+        if (range) {
+          range.addEventListener("input", function () {
+            setPosition(range.value);
+          });
+          range.addEventListener("change", function () {
+            setPosition(range.value);
+          });
+        }
+
+        slider.addEventListener("pointerdown", function (event) {
+          positionFromPointer(event);
+          slider.setPointerCapture(event.pointerId);
+        });
+
+        slider.addEventListener("pointermove", function (event) {
+          if (event.buttons === 1 || event.pressure > 0) {
+            positionFromPointer(event);
+          }
+        });
+
+        slider.addEventListener("pointerup", function (event) {
+          if (slider.hasPointerCapture && slider.hasPointerCapture(event.pointerId)) {
+            slider.releasePointerCapture(event.pointerId);
+          }
+        });
+
+        slider.addEventListener("pointercancel", function (event) {
+          if (slider.hasPointerCapture && slider.hasPointerCapture(event.pointerId)) {
+            slider.releasePointerCapture(event.pointerId);
+          }
+        });
+
+        let failedImages = 0;
+        function failImage() {
+          failedImages += 1;
+          if (fallback && failedImages > 0) {
+            fallback.style.display = "grid";
+          }
+        }
+
+        if (beforeImage) beforeImage.addEventListener("error", failImage);
+        if (afterImage) afterImage.addEventListener("error", failImage);
+
+        setPosition(50);
+      }
+
+      document.querySelectorAll("[data-before-after]").forEach(setupBeforeAfter);
+    })();
+  </script>
+</body>
+</html>
