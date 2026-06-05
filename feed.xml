@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>CrownCedar Studio Updates</title>
+    <link>https://crowncedar.com/</link>
+    <description>SEO and website updates for CrownCedar Studio.</description>
+    <language>en-LB</language>
+    <lastBuildDate>Fri, 05 Jun 2026 18:55:00 +0300</lastBuildDate>
+    <item>
+      <title>Live demo website pages added</title>
+      <link>https://crowncedar.com/#demos</link>
+      <guid>https://crowncedar.com/#live-demo-pages-2026-06-05</guid>
+      <pubDate>Fri, 05 Jun 2026 18:55:00 +0300</pubDate>
+      <description>CrownCedar Studio added real standalone demo pages for dental clinic, car dealer, restaurant, and gym website examples.</description>
+    </item>
+  </channel>
+</rss>
