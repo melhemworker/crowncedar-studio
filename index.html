@@ -21,8 +21,12 @@
 
   <!-- Search/brand icons: keep icon.png in the repo root and add favicon.ico / apple-touch-icon.png when available. -->
   <link rel="icon" href="favicon.ico" sizes="any" />
-  <link rel="icon" type="image/png" href="icon.png" sizes="512x512" />
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="icon-512.png" sizes="512x512" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="alternate" type="text/plain" title="CrownCedar Studio LLM source" href="https://crowncedar.com/llms.txt" />
+  <link rel="alternate" type="application/rss+xml" title="CrownCedar Studio updates" href="https://crowncedar.com/feed.xml" />
 
   <meta property="og:locale" content="en_LB" />
   <meta property="og:site_name" content="CrownCedar Studio" />
@@ -222,6 +226,103 @@
             "text": "Yes. The website can include visible WhatsApp buttons, a floating WhatsApp button, and direct message links placed where customers are most likely to contact you."
           }
         }
+      ]
+    }
+  ]
+}
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ItemList",
+      "@id": "https://crowncedar.com/#service-pages",
+      "name": "CrownCedar Studio service landing pages",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Web Design Lebanon",
+          "url": "https://crowncedar.com/web-design-lebanon.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tripoli",
+          "url": "https://crowncedar.com/web-design-tripoli.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Restaurants",
+          "url": "https://crowncedar.com/restaurant-websites-lebanon.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Clinics",
+          "url": "https://crowncedar.com/clinic-websites-lebanon.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Pricing",
+          "url": "https://crowncedar.com/website-pricing-lebanon.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Dental Clinic Demo",
+          "url": "https://crowncedar.com/demo-clinic-dental.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Car Dealer Demo",
+          "url": "https://crowncedar.com/demo-car-dealer.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Restaurant Demo",
+          "url": "https://crowncedar.com/demo-restaurant.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Gym Demo",
+          "url": "https://crowncedar.com/demo-gym.html"
+        }
+      ]
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://crowncedar.com/#site-navigation",
+      "name": [
+        "Home",
+        "Web Design Lebanon",
+        "Tripoli",
+        "Restaurants",
+        "Clinics",
+        "Pricing",
+        "Dental Clinic Demo",
+        "Car Dealer Demo",
+        "Restaurant Demo",
+        "Gym Demo"
+      ],
+      "url": [
+        "https://crowncedar.com/",
+        "https://crowncedar.com/web-design-lebanon.html",
+        "https://crowncedar.com/web-design-tripoli.html",
+        "https://crowncedar.com/restaurant-websites-lebanon.html",
+        "https://crowncedar.com/clinic-websites-lebanon.html",
+        "https://crowncedar.com/website-pricing-lebanon.html",
+        "https://crowncedar.com/demo-clinic-dental.html",
+        "https://crowncedar.com/demo-car-dealer.html",
+        "https://crowncedar.com/demo-restaurant.html",
+        "https://crowncedar.com/demo-gym.html"
       ]
     }
   ]
@@ -2737,6 +2838,10 @@ html.instagram-browser .mobile-menu {
   }
 }
 
+
+    a.feature-card { text-decoration: none; color: inherit; display: block; }
+    .footer-seo-links a { color: var(--gold-2); text-decoration: none; font-size: .9rem; font-weight: 800; }
+
 </style>
 
 </head>
@@ -2754,6 +2859,8 @@ html.instagram-browser .mobile-menu {
 
   <nav class="desktop-nav" aria-label="Primary navigation">
     <a class="nav-link active" href="#home">Home</a>
+    <!-- <a class="nav-link" href="web-design-lebanon.html">Services</a>
+    <a class="nav-link" href="web-design-tripoli.html">Tripoli</a> -->
     <a class="nav-link" href="#niches">Niches</a>
     <a class="nav-link" href="#demos">Demos</a>
     <a class="nav-link" href="#packages">Packages</a>
@@ -2777,6 +2884,8 @@ html.instagram-browser .mobile-menu {
 
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <a href="#home">Home</a>
+    <a href="web-design-lebanon.html">Services</a>
+    <a href="web-design-tripoli.html">Tripoli</a>
     <a href="#niches">Niches</a>
     <a href="#demos">Demos</a>
     <a href="#packages">Packages</a>
@@ -2967,76 +3076,97 @@ html.instagram-browser .mobile-menu {
   <div class="container">
     <div class="section-head fade-in">
       <div>
-        <span class="eyebrow"><i class="ph ph-devices"></i> Demo Showcase</span>
-        <h2 class="section-title">Preview the trust your business can create online.</h2>
+        <span class="eyebrow"><i class="ph ph-devices"></i> Live Demo Websites</span>
+        <h2 class="section-title">Real demo pages your customers can open, share, and understand.</h2>
       </div>
       <p class="section-subtitle">
-        Open a working sample and imagine your own photos, services, location, and WhatsApp contact inside the same clear structure.
+        These are not popups anymore. Each preview opens a real standalone demo page with its own URL, sections, images, calls to action, sitemap entry, and AI discovery reference.
       </p>
     </div>
 
     <div class="demo-grid">
       <article class="demo-card card fade-in">
-        <div class="demo-visual">
-          <div class="demo-img" style="background-image:url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=80')"></div>
+        <a class="demo-visual" href="demo-clinic-dental.html" aria-label="Open Lumière Dental Studio clinic demo website">
+          <div class="demo-img" style="background-image:url('after.png')"></div>
           <div class="demo-phone">
             <div class="demo-phone-inner">
-              <div class="demo-phone-img" style="background-image:url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=500&q=80')"></div>
+              <div class="demo-phone-img" style="background-image:url('doctor.png')"></div>
               <div class="demo-phone-content"><div></div><div></div><div></div><div></div></div>
             </div>
           </div>
-        </div>
-        <span class="niche-label">Clinic Website</span>
-        <h3>Smile Dental Clinic</h3>
-        <p>A clinic page built to show treatments, trust, location, and WhatsApp booking without making patients search.</p>
+        </a>
+        <span class="niche-label">Luxury Clinic Website</span>
+        <h3>Lumière Dental Studio</h3>
+        <p>A full dental clinic demo with 3D-inspired visuals, treatment sections, before/after slider, doctor profile, and booking flow.</p>
         <div class="tags">
-          <span class="tag">Treatments</span>
+          <span class="tag">3D Visuals</span>
+          <span class="tag">Before/After</span>
           <span class="tag">Booking</span>
-          <span class="tag">Maps</span>
         </div>
-        <button type="button" class="btn btn-secondary demo-open" data-title="Smile Dental Clinic" data-niche="Clinic Website" data-image="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1400&q=85" data-tags="Treatments,WhatsApp Booking,Doctor Profile,Google Maps">View Website Preview</button>
+        <a class="btn btn-secondary" href="demo-clinic-dental.html">Open Real Demo Page</a>
       </article>
 
       <article class="demo-card card fade-in">
-        <div class="demo-visual">
-          <div class="demo-img" style="background-image:url('https://images.unsplash.com/photo-1743264533381-105fa7c2bcec?auto=format&fit=crop&w=1600&q=80')"></div>
+        <a class="demo-visual" href="demo-car-dealer.html" aria-label="Open Elite Motors Lebanon car dealer demo website">
+          <div class="demo-img" style="background-image:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=80')"></div>
           <div class="demo-phone">
             <div class="demo-phone-inner">
-              <div class="demo-phone-img" style="background-image:url('https://images.unsplash.com/photo-1743264533381-105fa7c2bcec?auto=format&fit=crop&w=1600&q=80')"></div>
+              <div class="demo-phone-img" style="background-image:url('https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&w=500&q=80')"></div>
               <div class="demo-phone-content"><div></div><div></div><div></div><div></div></div>
             </div>
           </div>
-        </div>
+        </a>
         <span class="niche-label">Car Dealer Website</span>
         <h3>Elite Motors Lebanon</h3>
-        <p>A car dealer page built to make inventory feel premium and help serious buyers inquire faster.</p>
+        <p>A real car dealer demo with inventory cards, availability CTAs, premium photos, showroom details, and WhatsApp buyer inquiries.</p>
         <div class="tags">
           <span class="tag">Inventory</span>
-          <span class="tag">Photos</span>
+          <span class="tag">Availability</span>
           <span class="tag">WhatsApp</span>
         </div>
-        <button type="button" class="btn btn-secondary demo-open" data-title="Elite Motors Lebanon" data-niche="Car Dealer Website" data-image="https://images.unsplash.com/photo-1562141961-052bb2bff7a8?auto=format&fit=crop&w=1400&q=85" data-tags="Inventory,Car Photos,Availability,Direct Inquiry">View Website Preview</button>
+        <a class="btn btn-secondary" href="demo-car-dealer.html">Open Real Demo Page</a>
       </article>
 
       <article class="demo-card card fade-in">
-        <div class="demo-visual">
+        <a class="demo-visual" href="demo-restaurant.html" aria-label="Open Cedar Table Beirut restaurant demo website">
+          <div class="demo-img" style="background-image:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=80')"></div>
+          <div class="demo-phone">
+            <div class="demo-phone-inner">
+              <div class="demo-phone-img" style="background-image:url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=500&q=80')"></div>
+              <div class="demo-phone-content"><div></div><div></div><div></div><div></div></div>
+            </div>
+          </div>
+        </a>
+        <span class="niche-label">Restaurant Website</span>
+        <h3>Cedar Table Beirut</h3>
+        <p>A real restaurant demo with menu highlights, food gallery, reservation CTA, location, opening hours, and WhatsApp flow.</p>
+        <div class="tags">
+          <span class="tag">Menu</span>
+          <span class="tag">Reservations</span>
+          <span class="tag">Location</span>
+        </div>
+        <a class="btn btn-secondary" href="demo-restaurant.html">Open Real Demo Page</a>
+      </article>
+
+      <article class="demo-card card fade-in">
+        <a class="demo-visual" href="demo-gym.html" aria-label="Open FitHouse Gym demo website">
           <div class="demo-img" style="background-image:url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1000&q=80')"></div>
           <div class="demo-phone">
             <div class="demo-phone-inner">
-              <div class="demo-phone-img" style="background-image:url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=500&q=80')"></div>
+              <div class="demo-phone-img" style="background-image:url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=500&q=80')"></div>
               <div class="demo-phone-content"><div></div><div></div><div></div><div></div></div>
             </div>
           </div>
-        </div>
+        </a>
         <span class="niche-label">Gym Website</span>
         <h3>FitHouse Gym</h3>
-        <p>A gym page built to explain memberships, show transformations, and turn interested visitors into WhatsApp leads.</p>
+        <p>A real gym demo with memberships, trainers, class schedule, transformation visuals, branch info, and WhatsApp joining.</p>
         <div class="tags">
           <span class="tag">Plans</span>
-          <span class="tag">Trainers</span>
+          <span class="tag">Schedule</span>
           <span class="tag">Join CTA</span>
         </div>
-        <button type="button" class="btn btn-secondary demo-open" data-title="FitHouse Gym" data-niche="Gym Website" data-image="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1400&q=85" data-tags="Memberships,Trainers,Class Schedule,WhatsApp Joining">View Website Preview</button>
+        <a class="btn btn-secondary" href="demo-gym.html">Open Real Demo Page</a>
       </article>
     </div>
   </div>
@@ -3063,6 +3193,27 @@ html.instagram-browser .mobile-menu {
     </div>
     <h2> <br>&nbsp; Also included:</h2>
     <p> <br> &nbsp; Instagram / current page, optional contact form, basic speed cleanup, simple copy improvement, and a search-friendly page structure for your business.</p>
+  </div>
+</section>
+
+
+<section id="service-pages">
+  <div class="container">
+    <div class="section-head fade-in">
+      <div>
+        <span class="eyebrow"><i class="ph ph-link"></i> Search-Friendly Service Pages</span>
+        <h2 class="section-title">Focused pages for the searches Lebanese business owners actually make.</h2>
+      </div>
+      <p class="section-subtitle">Google and AI agents understand businesses better when each high-intent service has a clear, crawlable page. These pages also give real customers a faster path to the exact offer they need.</p>
+    </div>
+    <div class="features-grid">
+      <a class="feature-card card fade-in" href="web-design-lebanon.html"><div class="icon-box"><i class="ph ph-globe"></i></div><h3>Web Design Lebanon</h3><p>Primary service page for Lebanese business website design, WhatsApp-ready sites, and professional online presence.</p></a>
+      <a class="feature-card card fade-in" href="web-design-tripoli.html"><div class="icon-box"><i class="ph ph-map-pin-line"></i></div><h3>Web Design Tripoli</h3><p>Local page for Tripoli and North Lebanon businesses that need a serious website and clear contact flow.</p></a>
+      <a class="feature-card card fade-in" href="restaurant-websites-lebanon.html"><div class="icon-box"><i class="ph ph-fork-knife"></i></div><h3>Restaurant Websites</h3><p>Menu, photos, location, booking/contact details, and WhatsApp flow for restaurants and cafés.</p></a>
+      <a class="feature-card card fade-in" href="clinic-websites-lebanon.html"><div class="icon-box"><i class="ph ph-first-aid-kit"></i></div><h3>Clinic Websites</h3><p>Trust-focused clinic and dental websites with services, doctor profile, location, FAQs, and appointment path.</p></a>
+      <a class="feature-card card fade-in" href="car-dealer-websites-lebanon.html"><div class="icon-box"><i class="ph ph-car-profile"></i></div><h3>Car Dealer Websites</h3><p>Inventory, vehicle photos, availability, feature blocks, and WhatsApp leads for Lebanese car dealers.</p></a>
+      <a class="feature-card card fade-in" href="website-pricing-lebanon.html"><div class="icon-box"><i class="ph ph-tag"></i></div><h3>Website Pricing Lebanon</h3><p>Simple package explanation so buyers can understand cost, deposit, scope, and what affects price.</p></a>
+    </div>
   </div>
 </section>
 
@@ -3482,6 +3633,19 @@ html.instagram-browser .mobile-menu {
       </a>
     </div>
     <span class="footer-privacy-note">Privacy note: your inquiry details are not shared.</span>
+    <nav class="footer-seo-links" aria-label="CrownCedar service pages" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:14px;justify-content:flex-end;">
+      <a href="web-design-lebanon.html">Web Design Lebanon</a>
+      <a href="web-design-tripoli.html">Web Design Tripoli</a>
+      <a href="restaurant-websites-lebanon.html">Restaurant Websites</a>
+      <a href="clinic-websites-lebanon.html">Clinic Websites</a>
+      <a href="car-dealer-websites-lebanon.html">Car Dealer Websites</a>
+      <a href="website-pricing-lebanon.html">Pricing</a>
+      <a href="demo-clinic-dental.html">Clinic Demo</a>
+      <a href="demo-car-dealer.html">Car Dealer Demo</a>
+      <a href="demo-restaurant.html">Restaurant Demo</a>
+      <a href="demo-gym.html">Gym Demo</a>
+      <a href="llms.txt">LLM Source</a>
+    </nav>
   </div>
 </div>
 
@@ -3492,41 +3656,15 @@ html.instagram-browser .mobile-menu {
     <span>WhatsApp</span>
   </a>
 
-  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Website demo preview">
-    <div class="lightbox-content">
-      <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close demo preview">
-        <i class="ph ph-x"></i>
-      </button>
-      <div class="lightbox-body">
-        <span class="niche-label" id="lightboxNiche">Website Preview</span>
-        <h3 id="lightboxTitle">Website Demo Preview</h3>
-        <p>
-          <strong>This is a polished preview.</strong> It shows how your business could present services, photos, location, and WhatsApp contact in one clear page.
-        </p>
-        <div class="lightbox-tags" id="lightboxTags"></div>
-      </div>
-      <div class="demo-frame-wrap">
-        <iframe class="demo-frame" id="demoFrame" title="Working website demo preview" loading="lazy" referrerpolicy="no-referrer" sandbox="allow-popups allow-popups-to-escape-sandbox"></iframe>
-      </div>
-    </div>
-  </div>
-
   <script>
     const header = document.getElementById("siteHeader");
     const menuToggle = document.getElementById("menuToggle");
     const mobileMenu = document.getElementById("mobileMenu");
-    const mobileLinks = mobileMenu.querySelectorAll("a");
+    const mobileLinks = mobileMenu ? mobileMenu.querySelectorAll("a") : [];
     const navLinks = document.querySelectorAll(".nav-link");
     const sections = document.querySelectorAll("main section[id]");
     const fadeItems = document.querySelectorAll(".fade-in");
     const faqItems = document.querySelectorAll(".faq-item");
-    const demoButtons = document.querySelectorAll(".demo-open");
-    const lightbox = document.getElementById("lightbox");
-    const lightboxClose = document.getElementById("lightboxClose");
-    const demoFrame = document.getElementById("demoFrame");
-    const lightboxTitle = document.getElementById("lightboxTitle");
-    const lightboxNiche = document.getElementById("lightboxNiche");
-    const lightboxTags = document.getElementById("lightboxTags");
     const contactForm = document.getElementById("contactForm");
     const formMessage = document.getElementById("formMessage");
     const formError = document.getElementById("formError");
@@ -3553,13 +3691,8 @@ html.instagram-browser .mobile-menu {
       window.visualViewport.addEventListener("scroll", setRealViewportHeight, { passive: true });
     }
 
-    if (isInstagramBrowser) {
-      root.classList.add("instagram-browser");
-    }
-
-    if (isIOSBrowser) {
-      root.classList.add("ios-browser");
-    }
+    if (isInstagramBrowser) root.classList.add("instagram-browser");
+    if (isIOSBrowser) root.classList.add("ios-browser");
 
     function lockPageScroll() {
       savedScrollY = window.scrollY || document.documentElement.scrollTop || 0;
@@ -3569,24 +3702,17 @@ html.instagram-browser .mobile-menu {
     function unlockPageScroll() {
       const topValue = document.body.style.top;
       document.body.style.top = "";
-      if (topValue) {
-        window.scrollTo(0, Math.abs(parseInt(topValue, 10)) || savedScrollY);
-      }
+      if (topValue) window.scrollTo(0, Math.abs(parseInt(topValue, 10)) || savedScrollY);
     }
 
     function handleHeaderScroll() {
-      if (window.scrollY > 24) {
-        header.classList.add("scrolled");
-      } else {
-        header.classList.remove("scrolled");
-      }
+      if (!header) return;
+      header.classList.toggle("scrolled", window.scrollY > 24);
     }
 
     let scrollTicking = false;
-
     function requestHeaderScrollUpdate() {
       if (scrollTicking) return;
-
       scrollTicking = true;
       window.requestAnimationFrame(() => {
         handleHeaderScroll();
@@ -3598,6 +3724,7 @@ html.instagram-browser .mobile-menu {
     handleHeaderScroll();
 
     function openMenu() {
+      if (!mobileMenu || !menuToggle) return;
       if (isInstagramBrowser) lockPageScroll();
       mobileMenu.classList.add("open");
       document.body.classList.add("menu-open");
@@ -3607,6 +3734,7 @@ html.instagram-browser .mobile-menu {
     }
 
     function closeMenu() {
+      if (!mobileMenu || !menuToggle) return;
       mobileMenu.classList.remove("open");
       document.body.classList.remove("menu-open");
       if (isInstagramBrowser) unlockPageScroll();
@@ -3615,13 +3743,12 @@ html.instagram-browser .mobile-menu {
       menuToggle.innerHTML = '<i class="ph ph-list"></i>';
     }
 
-    menuToggle.addEventListener("click", () => {
-      mobileMenu.classList.contains("open") ? closeMenu() : openMenu();
-    });
-
-    mobileLinks.forEach(link => {
-      link.addEventListener("click", closeMenu);
-    });
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.contains("open") ? closeMenu() : openMenu();
+      });
+      mobileLinks.forEach(link => link.addEventListener("click", closeMenu));
+    }
 
     if ("IntersectionObserver" in window) {
       const fadeObserver = new IntersectionObserver((entries) => {
@@ -3632,7 +3759,6 @@ html.instagram-browser .mobile-menu {
           }
         });
       }, { threshold: 0.12 });
-
       fadeItems.forEach(item => fadeObserver.observe(item));
     } else {
       fadeItems.forEach(item => item.classList.add("visible"));
@@ -3643,46 +3769,31 @@ html.instagram-browser .mobile-menu {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             const id = entry.target.getAttribute("id");
-            navLinks.forEach(link => {
-              link.classList.toggle("active", link.getAttribute("href") === "#" + id);
-            });
+            navLinks.forEach(link => link.classList.toggle("active", link.getAttribute("href") === "#" + id));
           }
         });
-      }, {
-        rootMargin: "-38% 0px -55% 0px",
-        threshold: 0
-      });
-
+      }, { rootMargin: "-38% 0px -55% 0px", threshold: 0 });
       sections.forEach(section => activeObserver.observe(section));
     }
 
     faqItems.forEach((item, index) => {
       const question = item.querySelector(".faq-question");
       const answer = item.querySelector(".faq-answer");
-
       if (!question || !answer) return;
-
       const answerId = answer.id || `faq-answer-${index + 1}`;
       answer.id = answerId;
       question.setAttribute("aria-controls", answerId);
       question.setAttribute("aria-expanded", item.classList.contains("active") ? "true" : "false");
-
-      if (item.classList.contains("active")) {
-        answer.style.maxHeight = answer.scrollHeight + "px";
-      }
-
+      if (item.classList.contains("active")) answer.style.maxHeight = answer.scrollHeight + "px";
       question.addEventListener("click", () => {
         const isActive = item.classList.contains("active");
-
         faqItems.forEach(otherItem => {
           const otherQuestion = otherItem.querySelector(".faq-question");
           const otherAnswer = otherItem.querySelector(".faq-answer");
-
           otherItem.classList.remove("active");
           if (otherAnswer) otherAnswer.style.maxHeight = 0;
           if (otherQuestion) otherQuestion.setAttribute("aria-expanded", "false");
         });
-
         if (!isActive) {
           item.classList.add("active");
           answer.style.maxHeight = answer.scrollHeight + "px";
@@ -3691,601 +3802,41 @@ html.instagram-browser .mobile-menu {
       });
     });
 
-
-    function buildDemoPage(config) {
-      const services = config.services.map(item => `
-        <article class="service-card">
-          <div class="service-icon">${item.icon}</div>
-          <h3>${item.title}</h3>
-          <p>${item.text}</p>
-        </article>
-      `).join("");
-
-      const gallery = config.gallery.map(url => `
-        <div class="gallery-item" style="background-image:url('${url}')"></div>
-      `).join("");
-
-      const features = config.features.map(item => `<span>${item}</span>`).join("");
-
-      return `
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>${config.name} Demo</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
-<style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: Inter, system-ui, sans-serif;
-    color: #f8fafc;
-    background: #07131d;
-    overflow-x: hidden;
-  }
-  a { color: inherit; text-decoration: none; }
-  .demo-site {
-    min-height: 100vh;
-    background:
-      radial-gradient(circle at 20% 8%, ${config.accentSoft}, transparent 30%),
-      radial-gradient(circle at 85% 15%, rgba(37,99,235,.18), transparent 28%),
-      linear-gradient(180deg, #0B1D2B, #05080d 72%);
-  }
-  .demo-nav {
-    position: sticky;
-    top: 0;
-    z-index: 20;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 14px;
-    padding: 18px clamp(18px, 5vw, 58px);
-    background: rgba(7,19,29,.74);
-    -webkit-backdrop-filter: blur(18px);
-    backdrop-filter: blur(18px);
-    border-bottom: 1px solid rgba(255,255,255,.1);
-  }
-  .demo-logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 900;
-    letter-spacing: -.04em;
-  }
-  .demo-logo-mark {
-    width: 38px;
-    height: 38px;
-    display: grid;
-    place-items: center;
-    border-radius: 50%;
-    background: ${config.accent};
-    color: #07131d;
-    font-weight: 950;
-  }
-  .demo-nav-links {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    color: rgba(255,255,255,.72);
-    font-size: .88rem;
-    font-weight: 800;
-  }
-  .demo-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    border-radius: 999px;
-    border: 1px solid rgba(255,255,255,.13);
-    padding: 12px 16px;
-    background: ${config.accent};
-    color: #07131d;
-    font-weight: 900;
-    box-shadow: 0 14px 36px ${config.glow};
-  }
-  .demo-hero {
-    display: grid;
-    grid-template-columns: 1.04fr .96fr;
-    align-items: center;
-    gap: 38px;
-    padding: 76px clamp(18px, 5vw, 58px) 54px;
-  }
-  .demo-kicker {
-    display: inline-flex;
-    margin-bottom: 16px;
-    padding: 8px 11px;
-    border-radius: 999px;
-    color: ${config.accentText};
-    border: 1px solid ${config.border};
-    background: ${config.accentSoft};
-    font-size: .75rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: .08em;
-  }
-  h1 {
-    font-family: "Playfair Display", serif;
-    font-size: clamp(3rem, 8vw, 6.8rem);
-    line-height: .9;
-    letter-spacing: -.075em;
-    max-width: 760px;
-    margin-bottom: 20px;
-  }
-  .demo-hero p {
-    color: #a7b0bf;
-    font-size: 1.08rem;
-    line-height: 1.75;
-    max-width: 640px;
-    margin-bottom: 26px;
-  }
-  .demo-actions {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-  }
-  .demo-btn.secondary {
-    background: rgba(255,255,255,.07);
-    color: #ffffff;
-    box-shadow: none;
-  }
-  .hero-card {
-    min-height: 430px;
-    border-radius: 34px;
-    overflow: hidden;
-    border: 1px solid rgba(255,255,255,.14);
-    background:
-      linear-gradient(180deg, transparent 35%, rgba(5,8,13,.96)),
-      url('${config.heroImage}');
-    background-size: cover;
-    background-position: center;
-    box-shadow: 0 28px 90px rgba(0,0,0,.46);
-    display: flex;
-    align-items: end;
-    padding: 24px;
-  }
-  .hero-card-panel {
-    width: 100%;
-    padding: 18px;
-    border-radius: 24px;
-    background: rgba(7,19,29,.78);
-    border: 1px solid rgba(255,255,255,.14);
-    -webkit-backdrop-filter: blur(16px);
-    backdrop-filter: blur(16px);
-  }
-  .hero-card-panel h2 {
-    font-size: 1.45rem;
-    letter-spacing: -.04em;
-    margin-bottom: 8px;
-  }
-  .feature-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 14px;
-  }
-  .feature-row span {
-    padding: 7px 9px;
-    border-radius: 999px;
-    background: rgba(255,255,255,.09);
-    border: 1px solid rgba(255,255,255,.1);
-    color: rgba(255,255,255,.82);
-    font-size: .75rem;
-    font-weight: 800;
-  }
-  .section {
-    padding: 58px clamp(18px, 5vw, 58px);
-  }
-  .section-head {
-    max-width: 820px;
-    margin-bottom: 26px;
-  }
-  .section-head h2 {
-    font-family: "Playfair Display", serif;
-    font-size: clamp(2.2rem, 5vw, 4.1rem);
-    line-height: .98;
-    letter-spacing: -.06em;
-    margin-bottom: 12px;
-  }
-  .section-head p {
-    color: #a7b0bf;
-    line-height: 1.75;
-  }
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
-  }
-  .service-card {
-    padding: 24px;
-    border-radius: 24px;
-    background: rgba(255,255,255,.065);
-    border: 1px solid rgba(255,255,255,.11);
-  }
-  .service-icon {
-    width: 46px;
-    height: 46px;
-    display: grid;
-    place-items: center;
-    border-radius: 16px;
-    background: ${config.accentSoft};
-    color: ${config.accentText};
-    margin-bottom: 15px;
-    font-size: 1.35rem;
-  }
-  .service-card h3 {
-    margin-bottom: 8px;
-    letter-spacing: -.03em;
-  }
-  .service-card p {
-    color: #a7b0bf;
-    line-height: 1.65;
-    font-size: .94rem;
-  }
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: 1.2fr .8fr .8fr;
-    gap: 14px;
-  }
-  .gallery-item {
-    min-height: 230px;
-    border-radius: 24px;
-    background-size: cover;
-    background-position: center;
-    border: 1px solid rgba(255,255,255,.12);
-  }
-  .gallery-item:first-child {
-    grid-row: span 2;
-    min-height: 474px;
-  }
-  .info-strip {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
-  }
-  .info-box {
-    padding: 22px;
-    border-radius: 22px;
-    border: 1px solid rgba(255,255,255,.11);
-    background: rgba(255,255,255,.06);
-  }
-  .info-box strong {
-    display: block;
-    margin-bottom: 8px;
-    color: ${config.accentText};
-  }
-  .info-box span {
-    color: #a7b0bf;
-    line-height: 1.6;
-  }
-  .map-box {
-    min-height: 260px;
-    border-radius: 28px;
-    border: 1px solid rgba(255,255,255,.12);
-    background:
-      linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,.03)),
-      repeating-linear-gradient(45deg, rgba(255,255,255,.045) 0 1px, transparent 1px 18px);
-    display: grid;
-    place-items: center;
-    text-align: center;
-    color: #a7b0bf;
-    padding: 24px;
-  }
-  .map-box strong {
-    display: block;
-    color: #fff;
-    font-size: 1.4rem;
-    margin-bottom: 8px;
-  }
-  .demo-footer {
-    padding: 34px clamp(18px, 5vw, 58px);
-    border-top: 1px solid rgba(255,255,255,.1);
-    color: #a7b0bf;
-    background: rgba(5,8,13,.84);
-  }
-  @media (max-width: 820px) {
-    .demo-nav-links { display: none; }
-    .demo-hero,
-    .services-grid,
-    .info-strip,
-    .gallery-grid {
-      grid-template-columns: 1fr;
-    }
-    .gallery-item:first-child {
-      grid-row: auto;
-      min-height: 260px;
-    }
-    .hero-card {
-      min-height: 360px;
-    }
-  }
-</style>
-</head>
-<body>
-  <div class="demo-site">
-    <nav class="demo-nav">
-      <a class="demo-logo" href="#top">
-        <span class="demo-logo-mark">${config.logo}</span>
-        <span>${config.name}</span>
-      </a>
-      <div class="demo-nav-links">
-        <a href="#services">Services</a>
-        <a href="#gallery">Photos</a>
-        <a href="#location">Location</a>
-      </div>
-      <a class="demo-btn" href="https://wa.me/96171698012?text=${encodeURIComponent(config.whatsappText)}" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-    </nav>
-
-    <main id="top">
-      <section class="demo-hero">
-        <div>
-          <span class="demo-kicker">${config.kicker}</span>
-          <h1>${config.headline}</h1>
-          <p>${config.description}</p>
-          <div class="demo-actions">
-            <a class="demo-btn" href="https://wa.me/96171698012?text=${encodeURIComponent(config.whatsappText)}" target="_blank" rel="noopener noreferrer">${config.primaryCta}</a>
-            <a class="demo-btn secondary" href="#services">View Details</a>
-          </div>
-        </div>
-        <aside class="hero-card">
-          <div class="hero-card-panel">
-            <h2>${config.panelTitle}</h2>
-            <p>${config.panelText}</p>
-            <div class="feature-row">${features}</div>
-          </div>
-        </aside>
-      </section>
-
-      <section class="section" id="services">
-        <div class="section-head">
-          <h2>${config.servicesTitle}</h2>
-          <p>${config.servicesIntro}</p>
-        </div>
-        <div class="services-grid">${services}</div>
-      </section>
-
-      <section class="section" id="gallery">
-        <div class="section-head">
-          <h2>${config.galleryTitle}</h2>
-          <p>${config.galleryIntro}</p>
-        </div>
-        <div class="gallery-grid">${gallery}</div>
-      </section>
-
-      <section class="section" id="location">
-        <div class="section-head">
-          <h2>${config.locationTitle}</h2>
-          <p>${config.locationIntro}</p>
-        </div>
-        <div class="info-strip">
-          <div class="info-box"><strong>Address</strong><span>${config.address}</span></div>
-          <div class="info-box"><strong>Hours</strong><span>${config.hours}</span></div>
-          <div class="info-box"><strong>Contact</strong><span>Built for WhatsApp inquiries</span></div>
-        </div>
-        <div class="map-box" style="margin-top:14px;">
-          <div><strong>Google Maps Area</strong><span>Map embed placeholder for ${config.name}</span></div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="demo-footer">
-      ${config.name} — Website preview by CrownCedar Studio.
-    </footer>
-  </div>
-</body>
-</html>`;
-    }
-
-    const demoPages = {
-      "Smile Dental Clinic": buildDemoPage({
-        name: "Smile Dental Clinic",
-        logo: "SD",
-        kicker: "Dental Clinic • Jounieh",
-        headline: "Help patients trust your clinic before they book.",
-        description: "A premium clinic page that organizes treatments, doctor trust, location, opening hours, and a direct WhatsApp booking path.",
-        primaryCta: "Book on WhatsApp",
-        panelTitle: "A clearer clinic first impression",
-        panelText: "Designed for patients who want answers and reassurance before they book.",
-        servicesTitle: "Treatments organized for easier decisions.",
-        servicesIntro: "No searching through old posts. Patients see your main treatments in one professional section.",
-        galleryTitle: "Clinic photos that build trust.",
-        galleryIntro: "Show the clinic environment, equipment, team, and appropriate treatment visuals professionally.",
-        locationTitle: "Easy to find. Easy to contact.",
-        locationIntro: "Location, working hours, and WhatsApp contact stay simple, visible, and patient-friendly.",
-        address: "Jounieh, Lebanon — exact map added before launch",
-        hours: "Mon–Sat • 10:00 AM–7:00 PM",
-        whatsappText: "Hello CrownCedar Studio, I want a website like the Smile Dental Clinic demo for my business.",
-        accent: "#C9A96E",
-        accentText: "#e6cf96",
-        accentSoft: "rgba(201,169,110,.16)",
-        border: "rgba(201,169,110,.32)",
-        glow: "rgba(201,169,110,.25)",
-        heroImage: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1400&q=85",
-        features: ["Appointments", "Treatments", "Location", "WhatsApp"],
-        services: [
-          { icon: "🦷", title: "Dental Checkups", text: "Present routine visits, cleaning, and consultation details clearly." },
-          { icon: "✨", title: "Whitening", text: "Show cosmetic treatments with premium visuals and clear booking buttons." },
-          { icon: "🛡️", title: "Implants & Care", text: "Give serious patients confidence with organized treatment information." }
-        ],
-        gallery: [
-          "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=900&q=80",
-          "https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=900&q=80",
-          "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=80",
-          "https://images.unsplash.com/photo-1588776814546-daab30f310ce?auto=format&fit=crop&w=900&q=80",
-          "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=900&q=80"
-        ]
-      }),
-
-      "Elite Motors Lebanon": buildDemoPage({
-        name: "Elite Motors Lebanon",
-        logo: "EM",
-        kicker: "Car Dealer • Tripoli",
-        headline: "Make your car inventory look serious before buyers call.",
-        description: "A high-end dealer page with featured vehicles, availability, gallery, location, and direct WhatsApp buyer inquiries.",
-        primaryCta: "Ask About a Car",
-        panelTitle: "Premium inventory presentation",
-        panelText: "Built for buyers who want photos, details, availability, and a fast way to inquire.",
-        servicesTitle: "Vehicle information made easier to trust.",
-        servicesIntro: "The page can highlight available cars, financing, trade-ins, inspections, and dealership trust.",
-        galleryTitle: "Car photos that sell the feeling.",
-        galleryIntro: "Show exterior, interior, details, and showroom atmosphere in a premium layout.",
-        locationTitle: "Help buyers take the next step.",
-        locationIntro: "Make your showroom location, hours, and WhatsApp contact clear from one organized page.",
-        address: "Tripoli, Lebanon — exact showroom map added before launch",
-        hours: "Mon–Sat • 9:00 AM–8:00 PM",
-        whatsappText: "Hello CrownCedar Studio, I want a website like the Elite Motors Lebanon demo for my business.",
-        accent: "#C9A96E",
-        accentText: "#e6cf96",
-        accentSoft: "rgba(201,169,110,.16)",
-        border: "rgba(201,169,110,.32)",
-        glow: "rgba(201,169,110,.25)",
-        heroImage: "https://images.unsplash.com/photo-1562141961-052bb2bff7a8?auto=format&fit=crop&w=1400&q=85",
-        features: ["Inventory", "Availability", "Showroom", "WhatsApp"],
-        services: [
-          { icon: "🚘", title: "Available Cars", text: "Feature vehicles with photos, model year, price range, and availability status." },
-          { icon: "📸", title: "Car Gallery", text: "Present clean exterior, interior, dashboard, and feature photos." },
-          { icon: "📍", title: "Showroom Visit", text: "Help serious buyers find the location and message before visiting." }
-        ],
-        gallery: [
-          "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=80",
-          "https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=900&q=80",
-          "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=900&q=80",
-          "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=900&q=80",
-          "https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&w=900&q=80"
-        ]
-      }),
-
-      "FitHouse Gym": buildDemoPage({
-        name: "FitHouse Gym",
-        logo: "FH",
-        kicker: "Gym • Beirut",
-        headline: "Turn gym interest into clearer joining inquiries.",
-        description: "A premium gym page with memberships, coaches, class info, transformation visuals, location, and direct WhatsApp joining.",
-        primaryCta: "Join on WhatsApp",
-        panelTitle: "Built for easier joining inquiries",
-        panelText: "Designed to help visitors understand the gym, trust the atmosphere, and message fast.",
-        servicesTitle: "Programs and memberships upfront.",
-        servicesIntro: "Show memberships, coaching options, classes, and transformation focus clearly.",
-        galleryTitle: "Show the energy and results of the gym.",
-        galleryIntro: "Use strong visuals for equipment, training, coaches, atmosphere, and transformations.",
-        locationTitle: "Make joining easier.",
-        locationIntro: "The page keeps location, hours, and WhatsApp contact visible for new members.",
-        address: "Beirut, Lebanon — exact branch map added before launch",
-        hours: "Mon–Sun • 6:00 AM–11:00 PM",
-        whatsappText: "Hello CrownCedar Studio, I want a website like the FitHouse Gym demo for my business.",
-        accent: "#C9A96E",
-        accentText: "#e6cf96",
-        accentSoft: "rgba(201,169,110,.16)",
-        border: "rgba(201,169,110,.32)",
-        glow: "rgba(201,169,110,.25)",
-        heroImage: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1400&q=85",
-        features: ["Memberships", "Coaches", "Classes", "WhatsApp"],
-        services: [
-          { icon: "💪", title: "Gym Memberships", text: "Show monthly plans, student offers, and premium membership options." },
-          { icon: "🏋️", title: "Personal Training", text: "Present trainers, goals, and coaching packages in a clean layout." },
-          { icon: "🔥", title: "Classes", text: "Display class types, schedule highlights, and joining information." }
-        ],
-        gallery: [
-          "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=900&q=80",
-          "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80",
-          "https://images.unsplash.com/photo-1571019613914-85f342c6a11e?auto=format&fit=crop&w=900&q=80",
-          "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=900&q=80",
-          "https://images.unsplash.com/photo-1593079831268-3381b0db4a77?auto=format&fit=crop&w=900&q=80"
-        ]
-      })
-    };
-
-    demoButtons.forEach(button => {
-      button.addEventListener("click", () => {
-        const title = button.dataset.title;
-        const niche = button.dataset.niche;
-        const tags = (button.dataset.tags || "").split(",").filter(Boolean);
-
-        lightboxTitle.textContent = title;
-        lightboxNiche.textContent = niche + " • Website Preview";
-        lightboxTags.innerHTML = "";
-
-        tags.forEach(tag => {
-          const span = document.createElement("span");
-          span.className = "tag";
-          span.textContent = tag.trim();
-          lightboxTags.appendChild(span);
-        });
-
-        demoFrame.srcdoc = demoPages[title] || "";
-
-        if (isInstagramBrowser && !document.body.classList.contains("menu-open")) lockPageScroll();
-        lightbox.classList.add("open");
-        lightbox.setAttribute("aria-hidden", "false");
-        document.body.classList.add("menu-open");
-      });
-    });
-
-
-    function closeLightbox() {
-      lightbox.classList.remove("open");
-      lightbox.setAttribute("aria-hidden", "true");
-      document.body.classList.remove("menu-open");
-      if (isInstagramBrowser) unlockPageScroll();
-      if (demoFrame) {
-        demoFrame.srcdoc = "";
-      }
-    }
-
-    if (lightboxClose) {
-      lightboxClose.addEventListener("click", closeLightbox);
-    }
-
-    if (lightbox) {
-      lightbox.addEventListener("click", event => {
-        if (event.target === lightbox) {
-          closeLightbox();
-        }
-      });
-    }
-
     document.addEventListener("keydown", event => {
-      if (event.key === "Escape") {
-        closeLightbox();
-        closeMenu();
-      }
+      if (event.key === "Escape") closeMenu();
     });
 
-   
-  document.querySelectorAll('a[href^="http"]').forEach(link => {
-    link.setAttribute("rel", "noopener noreferrer");
-  });
+    document.querySelectorAll('a[href^="http"]').forEach(link => {
+      link.setAttribute("rel", "noopener noreferrer");
+    });
 
-  document.querySelectorAll('a[href^="https://wa.me/"]').forEach(link => {
-    link.addEventListener("click", () => {
-      if (isInstagramBrowser) {
-        setRealViewportHeight();
-      }
-    }, { passive: true });
-  });
+    document.querySelectorAll('a[href^="https://wa.me/"]').forEach(link => {
+      link.addEventListener("click", () => {
+        if (isInstagramBrowser) setRealViewportHeight();
+      }, { passive: true });
+    });
 
-  const WHATSAPP_NUMBER = "96171698012"; // Replace with your real number, example: 96170123456
+    const WHATSAPP_NUMBER = "96171698012";
 
-  if (contactForm) {
-    contactForm.addEventListener("submit", event => {
-      event.preventDefault();
+    if (contactForm) {
+      contactForm.addEventListener("submit", event => {
+        event.preventDefault();
+        const name = document.getElementById("name").value.trim();
+        const businessType = document.getElementById("businessType").value.trim();
+        const whatsapp = document.getElementById("whatsapp").value.trim();
+        const instagram = document.getElementById("instagram").value.trim();
+        const message = document.getElementById("message").value.trim();
 
-    const name = document.getElementById("name").value.trim();
-    const businessType = document.getElementById("businessType").value.trim();
-    const whatsapp = document.getElementById("whatsapp").value.trim();
-    const instagram = document.getElementById("instagram").value.trim();
-    const message = document.getElementById("message").value.trim();
+        formMessage.classList.remove("show");
+        formError.classList.remove("show");
 
-    formMessage.classList.remove("show");
-    formError.classList.remove("show");
+        if (!name || !businessType || !whatsapp || !message) {
+          formError.textContent = "Please add your name, business type, WhatsApp number, and what you need from the website.";
+          formError.classList.add("show");
+          return;
+        }
 
-    if (!name || !businessType || !whatsapp || !message) {
-      formError.textContent = "Please add your name, business type, WhatsApp number, and what you need from the website.";
-      formError.classList.add("show");
-      return;
-    }
-
-    const inquiryText = `
+        const inquiryText = `
 Hello CrownCedar Studio, I want a website that makes my business look trusted and easier to contact.
 
 Name: ${name}
@@ -4297,21 +3848,15 @@ Message:
 ${message}
 
 Please recommend the right package for my business. I understand the working website starts after the $100 deposit.
-    `.trim();
+        `.trim();
 
-    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(inquiryText)}`;
-
-    formMessage.textContent = "WhatsApp is opening with your inquiry. Press Send there to submit it.";
-    formMessage.classList.add("show");
-
-    const opened = window.open(whatsappUrl, "_blank", "noopener,noreferrer");
-
-    if (!opened) {
-      window.location.href = whatsappUrl;
+        const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(inquiryText)}`;
+        formMessage.textContent = "WhatsApp is opening with your inquiry. Press Send there to submit it.";
+        formMessage.classList.add("show");
+        const opened = window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+        if (!opened) window.location.href = whatsappUrl;
+      });
     }
-    });
-  }
-
   </script>
 
 </body>
