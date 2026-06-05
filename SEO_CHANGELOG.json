@@ -1,0 +1,69 @@
+[
+  {
+    "date": "2026-06-05",
+    "domain": "https://crowncedar.com",
+    "new_pages": [
+      "web-design-lebanon.html",
+      "web-design-tripoli.html",
+      "restaurant-websites-lebanon.html",
+      "clinic-websites-lebanon.html",
+      "car-dealer-websites-lebanon.html",
+      "website-pricing-lebanon.html"
+    ],
+    "discovery_files": [
+      "robots.txt",
+      "sitemap.xml",
+      "llms.txt",
+      "llms-full.txt",
+      "ai-index.md",
+      "feed.xml",
+      "humans.txt"
+    ],
+    "icons": [
+      "favicon.ico",
+      "favicon-16x16.png",
+      "favicon-32x32.png",
+      "apple-touch-icon.png",
+      "icon-192.png",
+      "icon-512.png",
+      "site.webmanifest"
+    ],
+    "notes": [
+      "Added crawlable service pages for high-intent SEO queries",
+      "Added JSON-LD to each landing page",
+      "Added internal links from homepage and footer",
+      "Expanded robots.txt for search and AI crawlers",
+      "Expanded sitemap to include all canonical pages"
+    ],
+    "updates": [
+      {
+        "date": "2026-06-05",
+        "change": "Converted homepage demos from JavaScript iframe previews into real standalone demo pages; preserved uploaded clinic demo code exactly; added demo pages to sitemap, llms.txt, llms-full.txt, ai-index.md, feed.xml, and homepage/footer links.",
+        "pages_added": [
+          "demo-clinic-dental.html",
+          "demo-car-dealer.html",
+          "demo-restaurant.html",
+          "demo-gym.html"
+        ],
+        "assets_added": [
+          "before.png",
+          "after.png",
+          "doctor.png"
+        ],
+        "clinic_demo_sha256": "5a407f0f3164e96839054302d8fd4e8af1e9f3a132c174debcdb7c20d153ffed"
+      }
+    ]
+  },
+  {
+    "date": "2026-06-05",
+    "change": "Rebuilt the three weak SEO landing pages into premium standalone pages with inline luxury styling, stronger conversion copy, real demo links, JSON-LD, FAQ content, and AI-discovery references.",
+    "files": [
+      "web-design-lebanon.html",
+      "web-design-tripoli.html",
+      "website-pricing-lebanon.html",
+      "llms.txt",
+      "llms-full.txt",
+      "ai-index.md"
+    ]
+  }
+]
