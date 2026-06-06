@@ -1,10 +1,4 @@
-/* TEAM */
-Studio: CrownCedar Studio
-Site: https://crowncedar.com/
-Contact: WhatsApp +961 71 698 012
+CrownCedar Studio
+Website: https://crowncedar.com/
 Location: Lebanon
-
-/* SITE */
-Language: English / Lebanon focus
-Purpose: Premium website design for Lebanese businesses
-Last update: 2026-06-05
+Focus: premium website design, local SEO foundations, WhatsApp-ready websites.
