@@ -1,0 +1,1521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CrownCedar Studio Legal Pages | Terms, Privacy, Refunds & Disclaimers</title>
+  <meta name="description" content="Legal policies for CrownCedar Studio, a freelance web design project in Lebanon: terms, privacy policy, refund policy, copyright policy, client agreement, and demo disclaimer." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0b0f14" />
+  <style>
+    :root {
+      --bg: #080b10;
+      --panel: rgba(255, 255, 255, 0.055);
+      --panel-strong: rgba(255, 255, 255, 0.09);
+      --text: #edf2f7;
+      --muted: #a8b3c2;
+      --faint: #737f8e;
+      --line: rgba(255, 255, 255, 0.12);
+      --gold: #d9b76f;
+      --gold-2: #f5dc9c;
+      --ink: #101419;
+      --white: #ffffff;
+      --danger-soft: rgba(217, 183, 111, 0.13);
+      --radius-xl: 28px;
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --shadow: 0 28px 90px rgba(0, 0, 0, 0.45);
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--bg);
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.75;
+      background:
+        radial-gradient(circle at top left, rgba(217, 183, 111, 0.18), transparent 32rem),
+        radial-gradient(circle at top right, rgba(96, 165, 250, 0.10), transparent 28rem),
+        linear-gradient(180deg, #080b10 0%, #0b0f14 52%, #07090d 100%);
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page-shell {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(18px);
+      background: rgba(8, 11, 16, 0.78);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .topbar-inner {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      color: #14100a;
+      background: linear-gradient(135deg, var(--gold-2), var(--gold));
+      box-shadow: 0 10px 28px rgba(217, 183, 111, 0.28);
+      font-weight: 950;
+    }
+
+    .brand small {
+      display: block;
+      color: var(--muted);
+      font-weight: 600;
+      letter-spacing: 0;
+      line-height: 1.2;
+    }
+
+    .nav-actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .button {
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 10px 14px;
+      font: inherit;
+      font-weight: 800;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform .2s ease, border-color .2s ease, background .2s ease;
+      white-space: nowrap;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+      border-color: rgba(217, 183, 111, 0.55);
+      background: rgba(217, 183, 111, 0.10);
+    }
+
+    .hero {
+      padding: 76px 0 38px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid rgba(217, 183, 111, 0.35);
+      background: rgba(217, 183, 111, 0.09);
+      color: var(--gold-2);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 0.92rem;
+      font-weight: 800;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 18px var(--gold);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.55rem, 7vw, 5.75rem);
+      line-height: 0.96;
+      max-width: 950px;
+      margin: 24px 0 22px;
+      letter-spacing: -0.075em;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2.3vw, 1.28rem);
+      max-width: 780px;
+      margin: 0;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 22px;
+      margin-top: 34px;
+    }
+
+    .notice-card, .meta-card {
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,0.075), rgba(255,255,255,0.04));
+      border-radius: var(--radius-xl);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .notice-card strong {
+      color: var(--gold-2);
+    }
+
+    .meta-card {
+      display: grid;
+      gap: 14px;
+      align-content: start;
+    }
+
+    .meta-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 12px;
+    }
+
+    .meta-row:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .meta-row span {
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .meta-row b {
+      text-align: right;
+    }
+
+    .toc {
+      padding: 22px 0 30px;
+    }
+
+    .toc-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .toc-card {
+      min-height: 112px;
+      padding: 18px;
+      text-decoration: none;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.045);
+      transition: transform .2s ease, border-color .2s ease, background .2s ease;
+    }
+
+    .toc-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(217, 183, 111, .55);
+      background: rgba(217, 183, 111, .08);
+    }
+
+    .toc-card span {
+      display: inline-grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 10px;
+      margin-bottom: 14px;
+      color: #18120a;
+      background: linear-gradient(135deg, var(--gold-2), var(--gold));
+      font-weight: 950;
+    }
+
+    .toc-card strong {
+      display: block;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      gap: 34px;
+      align-items: start;
+      padding: 22px 0 80px;
+    }
+
+    aside {
+      position: sticky;
+      top: 96px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.045);
+      border-radius: var(--radius-xl);
+      padding: 18px;
+      max-height: calc(100vh - 120px);
+      overflow: auto;
+    }
+
+    aside h2 {
+      margin: 0 0 14px;
+      font-size: .9rem;
+      color: var(--gold-2);
+      text-transform: uppercase;
+      letter-spacing: .12em;
+    }
+
+    .side-nav {
+      display: grid;
+      gap: 4px;
+    }
+
+    .side-nav a {
+      color: var(--muted);
+      text-decoration: none;
+      padding: 10px 11px;
+      border-radius: 12px;
+      font-weight: 750;
+      line-height: 1.25;
+    }
+
+    .side-nav a:hover {
+      color: var(--text);
+      background: rgba(255,255,255,.06);
+    }
+
+    main {
+      min-width: 0;
+    }
+
+    .legal-document {
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.965);
+      color: #1a222c;
+      border-radius: var(--radius-xl);
+      padding: clamp(24px, 5vw, 56px);
+      box-shadow: var(--shadow);
+    }
+
+    .legal-document h1,
+    .legal-document h2,
+    .legal-document h3 {
+      color: #0f1720;
+      line-height: 1.16;
+      letter-spacing: -0.035em;
+      scroll-margin-top: 96px;
+      position: relative;
+    }
+
+    .legal-document h1 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      margin: 42px 0 18px;
+      padding-top: 30px;
+      border-top: 1px solid rgba(16, 24, 32, .13);
+    }
+
+    .legal-document h1:first-child {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .legal-document h2 {
+      font-size: clamp(1.22rem, 2.4vw, 1.62rem);
+      margin: 36px 0 12px;
+    }
+
+    .legal-document h3 {
+      font-size: 1.05rem;
+      margin: 26px 0 8px;
+    }
+
+    .legal-document p {
+      margin: 0 0 15px;
+    }
+
+    .legal-document ul,
+    .legal-document ol {
+      padding-left: 1.35rem;
+      margin: 10px 0 18px;
+    }
+
+    .legal-document li {
+      margin: 6px 0;
+    }
+
+    .legal-document hr {
+      border: 0;
+      border-top: 1px solid rgba(16, 24, 32, .12);
+      margin: 38px 0;
+    }
+
+    .legal-document strong {
+      color: #0c1117;
+    }
+
+    .legal-document blockquote {
+      border-left: 4px solid #b99043;
+      margin: 22px 0;
+      padding: 16px 18px;
+      background: #fff7e4;
+      border-radius: 0 16px 16px 0;
+    }
+
+    .heading-link {
+      opacity: 0;
+      margin-left: 10px;
+      text-decoration: none;
+      color: #b99043;
+      font-size: .85em;
+    }
+
+    h1:hover .heading-link,
+    h2:hover .heading-link,
+    h3:hover .heading-link {
+      opacity: 1;
+    }
+
+    .placeholder {
+      display: inline-block;
+      background: #fff1c7;
+      border: 1px dashed #b99043;
+      color: #7c5513;
+      padding: 0 .35em;
+      border-radius: 7px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .footer-note {
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      padding: 26px 0 48px;
+      font-size: .95rem;
+    }
+
+    .mobile-nav {
+      display: none;
+      margin-top: 18px;
+    }
+
+    .mobile-nav select {
+      width: 100%;
+      appearance: none;
+      border: 1px solid var(--line);
+      color: var(--text);
+      background: rgba(255,255,255,.07);
+      border-radius: 16px;
+      padding: 14px;
+      font: inherit;
+      font-weight: 800;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    ::selection {
+      background: rgba(217, 183, 111, .35);
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      aside {
+        display: none;
+      }
+
+      .mobile-nav {
+        display: block;
+      }
+
+      .toc-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 620px) {
+      .topbar-inner {
+        min-height: 68px;
+      }
+
+      .brand small {
+        display: none;
+      }
+
+      .nav-actions .button:first-child {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 44px;
+      }
+
+      .hero-grid {
+        margin-top: 24px;
+      }
+
+      .toc-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .legal-document {
+        border-radius: 22px;
+      }
+
+      .legal-document ul,
+      .legal-document ol {
+        padding-left: 1.1rem;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        color: #000;
+      }
+
+      .topbar,
+      .hero,
+      .toc,
+      aside,
+      .footer-note,
+      .mobile-nav {
+        display: none !important;
+      }
+
+      .page-shell,
+      .layout {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+        display: block;
+      }
+
+      .legal-document {
+        border: 0;
+        box-shadow: none;
+        color: #000;
+        padding: 0;
+      }
+
+      .heading-link {
+        display: none;
+      }
+
+      .placeholder {
+        border: 1px solid #000;
+        color: #000;
+        background: #fff;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar" aria-label="Top navigation">
+    <div class="topbar-inner">
+      <a class="brand" href="#top" aria-label="CrownCedar Studio legal page">
+        <span class="brand-mark">CC</span>
+        <span>CrownCedar Studio <small>Legal center</small></span>
+      </a>
+      <div class="nav-actions">
+        <a class="button" href="#5-client-agreement-template">Client Agreement</a>
+        <button class="button" onclick="window.print()">Print / Save PDF</button>
+      </div>
+    </div>
+  </header>
+
+  <div id="top" class="page-shell">
+    <section class="hero">
+      <span class="eyebrow">Freelance project in Lebanon · Effective June 8, 2026</span>
+      <h1>Legal pages for CrownCedar Studio.</h1>
+      <p>Terms, privacy policy, refund rules, copyright protection, client agreement language, and demo disclaimers for a freelance web design project operating in Lebanon.</p>
+
+      <div class="mobile-nav">
+        <label for="jump" class="sr-only">Jump to section</label>
+        <select id="jump" onchange="if(this.value) location.hash = this.value;">
+          <option value="">Jump to a legal section</option>
+          <option value="1-terms-conditions">1. Terms &amp; Conditions</option><option value="2-privacy-policy">2. Privacy Policy</option><option value="3-refund-policy">3. Refund Policy</option><option value="4-copyright-intellectual-property-policy">4. Copyright &amp; Intellectual Property Policy</option><option value="5-client-agreement-template">5. Client Agreement Template</option><option value="6-demo-disclaimer">6. Demo Disclaimer</option><option value="7-short-footer-legal-notice">7. Short Footer Legal Notice</option><option value="8-checkout-project-start-consent-text">8. Checkout / Project Start Consent Text</option>
+        </select>
+      </div>
+
+      <div class="hero-grid">
+        <div class="notice-card">
+          <strong>Important:</strong> This page is drafted for operational protection and client clarity. It does not replace advice from a qualified Lebanese lawyer, especially for high-value contracts, regulated industries, or future international expansion.
+        </div>
+        <div class="meta-card" aria-label="Document metadata">
+          <div class="meta-row"><span>Status</span><b>Freelance project</b></div>
+          <div class="meta-row"><span>Jurisdiction</span><b>Lebanon</b></div>
+          <div class="meta-row"><span>Last updated</span><b>June 8, 2026</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="toc" aria-label="Table of contents">
+      <div class="toc-grid">
+        
+<a class="toc-card" href="#1-terms-conditions">
+  <span>1</span>
+  <strong>Terms &amp; Conditions</strong>
+</a>
+
+<a class="toc-card" href="#2-privacy-policy">
+  <span>2</span>
+  <strong>Privacy Policy</strong>
+</a>
+
+<a class="toc-card" href="#3-refund-policy">
+  <span>3</span>
+  <strong>Refund Policy</strong>
+</a>
+
+<a class="toc-card" href="#4-copyright-intellectual-property-policy">
+  <span>4</span>
+  <strong>Copyright &amp; Intellectual Property Policy</strong>
+</a>
+
+<a class="toc-card" href="#5-client-agreement-template">
+  <span>5</span>
+  <strong>Client Agreement Template</strong>
+</a>
+
+<a class="toc-card" href="#6-demo-disclaimer">
+  <span>6</span>
+  <strong>Demo Disclaimer</strong>
+</a>
+
+<a class="toc-card" href="#7-short-footer-legal-notice">
+  <span>7</span>
+  <strong>Short Footer Legal Notice</strong>
+</a>
+
+<a class="toc-card" href="#8-checkout-project-start-consent-text">
+  <span>8</span>
+  <strong>Checkout / Project Start Consent Text</strong>
+</a>
+      </div>
+    </section>
+
+    <div class="layout">
+      <aside aria-label="Legal section navigation">
+        <h2>Legal sections</h2>
+        <nav class="side-nav">
+          <a href="#1-terms-conditions">1. Terms &amp; Conditions</a>
+<a href="#2-privacy-policy">2. Privacy Policy</a>
+<a href="#3-refund-policy">3. Refund Policy</a>
+<a href="#4-copyright-intellectual-property-policy">4. Copyright &amp; Intellectual Property Policy</a>
+<a href="#5-client-agreement-template">5. Client Agreement Template</a>
+<a href="#6-demo-disclaimer">6. Demo Disclaimer</a>
+<a href="#7-short-footer-legal-notice">7. Short Footer Legal Notice</a>
+<a href="#8-checkout-project-start-consent-text">8. Checkout / Project Start Consent Text</a>
+        </nav>
+      </aside>
+
+      <main>
+        <article class="legal-document">
+          <h1 id="crowncedar-studio-legal-pages">CrownCedar Studio Legal Pages<a class="heading-link" href="#crowncedar-studio-legal-pages" aria-label="Link to this section">#</a></h1>
+<p>Last updated: June 8, 2026</p>
+<p>Important note: CrownCedar Studio is currently operated as a freelance web design project and is not presented as a registered company, SARL, LLC, corporation, or partnership unless expressly stated in writing. If CrownCedar Studio becomes registered in the future, these terms may be updated to reflect the registered legal entity.</p>
+<hr />
+<h1 id="1-terms-conditions">1. Terms &amp; Conditions<a class="heading-link" href="#1-terms-conditions" aria-label="Link to this section">#</a></h1>
+<h2 id="1-1-introduction">1.1 Introduction<a class="heading-link" href="#1-1-introduction" aria-label="Link to this section">#</a></h2>
+<p>Welcome to CrownCedar Studio.</p>
+<p>These Terms &amp; Conditions govern the use of our website, services, project offers, quotations, demos, communications, and client work. By visiting our website, contacting us, requesting a quotation, approving a project, paying a deposit, submitting business materials, or using our services, you agree to these Terms &amp; Conditions.</p>
+<p>For these Terms, “CrownCedar Studio,” “we,” “us,” or “our” refers to the freelance web design project operated under the name CrownCedar Studio. “Client,” “you,” or “your” refers to any person, business, organization, or representative requesting or purchasing services from us.</p>
+<p>If you do not agree with these Terms, please do not use our website or services.</p>
+<h2 id="1-2-services">1.2 Services<a class="heading-link" href="#1-2-services" aria-label="Link to this section">#</a></h2>
+<p>CrownCedar Studio provides website design and development services for businesses, mainly including business landing pages, one-page websites, service pages, portfolio pages, demo pages, website redesigns, website content organization, mobile-friendly layouts, and related digital presence support.</p>
+<p>The exact services included in a project depend on the package, quotation, written agreement, invoice, or WhatsApp/email confirmation agreed with the client.</p>
+<p>Unless specifically agreed in writing, our services do not include:</p>
+<ul>
+<li>legal advice;</li>
+<li>accounting or tax advice;</li>
+<li>business licensing advice;</li>
+<li>guaranteed SEO ranking;</li>
+<li>guaranteed sales, traffic, leads, conversions, or revenue;</li>
+<li>paid advertising management;</li>
+<li>long-term website maintenance;</li>
+<li>domain name fees;</li>
+<li>hosting fees;</li>
+<li>third-party software subscriptions;</li>
+<li>professional photography;</li>
+<li>professional copywriting beyond agreed website content organization;</li>
+<li>translation services;</li>
+<li>logo design;</li>
+<li>advanced backend systems;</li>
+<li>e-commerce payment gateway setup;</li>
+<li>security monitoring;</li>
+<li>customer support after delivery beyond the agreed scope.</li>
+</ul>
+<p>Any service not clearly included in writing is not included.</p>
+<h2 id="1-3-project-scope">1.3 Project Scope<a class="heading-link" href="#1-3-project-scope" aria-label="Link to this section">#</a></h2>
+<p>Each project is limited to the scope agreed before work begins.</p>
+<p>The project scope may include, depending on the package or quotation:</p>
+<ul>
+<li>number of pages;</li>
+<li>sections included;</li>
+<li>design style;</li>
+<li>content provided by the client;</li>
+<li>images and logos provided by the client;</li>
+<li>WhatsApp button;</li>
+<li>contact section;</li>
+<li>map/location section;</li>
+<li>portfolio/demo display;</li>
+<li>basic mobile responsiveness;</li>
+<li>basic on-page structure;</li>
+<li>deployment assistance if agreed.</li>
+</ul>
+<p>Any major change outside the original scope may require additional payment. This includes, but is not limited to:</p>
+<ul>
+<li>changing the entire design direction after work has started;</li>
+<li>adding new pages;</li>
+<li>adding advanced features;</li>
+<li>adding booking systems;</li>
+<li>adding online payment systems;</li>
+<li>adding dashboards;</li>
+<li>adding databases;</li>
+<li>adding user accounts;</li>
+<li>adding multilingual versions;</li>
+<li>rewriting most of the website content;</li>
+<li>replacing most images after design approval;</li>
+<li>redesigning the website after revisions are used;</li>
+<li>changing business direction or branding after the project begins.</li>
+</ul>
+<h2 id="1-4-client-materials-and-responsibilities">1.4 Client Materials and Responsibilities<a class="heading-link" href="#1-4-client-materials-and-responsibilities" aria-label="Link to this section">#</a></h2>
+<p>The client is responsible for providing all necessary materials required to complete the project, including but not limited to:</p>
+<ul>
+<li>business name;</li>
+<li>logo;</li>
+<li>brand colors, if available;</li>
+<li>business description;</li>
+<li>services;</li>
+<li>prices, if needed;</li>
+<li>photos;</li>
+<li>videos;</li>
+<li>social media links;</li>
+<li>WhatsApp number;</li>
+<li>email address;</li>
+<li>location;</li>
+<li>Google Maps link;</li>
+<li>legal business information;</li>
+<li>required disclaimers for the client’s industry;</li>
+<li>domain and hosting access, if needed.</li>
+</ul>
+<p>The client confirms that all materials submitted to CrownCedar Studio are accurate, lawful, and authorized for use.</p>
+<p>The client is responsible for making sure they have the legal right to use all logos, names, images, videos, text, trademarks, brand assets, testimonials, reviews, medical claims, financial claims, product claims, and business information provided to us.</p>
+<p>CrownCedar Studio is not responsible for legal claims, copyright claims, trademark claims, privacy claims, false advertising claims, or regulatory issues caused by materials, instructions, claims, or information supplied by the client.</p>
+<h2 id="1-5-accuracy-of-client-information">1.5 Accuracy of Client Information<a class="heading-link" href="#1-5-accuracy-of-client-information" aria-label="Link to this section">#</a></h2>
+<p>The client is responsible for reviewing the website before approval and deployment.</p>
+<p>This includes checking:</p>
+<ul>
+<li>spelling;</li>
+<li>phone numbers;</li>
+<li>WhatsApp links;</li>
+<li>email addresses;</li>
+<li>prices;</li>
+<li>service descriptions;</li>
+<li>business claims;</li>
+<li>opening hours;</li>
+<li>location;</li>
+<li>maps;</li>
+<li>images;</li>
+<li>names;</li>
+<li>legal notices;</li>
+<li>industry-specific disclaimers.</li>
+</ul>
+<p>CrownCedar Studio is not responsible for losses caused by incorrect information supplied, approved, or not corrected by the client.</p>
+<h2 id="1-6-delivery-time">1.6 Delivery Time<a class="heading-link" href="#1-6-delivery-time" aria-label="Link to this section">#</a></h2>
+<p>CrownCedar Studio may advertise a first version or first draft within 48 hours.</p>
+<p>This means the first working version, first draft, or first design version of the website may be delivered within 48 hours after all of the following are completed:</p>
+<ol>
+<li>the client confirms the project;</li>
+<li>the required deposit is received;</li>
+<li>the client provides all required materials;</li>
+<li>the project scope is clear;</li>
+<li>no unusual technical requirement, third-party delay, or missing material blocks the work.</li>
+</ol>
+<p>The 48-hour delivery promise applies to the first version only. It does not guarantee the final version, full launch, deployment, final approval, final edits, hosting setup, domain setup, or third-party connection within 48 hours.</p>
+<p>If the client delays sending content, images, feedback, approvals, access, payments, or required information, all timelines are extended automatically.</p>
+<h2 id="1-7-revisions">1.7 Revisions<a class="heading-link" href="#1-7-revisions" aria-label="Link to this section">#</a></h2>
+<p>Revision limits depend on the selected package:</p>
+<ul>
+<li>Basic Package: 3 revision rounds.</li>
+<li>Standard Package: 5 revision rounds.</li>
+<li>Premium Package: 7 revision rounds.</li>
+</ul>
+<p>A revision round means one collected batch of reasonable edits sent by the client at one time.</p>
+<p>Examples of reasonable revisions include:</p>
+<ul>
+<li>changing text;</li>
+<li>replacing images;</li>
+<li>adjusting spacing;</li>
+<li>changing a section order;</li>
+<li>editing colors within the agreed style;</li>
+<li>fixing client-requested content;</li>
+<li>minor layout adjustments.</li>
+</ul>
+<p>A revision does not include:</p>
+<ul>
+<li>a full redesign;</li>
+<li>a new website concept;</li>
+<li>adding new pages;</li>
+<li>changing the full business direction;</li>
+<li>adding advanced features;</li>
+<li>rewriting the whole website;</li>
+<li>replacing all content after approval;</li>
+<li>changing the package scope;</li>
+<li>adding services not previously agreed.</li>
+</ul>
+<p>Additional revision rounds may be available for an extra fee.</p>
+<p>Unused revisions have no cash value and cannot be exchanged for discounts, refunds, extra services, or future work unless agreed in writing.</p>
+<h2 id="1-8-project-approval">1.8 Project Approval<a class="heading-link" href="#1-8-project-approval" aria-label="Link to this section">#</a></h2>
+<p>A project may be considered approved when the client:</p>
+<ul>
+<li>confirms approval in writing;</li>
+<li>asks us to deploy the website;</li>
+<li>asks us to prepare final delivery;</li>
+<li>confirms that the website is acceptable;</li>
+<li>uses the website publicly;</li>
+<li>shares the website publicly;</li>
+<li>requests final launch after reviewing the project.</li>
+</ul>
+<p>Once the client approves the project or requests deployment, further changes may be treated as additional paid work unless unused revision rounds remain.</p>
+<h2 id="1-9-client-delays-and-paused-projects">1.9 Client Delays and Paused Projects<a class="heading-link" href="#1-9-client-delays-and-paused-projects" aria-label="Link to this section">#</a></h2>
+<p>If the client does not reply, send required information, provide feedback, or complete payment, the project may be paused.</p>
+<p>If a client does not respond for 14 calendar days, CrownCedar Studio may pause the project and remove it from active scheduling.</p>
+<p>If the client returns later, continuation depends on availability. Additional fees may apply if the delay causes extra work, outdated materials, hosting/domain changes, or a restart of the project.</p>
+<p>Deposits and payments already made remain subject to the Refund Policy.</p>
+<h2 id="1-10-prices-deposits-and-payments">1.10 Prices, Deposits, and Payments<a class="heading-link" href="#1-10-prices-deposits-and-payments" aria-label="Link to this section">#</a></h2>
+<p>For projects below USD 1,000, the standard deposit is USD 100 unless otherwise agreed in writing.</p>
+<p>For projects of USD 1,000 or more, the standard deposit is 50% of the total project price unless otherwise agreed in writing.</p>
+<p>Work begins only after the deposit is received and the project is confirmed.</p>
+<p>Deposits are non-refundable once work begins, unless CrownCedar Studio decides otherwise in writing or unless mandatory applicable law requires otherwise.</p>
+<p>Final payment is required after the website is completed according to the agreed scope, or as close as reasonably possible based on the client’s remaining revision rights, and before deployment, transfer, launch, publication, or handover.</p>
+<p>CrownCedar Studio may refuse to deploy, transfer, publish, deliver files, provide access, or continue work until all due payments are received.</p>
+<h2 id="1-11-deployment">1.11 Deployment<a class="heading-link" href="#1-11-deployment" aria-label="Link to this section">#</a></h2>
+<p>Deployment means putting the website live online, connecting it to hosting, connecting it to a domain, uploading files, or otherwise making the website publicly accessible.</p>
+<p>Unless agreed otherwise, final payment must be made before deployment.</p>
+<p>The client is responsible for paying domain, hosting, email, and third-party platform costs. CrownCedar Studio may guide the client on what to buy, but the client remains responsible for purchasing, renewing, and maintaining those services.</p>
+<p>If we assist with deployment, we are not responsible for third-party downtime, hosting errors, domain expiration, DNS delays, platform restrictions, email issues, account bans, or third-party technical failures.</p>
+<h2 id="1-12-domain-hosting-and-third-party-services">1.12 Domain, Hosting, and Third-Party Services<a class="heading-link" href="#1-12-domain-hosting-and-third-party-services" aria-label="Link to this section">#</a></h2>
+<p>The client pays for and owns their domain and hosting unless otherwise agreed in writing.</p>
+<p>Third-party services may include platforms such as hosting providers, domain registrars, WhatsApp, Google Maps, Instagram, Facebook, GitHub, Vercel, Netlify, analytics tools, email providers, booking tools, payment providers, plugins, fonts, stock media, or other software.</p>
+<p>Third-party services are controlled by their own providers and are subject to their own terms, pricing, availability, policies, restrictions, and technical limits.</p>
+<p>CrownCedar Studio is not responsible for third-party changes, outages, price increases, account problems, policy violations, suspensions, or data loss caused by third-party providers.</p>
+<h2 id="1-13-no-guaranteed-results">1.13 No Guaranteed Results<a class="heading-link" href="#1-13-no-guaranteed-results" aria-label="Link to this section">#</a></h2>
+<p>CrownCedar Studio works to create clean, professional, mobile-friendly, and business-focused websites.</p>
+<p>However, we do not guarantee:</p>
+<ul>
+<li>Google ranking;</li>
+<li>first-page SEO results;</li>
+<li>AI search visibility;</li>
+<li>traffic;</li>
+<li>leads;</li>
+<li>sales;</li>
+<li>bookings;</li>
+<li>revenue;</li>
+<li>conversion rate;</li>
+<li>business growth;</li>
+<li>customer trust;</li>
+<li>advertising results;</li>
+<li>social media growth;</li>
+<li>viral reach;</li>
+<li>exact performance outcomes.</li>
+</ul>
+<p>Any examples, demos, case studies, portfolio items, or estimated results are for illustration only and are not guarantees.</p>
+<h2 id="1-14-seo-and-marketing">1.14 SEO and Marketing<a class="heading-link" href="#1-14-seo-and-marketing" aria-label="Link to this section">#</a></h2>
+<p>Unless a written agreement specifically includes SEO or marketing services, any SEO-related work is limited to basic website structure, headings, page titles, descriptions, clean organization, and reasonable best-effort improvements.</p>
+<p>Search engines, AI tools, social media platforms, and advertising platforms control their own algorithms and results. CrownCedar Studio cannot control or guarantee how a website will rank, appear, or perform.</p>
+<h2 id="1-15-portfolio-rights">1.15 Portfolio Rights<a class="heading-link" href="#1-15-portfolio-rights" aria-label="Link to this section">#</a></h2>
+<p>After deployment or public launch, CrownCedar Studio may display the completed website, screenshots, project name, business category, link, and short project description in our portfolio, website, social media, marketing materials, proposals, or client examples.</p>
+<p>If the client does not want their website shown in our portfolio, they must request this in writing. Once received, CrownCedar Studio will make reasonable efforts to remove or avoid portfolio use going forward.</p>
+<p>This does not apply to demo websites, which are covered by the Demo Disclaimer.</p>
+<h2 id="1-16-intellectual-property">1.16 Intellectual Property<a class="heading-link" href="#1-16-intellectual-property" aria-label="Link to this section">#</a></h2>
+<p>Until full payment is received, all designs, drafts, layouts, code, files, concepts, source files, written structure, and work created by CrownCedar Studio remain the property of CrownCedar Studio.</p>
+<p>After full payment is received, the client receives ownership or usage rights to the final website deliverables created specifically for the client, subject to these Terms and any third-party licenses.</p>
+<p>CrownCedar Studio retains ownership of:</p>
+<ul>
+<li>reusable code;</li>
+<li>templates;</li>
+<li>frameworks;</li>
+<li>design systems;</li>
+<li>methods;</li>
+<li>workflow;</li>
+<li>general know-how;</li>
+<li>non-client-specific components;</li>
+<li>pre-existing materials;</li>
+<li>internal tools;</li>
+<li>concepts not paid for;</li>
+<li>rejected drafts;</li>
+<li>unused designs.</li>
+</ul>
+<p>The client may not resell, redistribute, copy, or claim ownership of CrownCedar Studio’s reusable templates, systems, or internal methods as standalone products unless agreed in writing.</p>
+<h2 id="1-17-copyright-and-trademark-responsibility">1.17 Copyright and Trademark Responsibility<a class="heading-link" href="#1-17-copyright-and-trademark-responsibility" aria-label="Link to this section">#</a></h2>
+<p>The client confirms that they own or have permission to use all content provided to CrownCedar Studio.</p>
+<p>This includes:</p>
+<ul>
+<li>logos;</li>
+<li>brand names;</li>
+<li>trade names;</li>
+<li>photos;</li>
+<li>videos;</li>
+<li>written text;</li>
+<li>testimonials;</li>
+<li>reviews;</li>
+<li>product photos;</li>
+<li>music;</li>
+<li>icons;</li>
+<li>fonts;</li>
+<li>graphics;</li>
+<li>medical claims;</li>
+<li>before/after images;</li>
+<li>customer images;</li>
+<li>maps;</li>
+<li>menus;</li>
+<li>price lists;</li>
+<li>business claims.</li>
+</ul>
+<p>The client agrees to protect CrownCedar Studio from claims, damages, costs, legal fees, or disputes caused by materials or instructions supplied by the client.</p>
+<p>If any third party claims that client-provided content violates their rights, the client is responsible for resolving the issue.</p>
+<h2 id="1-18-legal-and-regulated-industries">1.18 Legal and Regulated Industries<a class="heading-link" href="#1-18-legal-and-regulated-industries" aria-label="Link to this section">#</a></h2>
+<p>Some industries may require special legal wording, licenses, disclaimers, approvals, or restrictions. These may include medical clinics, dental clinics, pharmacies, financial services, investment services, insurance, real estate, food products, supplements, education, legal services, and other regulated sectors.</p>
+<p>The client is responsible for ensuring their website content complies with the laws and regulations applying to their business.</p>
+<p>CrownCedar Studio does not provide legal, medical, financial, regulatory, or compliance advice.</p>
+<h2 id="1-19-prohibited-content">1.19 Prohibited Content<a class="heading-link" href="#1-19-prohibited-content" aria-label="Link to this section">#</a></h2>
+<p>CrownCedar Studio may refuse, pause, or cancel work involving:</p>
+<ul>
+<li>illegal activity;</li>
+<li>fraud;</li>
+<li>scams;</li>
+<li>impersonation;</li>
+<li>stolen content;</li>
+<li>misleading claims;</li>
+<li>hate content;</li>
+<li>harassment;</li>
+<li>fake testimonials presented as real;</li>
+<li>false business information;</li>
+<li>copyright infringement;</li>
+<li>trademark infringement;</li>
+<li>adult content;</li>
+<li>malware;</li>
+<li>phishing;</li>
+<li>deceptive advertising;</li>
+<li>dangerous products or services;</li>
+<li>any content that may expose us to legal, reputational, or technical risk.</li>
+</ul>
+<h2 id="1-20-communication-and-electronic-agreement">1.20 Communication and Electronic Agreement<a class="heading-link" href="#1-20-communication-and-electronic-agreement" aria-label="Link to this section">#</a></h2>
+<p>Project communication may happen through WhatsApp, email, phone, website forms, social media, or other written channels.</p>
+<p>Written approval through WhatsApp, email, or another electronic message may be treated as confirmation, acceptance, approval, or agreement.</p>
+<p>The client agrees that electronic messages, screenshots, payment confirmations, approvals, and written communications may be used to confirm the project terms, scope, pricing, approvals, and delivery.</p>
+<h2 id="1-21-limitation-of-liability">1.21 Limitation of Liability<a class="heading-link" href="#1-21-limitation-of-liability" aria-label="Link to this section">#</a></h2>
+<p>To the maximum extent allowed by applicable law, CrownCedar Studio is not liable for indirect, incidental, special, punitive, or consequential damages, including loss of profit, loss of revenue, loss of customers, loss of data, business interruption, reputational damage, advertising loss, SEO loss, or third-party platform issues.</p>
+<p>To the maximum extent allowed by applicable law, CrownCedar Studio’s total liability for any project is limited to the amount actually paid by the client to CrownCedar Studio for that specific project.</p>
+<p>Nothing in these Terms excludes liability that cannot legally be excluded under applicable law.</p>
+<h2 id="1-22-indemnification">1.22 Indemnification<a class="heading-link" href="#1-22-indemnification" aria-label="Link to this section">#</a></h2>
+<p>The client agrees to indemnify and hold CrownCedar Studio harmless from claims, damages, liabilities, losses, fees, legal costs, or disputes arising from:</p>
+<ul>
+<li>client-provided content;</li>
+<li>client instructions;</li>
+<li>false or misleading client claims;</li>
+<li>copyright infringement;</li>
+<li>trademark infringement;</li>
+<li>privacy violations;</li>
+<li>illegal business activity;</li>
+<li>regulatory violations;</li>
+<li>use of the website after delivery;</li>
+<li>changes made by the client or third parties after delivery;</li>
+<li>third-party platforms, hosting, or domain issues.</li>
+</ul>
+<h2 id="1-23-cancellation">1.23 Cancellation<a class="heading-link" href="#1-23-cancellation" aria-label="Link to this section">#</a></h2>
+<p>The client may cancel a project by written notice.</p>
+<p>If cancellation happens after work has started, deposits and payments already made are non-refundable unless CrownCedar Studio decides otherwise in writing or mandatory applicable law requires otherwise.</p>
+<p>If work completed exceeds the amount already paid, CrownCedar Studio may invoice the client for the completed work.</p>
+<p>CrownCedar Studio may cancel or refuse a project if the client violates these Terms, does not pay, provides unlawful material, behaves abusively, delays excessively, changes the scope repeatedly, or creates legal/reputational risk.</p>
+<h2 id="1-24-governing-law">1.24 Governing Law<a class="heading-link" href="#1-24-governing-law" aria-label="Link to this section">#</a></h2>
+<p>These Terms are governed by the laws of Lebanon.</p>
+<p>Any dispute shall be handled before the competent Lebanese courts, unless the parties agree otherwise in writing.</p>
+<h2 id="1-25-updates-to-these-terms">1.25 Updates to These Terms<a class="heading-link" href="#1-25-updates-to-these-terms" aria-label="Link to this section">#</a></h2>
+<p>CrownCedar Studio may update these Terms from time to time. The updated version will be posted on our website with a new “Last updated” date.</p>
+<p>For already confirmed projects, the agreed project terms at the time of confirmation will generally apply unless both parties agree to updated terms.</p>
+<hr />
+<h1 id="2-privacy-policy">2. Privacy Policy<a class="heading-link" href="#2-privacy-policy" aria-label="Link to this section">#</a></h1>
+<h2 id="2-1-introduction">2.1 Introduction<a class="heading-link" href="#2-1-introduction" aria-label="Link to this section">#</a></h2>
+<p>This Privacy Policy explains how CrownCedar Studio collects, uses, stores, and protects personal and business information.</p>
+<p>By using our website, contacting us, requesting a quotation, submitting a form, sending us a message, or working with us, you agree to this Privacy Policy.</p>
+<h2 id="2-2-information-we-collect">2.2 Information We Collect<a class="heading-link" href="#2-2-information-we-collect" aria-label="Link to this section">#</a></h2>
+<p>We may collect the following information:</p>
+<ul>
+<li>name;</li>
+<li>business name;</li>
+<li>phone number;</li>
+<li>WhatsApp number;</li>
+<li>email address;</li>
+<li>social media links;</li>
+<li>website link;</li>
+<li>business location;</li>
+<li>Google Maps link;</li>
+<li>business details;</li>
+<li>project requirements;</li>
+<li>logos;</li>
+<li>images;</li>
+<li>videos;</li>
+<li>written content;</li>
+<li>service descriptions;</li>
+<li>pricing information;</li>
+<li>payment confirmation details;</li>
+<li>communication history;</li>
+<li>feedback and revision notes;</li>
+<li>website analytics data, if analytics tools are used;</li>
+<li>technical information such as browser type, device type, pages visited, and approximate usage data.</li>
+</ul>
+<h2 id="2-3-how-we-collect-information">2.3 How We Collect Information<a class="heading-link" href="#2-3-how-we-collect-information" aria-label="Link to this section">#</a></h2>
+<p>We may collect information when you:</p>
+<ul>
+<li>visit our website;</li>
+<li>submit a contact form;</li>
+<li>message us on WhatsApp;</li>
+<li>email us;</li>
+<li>call us;</li>
+<li>request a quote;</li>
+<li>send project materials;</li>
+<li>approve a project;</li>
+<li>pay a deposit;</li>
+<li>work with us on a website;</li>
+<li>interact with our social media;</li>
+<li>use a website we created, if analytics or contact tools are included.</li>
+</ul>
+<h2 id="2-4-how-we-use-information">2.4 How We Use Information<a class="heading-link" href="#2-4-how-we-use-information" aria-label="Link to this section">#</a></h2>
+<p>We use information to:</p>
+<ul>
+<li>respond to inquiries;</li>
+<li>prepare quotations;</li>
+<li>understand project requirements;</li>
+<li>design and develop websites;</li>
+<li>communicate with clients;</li>
+<li>send project updates;</li>
+<li>request approvals;</li>
+<li>process revisions;</li>
+<li>prepare invoices or payment records;</li>
+<li>deploy websites;</li>
+<li>provide support;</li>
+<li>improve our services;</li>
+<li>display portfolio work where allowed;</li>
+<li>protect our legal rights;</li>
+<li>prevent misuse, fraud, or technical abuse;</li>
+<li>comply with legal obligations.</li>
+</ul>
+<h2 id="2-5-client-website-content">2.5 Client Website Content<a class="heading-link" href="#2-5-client-website-content" aria-label="Link to this section">#</a></h2>
+<p>If you provide business information, images, logos, service descriptions, or other materials for your website, you understand that this content may be published publicly as part of your website.</p>
+<p>After deployment, your website may be visible to customers, search engines, AI tools, social media platforms, and the public.</p>
+<h2 id="2-6-portfolio-use">2.6 Portfolio Use<a class="heading-link" href="#2-6-portfolio-use" aria-label="Link to this section">#</a></h2>
+<p>After deployment, we may display your website, business name, screenshots, link, and project description in our portfolio unless you ask us in writing not to.</p>
+<p>If you request removal from our portfolio, we will make reasonable efforts to remove or stop using the portfolio item going forward.</p>
+<h2 id="2-7-sharing-information">2.7 Sharing Information<a class="heading-link" href="#2-7-sharing-information" aria-label="Link to this section">#</a></h2>
+<p>We do not sell personal information.</p>
+<p>We may share necessary information with third-party services only when needed to provide services, operate our website, communicate, deploy websites, process work, or comply with legal obligations.</p>
+<p>These may include:</p>
+<ul>
+<li>hosting providers;</li>
+<li>domain providers;</li>
+<li>email providers;</li>
+<li>WhatsApp;</li>
+<li>Google services;</li>
+<li>analytics tools;</li>
+<li>website deployment platforms;</li>
+<li>cloud storage providers;</li>
+<li>payment providers;</li>
+<li>contractors or technical collaborators, if needed;</li>
+<li>legal or government authorities if required by law.</li>
+</ul>
+<p>Third-party services have their own privacy policies and terms.</p>
+<h2 id="2-8-international-tools-and-data-transfer">2.8 International Tools and Data Transfer<a class="heading-link" href="#2-8-international-tools-and-data-transfer" aria-label="Link to this section">#</a></h2>
+<p>Some tools and platforms used for communication, hosting, analytics, deployment, or storage may operate outside Lebanon.</p>
+<p>By using our services, you understand that your information may be processed or stored through third-party platforms located in other countries.</p>
+<h2 id="2-9-cookies-and-analytics">2.9 Cookies and Analytics<a class="heading-link" href="#2-9-cookies-and-analytics" aria-label="Link to this section">#</a></h2>
+<p>Our website may use cookies or similar technologies to improve user experience, measure website traffic, understand visitor behavior, or support marketing.</p>
+<p>If we use analytics or advertising tools in the future, those tools may collect technical data such as pages visited, device type, browser type, approximate location, and interaction data.</p>
+<p>You can usually disable cookies through your browser settings.</p>
+<h2 id="2-10-data-retention">2.10 Data Retention<a class="heading-link" href="#2-10-data-retention" aria-label="Link to this section">#</a></h2>
+<p>We keep information only as long as reasonably needed for:</p>
+<ul>
+<li>project completion;</li>
+<li>client communication;</li>
+<li>business records;</li>
+<li>legal protection;</li>
+<li>dispute prevention;</li>
+<li>accounting or tax purposes;</li>
+<li>portfolio records;</li>
+<li>service improvement.</li>
+</ul>
+<p>You may request deletion of your personal information, and we will respond reasonably unless we need to keep certain information for legal, payment, security, or dispute-related reasons.</p>
+<h2 id="2-11-security">2.11 Security<a class="heading-link" href="#2-11-security" aria-label="Link to this section">#</a></h2>
+<p>We take reasonable steps to protect information from unauthorized access, loss, misuse, or disclosure.</p>
+<p>However, no website, messaging platform, hosting provider, or online system is completely secure. We cannot guarantee absolute security of information transmitted online.</p>
+<h2 id="2-12-client-responsibility-for-sensitive-information">2.12 Client Responsibility for Sensitive Information<a class="heading-link" href="#2-12-client-responsibility-for-sensitive-information" aria-label="Link to this section">#</a></h2>
+<p>Please do not send unnecessary sensitive information.</p>
+<p>If your business requires sensitive, medical, financial, legal, or confidential data to be included on your website, you are responsible for telling us in advance and making sure your use of that data is lawful.</p>
+<h2 id="2-13-your-rights">2.13 Your Rights<a class="heading-link" href="#2-13-your-rights" aria-label="Link to this section">#</a></h2>
+<p>You may contact us to request:</p>
+<ul>
+<li>access to your information;</li>
+<li>correction of inaccurate information;</li>
+<li>deletion of information where legally possible;</li>
+<li>withdrawal of consent for certain uses;</li>
+<li>removal from portfolio display;</li>
+<li>clarification on how your information is used.</li>
+</ul>
+<p>We may need to verify your identity before processing certain requests.</p>
+<h2 id="2-14-children">2.14 Children<a class="heading-link" href="#2-14-children" aria-label="Link to this section">#</a></h2>
+<p>Our services are intended for businesses and adults. We do not knowingly collect personal information from children.</p>
+<h2 id="2-15-legal-requests">2.15 Legal Requests<a class="heading-link" href="#2-15-legal-requests" aria-label="Link to this section">#</a></h2>
+<p>We may disclose information if required by law, court order, legal process, government request, or to protect our rights, clients, users, or services.</p>
+<h2 id="2-16-updates-to-this-privacy-policy">2.16 Updates to This Privacy Policy<a class="heading-link" href="#2-16-updates-to-this-privacy-policy" aria-label="Link to this section">#</a></h2>
+<p>We may update this Privacy Policy from time to time. The updated version will be posted on our website with a new “Last updated” date.</p>
+<h2 id="2-17-contact">2.17 Contact<a class="heading-link" href="#2-17-contact" aria-label="Link to this section">#</a></h2>
+<p>For privacy requests, contact:</p>
+<p>CrownCedar Studio
+Email: <span class="placeholder">[Insert Email]</span>
+WhatsApp: <span class="placeholder">[Insert WhatsApp Number]</span>
+Location: Lebanon</p>
+<hr />
+<h1 id="3-refund-policy">3. Refund Policy<a class="heading-link" href="#3-refund-policy" aria-label="Link to this section">#</a></h1>
+<h2 id="3-1-introduction">3.1 Introduction<a class="heading-link" href="#3-1-introduction" aria-label="Link to this section">#</a></h2>
+<p>This Refund Policy explains how deposits, payments, cancellations, and refunds work for CrownCedar Studio projects.</p>
+<p>By paying a deposit, approving a project, or submitting project materials, the client agrees to this Refund Policy.</p>
+<p>Nothing in this Refund Policy removes rights that cannot legally be removed under applicable law.</p>
+<h2 id="3-2-deposits">3.2 Deposits<a class="heading-link" href="#3-2-deposits" aria-label="Link to this section">#</a></h2>
+<p>For projects below USD 1,000, the standard deposit is USD 100 unless otherwise agreed in writing.</p>
+<p>For projects of USD 1,000 or more, the standard deposit is 50% of the total project price unless otherwise agreed in writing.</p>
+<p>Deposits reserve project time, planning, creative work, communication, scheduling, and design/development resources.</p>
+<h2 id="3-3-non-refundable-deposits">3.3 Non-Refundable Deposits<a class="heading-link" href="#3-3-non-refundable-deposits" aria-label="Link to this section">#</a></h2>
+<p>Deposits are non-refundable once work has started, unless CrownCedar Studio decides otherwise in writing or mandatory applicable law requires otherwise.</p>
+<p>Work may be considered started when any of the following happens:</p>
+<ul>
+<li>project planning begins;</li>
+<li>design work begins;</li>
+<li>development work begins;</li>
+<li>a draft is created;</li>
+<li>a file is prepared;</li>
+<li>content is reviewed;</li>
+<li>a layout is prepared;</li>
+<li>a demo is customized;</li>
+<li>project time is reserved;</li>
+<li>communication, consultation, or strategy work is provided;</li>
+<li>client materials are received and reviewed.</li>
+</ul>
+<h2 id="3-4-custom-work">3.4 Custom Work<a class="heading-link" href="#3-4-custom-work" aria-label="Link to this section">#</a></h2>
+<p>Websites are custom digital services made according to the client’s business, brand, content, instructions, and specifications.</p>
+<p>Because custom work requires time and cannot be returned like a physical product, refunds are limited once work begins.</p>
+<h2 id="3-5-first-version-delivery">3.5 First Version Delivery<a class="heading-link" href="#3-5-first-version-delivery" aria-label="Link to this section">#</a></h2>
+<p>If CrownCedar Studio promises a first version within 48 hours, this applies only after:</p>
+<ul>
+<li>deposit is paid;</li>
+<li>project scope is confirmed;</li>
+<li>client provides required materials;</li>
+<li>content is sufficient;</li>
+<li>no third-party issue blocks the work.</li>
+</ul>
+<p>The 48-hour timeline applies to the first version, not the final website or deployment.</p>
+<p>A delay caused by missing client materials, unclear instructions, late replies, delayed payments, third-party platforms, hosting/domain issues, or client changes does not create a refund right.</p>
+<h2 id="3-6-final-payment">3.6 Final Payment<a class="heading-link" href="#3-6-final-payment" aria-label="Link to this section">#</a></h2>
+<p>Final payment is required after the website is completed according to the agreed scope, or as close as reasonably possible based on the client’s remaining revisions, and before deployment, publication, transfer, or final handover.</p>
+<p>CrownCedar Studio may refuse deployment or handover until final payment is received.</p>
+<h2 id="3-7-when-refunds-may-be-considered">3.7 When Refunds May Be Considered<a class="heading-link" href="#3-7-when-refunds-may-be-considered" aria-label="Link to this section">#</a></h2>
+<p>A refund may be considered only if:</p>
+<ul>
+<li>CrownCedar Studio cancels the project before any work begins;</li>
+<li>CrownCedar Studio is unable to start or deliver the agreed service for reasons fully under our control;</li>
+<li>both parties agree in writing to a refund;</li>
+<li>mandatory applicable law requires a refund.</li>
+</ul>
+<p>Refunds are not automatic.</p>
+<h2 id="3-8-no-refunds-for-change-of-mind">3.8 No Refunds for Change of Mind<a class="heading-link" href="#3-8-no-refunds-for-change-of-mind" aria-label="Link to this section">#</a></h2>
+<p>Refunds are not provided because the client:</p>
+<ul>
+<li>changed their mind;</li>
+<li>no longer wants a website;</li>
+<li>found another designer;</li>
+<li>delayed sending materials;</li>
+<li>changed business direction;</li>
+<li>failed to reply;</li>
+<li>rejected work that matches the agreed scope;</li>
+<li>expected services not included in the package;</li>
+<li>used all included revisions;</li>
+<li>wants unlimited changes;</li>
+<li>asks for a full redesign after work started;</li>
+<li>expected guaranteed sales, leads, SEO ranking, or business results.</li>
+</ul>
+<h2 id="3-9-revisions-before-refunds">3.9 Revisions Before Refunds<a class="heading-link" href="#3-9-revisions-before-refunds" aria-label="Link to this section">#</a></h2>
+<p>If the client is unhappy with the first version, the client must use the included revision rounds before requesting any solution.</p>
+<p>Revision limits are:</p>
+<ul>
+<li>Basic Package: 3 revision rounds.</li>
+<li>Standard Package: 5 revision rounds.</li>
+<li>Premium Package: 7 revision rounds.</li>
+</ul>
+<p>A refund request does not replace the revision process.</p>
+<h2 id="3-10-third-party-costs">3.10 Third-Party Costs<a class="heading-link" href="#3-10-third-party-costs" aria-label="Link to this section">#</a></h2>
+<p>Third-party costs are non-refundable by CrownCedar Studio.</p>
+<p>These include:</p>
+<ul>
+<li>domain names;</li>
+<li>hosting;</li>
+<li>email services;</li>
+<li>paid plugins;</li>
+<li>stock assets;</li>
+<li>fonts;</li>
+<li>software subscriptions;</li>
+<li>payment processor fees;</li>
+<li>platform fees;</li>
+<li>advertising fees;</li>
+<li>third-party setup costs.</li>
+</ul>
+<p>If a third-party provider has its own refund policy, the client must deal with that provider directly unless otherwise agreed.</p>
+<h2 id="3-11-chargebacks-and-payment-disputes">3.11 Chargebacks and Payment Disputes<a class="heading-link" href="#3-11-chargebacks-and-payment-disputes" aria-label="Link to this section">#</a></h2>
+<p>If the client has a concern, the client must contact CrownCedar Studio first so we can try to resolve it.</p>
+<p>If a client opens a chargeback or payment dispute after receiving work, CrownCedar Studio may submit project communications, approvals, files, drafts, screenshots, and delivery evidence to the payment provider or relevant authority.</p>
+<h2 id="3-12-cancellation-by-crowncedar-studio">3.12 Cancellation by CrownCedar Studio<a class="heading-link" href="#3-12-cancellation-by-crowncedar-studio" aria-label="Link to this section">#</a></h2>
+<p>CrownCedar Studio may cancel a project if the client:</p>
+<ul>
+<li>does not pay;</li>
+<li>sends unlawful materials;</li>
+<li>requests illegal or misleading content;</li>
+<li>abuses communication;</li>
+<li>repeatedly changes the scope;</li>
+<li>does not respond for a long period;</li>
+<li>causes legal, reputational, or technical risk;</li>
+<li>violates the Terms &amp; Conditions.</li>
+</ul>
+<p>If cancellation happens after work begins, deposits and paid amounts may be retained for work already performed.</p>
+<h2 id="3-13-contact-for-refund-questions">3.13 Contact for Refund Questions<a class="heading-link" href="#3-13-contact-for-refund-questions" aria-label="Link to this section">#</a></h2>
+<p>For refund questions, contact:</p>
+<p>CrownCedar Studio
+Email: <span class="placeholder">[Insert Email]</span>
+WhatsApp: <span class="placeholder">[Insert WhatsApp Number]</span>
+Location: Lebanon</p>
+<hr />
+<h1 id="4-copyright-intellectual-property-policy">4. Copyright &amp; Intellectual Property Policy<a class="heading-link" href="#4-copyright-intellectual-property-policy" aria-label="Link to this section">#</a></h1>
+<h2 id="4-1-client-content">4.1 Client Content<a class="heading-link" href="#4-1-client-content" aria-label="Link to this section">#</a></h2>
+<p>The client confirms that all content provided to CrownCedar Studio is owned by the client or legally authorized for use.</p>
+<p>This includes:</p>
+<ul>
+<li>business names;</li>
+<li>logos;</li>
+<li>trademarks;</li>
+<li>photos;</li>
+<li>videos;</li>
+<li>written text;</li>
+<li>product images;</li>
+<li>service descriptions;</li>
+<li>testimonials;</li>
+<li>reviews;</li>
+<li>before/after images;</li>
+<li>music;</li>
+<li>icons;</li>
+<li>graphics;</li>
+<li>fonts;</li>
+<li>maps;</li>
+<li>customer photos;</li>
+<li>employee photos;</li>
+<li>medical or professional content;</li>
+<li>any other material provided for the website.</li>
+</ul>
+<p>The client is fully responsible for the legality, accuracy, ownership, and permissions of all provided content.</p>
+<h2 id="4-2-no-stolen-or-unauthorized-materials">4.2 No Stolen or Unauthorized Materials<a class="heading-link" href="#4-2-no-stolen-or-unauthorized-materials" aria-label="Link to this section">#</a></h2>
+<p>The client must not submit stolen, copied, unlicensed, or unauthorized materials.</p>
+<p>If the client submits content taken from Google, Instagram, competitors, photographers, designers, stock websites, AI tools, customers, employees, or third parties, the client must make sure they have permission to use it.</p>
+<p>CrownCedar Studio is not responsible for copyright or trademark issues caused by client-provided materials.</p>
+<h2 id="4-3-client-claims-and-industry-content">4.3 Client Claims and Industry Content<a class="heading-link" href="#4-3-client-claims-and-industry-content" aria-label="Link to this section">#</a></h2>
+<p>The client is responsible for all business claims displayed on the website.</p>
+<p>This includes claims such as:</p>
+<ul>
+<li>“best”;</li>
+<li>“number one”;</li>
+<li>medical results;</li>
+<li>dental before/after results;</li>
+<li>financial results;</li>
+<li>guaranteed outcomes;</li>
+<li>discounts;</li>
+<li>certifications;</li>
+<li>licenses;</li>
+<li>awards;</li>
+<li>years of experience;</li>
+<li>client reviews;</li>
+<li>success stories;</li>
+<li>product performance;</li>
+<li>safety claims.</li>
+</ul>
+<p>The client must make sure these claims are truthful, lawful, and supported.</p>
+<h2 id="4-4-ownership-before-payment">4.4 Ownership Before Payment<a class="heading-link" href="#4-4-ownership-before-payment" aria-label="Link to this section">#</a></h2>
+<p>Until full payment is received, all work created by CrownCedar Studio remains owned by CrownCedar Studio.</p>
+<p>This includes:</p>
+<ul>
+<li>website designs;</li>
+<li>drafts;</li>
+<li>layouts;</li>
+<li>code;</li>
+<li>files;</li>
+<li>source files;</li>
+<li>written structure;</li>
+<li>visual concepts;</li>
+<li>development work;</li>
+<li>mockups;</li>
+<li>rejected versions;</li>
+<li>unused versions;</li>
+<li>demos;</li>
+<li>templates;</li>
+<li>strategies.</li>
+</ul>
+<p>The client may not copy, use, publish, transfer, modify, recreate, or give the unpaid work to another person or developer.</p>
+<h2 id="4-5-ownership-after-full-payment">4.5 Ownership After Full Payment<a class="heading-link" href="#4-5-ownership-after-full-payment" aria-label="Link to this section">#</a></h2>
+<p>After full payment is received, the client receives ownership or usage rights to the final website deliverables created specifically for the client, subject to:</p>
+<ul>
+<li>third-party licenses;</li>
+<li>hosting or platform terms;</li>
+<li>stock media licenses;</li>
+<li>font licenses;</li>
+<li>plugin licenses;</li>
+<li>reusable CrownCedar Studio components;</li>
+<li>these Terms.</li>
+</ul>
+<h2 id="4-6-crowncedar-studio-retained-rights">4.6 CrownCedar Studio Retained Rights<a class="heading-link" href="#4-6-crowncedar-studio-retained-rights" aria-label="Link to this section">#</a></h2>
+<p>CrownCedar Studio keeps ownership of:</p>
+<ul>
+<li>reusable templates;</li>
+<li>reusable code;</li>
+<li>design systems;</li>
+<li>internal tools;</li>
+<li>frameworks;</li>
+<li>methods;</li>
+<li>know-how;</li>
+<li>workflow;</li>
+<li>general components;</li>
+<li>previous work;</li>
+<li>non-client-specific materials;</li>
+<li>concepts not selected or paid for.</li>
+</ul>
+<p>The client receives the final project, not ownership of CrownCedar Studio’s entire system, business method, or reusable assets.</p>
+<h2 id="4-7-third-party-assets">4.7 Third-Party Assets<a class="heading-link" href="#4-7-third-party-assets" aria-label="Link to this section">#</a></h2>
+<p>Some websites may use third-party assets such as fonts, icons, libraries, plugins, stock images, hosting platforms, maps, analytics tools, or open-source code.</p>
+<p>These assets remain subject to their own licenses and terms.</p>
+<p>The client may need to pay for certain licenses or subscriptions if required.</p>
+<h2 id="4-8-indemnity-for-ip-claims">4.8 Indemnity for IP Claims<a class="heading-link" href="#4-8-indemnity-for-ip-claims" aria-label="Link to this section">#</a></h2>
+<p>If any person or business makes a claim against CrownCedar Studio because of content, instructions, materials, trademarks, images, text, or claims provided by the client, the client agrees to protect CrownCedar Studio from resulting losses, claims, damages, costs, legal fees, or expenses.</p>
+<h2 id="4-9-portfolio-display">4.9 Portfolio Display<a class="heading-link" href="#4-9-portfolio-display" aria-label="Link to this section">#</a></h2>
+<p>CrownCedar Studio may show completed client websites in its portfolio after deployment unless the client asks in writing not to.</p>
+<p>Portfolio display may include screenshots, links, business names, industry category, and a short description of the work.</p>
+<hr />
+<h1 id="5-client-agreement-template">5. Client Agreement Template<a class="heading-link" href="#5-client-agreement-template" aria-label="Link to this section">#</a></h1>
+<p>Project Agreement for Website Design Services</p>
+<p>Date: <span class="placeholder">[Insert Date]</span></p>
+<p>This agreement is between:</p>
+<p>Service Provider: CrownCedar Studio, a freelance web design project operated in Lebanon.
+Contact: <span class="placeholder">[Insert Email / WhatsApp]</span></p>
+<p>Client: [Client Full Name / Business Name]
+Client Contact: [Client Phone / Email]
+Client Location: <span class="placeholder">[Insert Location]</span></p>
+<h2 id="5-1-project">5.1 Project<a class="heading-link" href="#5-1-project" aria-label="Link to this section">#</a></h2>
+<p>The client hires CrownCedar Studio to create a website for:</p>
+<p>Business Name: <span class="placeholder">[Insert Business Name]</span>
+Website Type: <span class="placeholder">[One-page website / landing page / multi-page website / redesign / other]</span>
+Package: <span class="placeholder">[Basic / Standard / Premium / Custom]</span>
+Project Price: USD <span class="placeholder">[Insert Amount]</span>
+Deposit Required: USD <span class="placeholder">[Insert Amount]</span>
+Final Payment: USD <span class="placeholder">[Insert Amount]</span></p>
+<h2 id="5-2-scope-of-work">5.2 Scope of Work<a class="heading-link" href="#5-2-scope-of-work" aria-label="Link to this section">#</a></h2>
+<p>The project includes:</p>
+<ul>
+<li><span class="placeholder">[Insert page/section 1]</span></li>
+<li><span class="placeholder">[Insert page/section 2]</span></li>
+<li><span class="placeholder">[Insert page/section 3]</span></li>
+<li>[WhatsApp button]</li>
+<li>[Contact section]</li>
+<li>[Map/location section]</li>
+<li>[Gallery]</li>
+<li>[Mobile responsive layout]</li>
+<li>[Other agreed items]</li>
+</ul>
+<p>The project does not include anything not listed above unless both parties agree in writing.</p>
+<h2 id="5-3-deposit">5.3 Deposit<a class="heading-link" href="#5-3-deposit" aria-label="Link to this section">#</a></h2>
+<p>For projects below USD 1,000, the deposit is normally USD 100.</p>
+<p>For projects of USD 1,000 or more, the deposit is normally 50% of the total project price.</p>
+<p>The client agrees to pay the deposit before work begins.</p>
+<p>The deposit is non-refundable once work starts unless CrownCedar Studio decides otherwise in writing or mandatory applicable law requires otherwise.</p>
+<h2 id="5-4-required-client-materials">5.4 Required Client Materials<a class="heading-link" href="#5-4-required-client-materials" aria-label="Link to this section">#</a></h2>
+<p>The client agrees to provide the required materials, including:</p>
+<ul>
+<li>logo;</li>
+<li>business name;</li>
+<li>business description;</li>
+<li>services;</li>
+<li>images;</li>
+<li>contact details;</li>
+<li>WhatsApp number;</li>
+<li>location;</li>
+<li>social links;</li>
+<li>domain/hosting access if needed;</li>
+<li>any legal disclaimers required by the client’s business.</li>
+</ul>
+<p>The client confirms that they have the right to use all materials provided.</p>
+<h2 id="5-5-timeline">5.5 Timeline<a class="heading-link" href="#5-5-timeline" aria-label="Link to this section">#</a></h2>
+<p>CrownCedar Studio will aim to provide the first version within 48 hours after:</p>
+<ul>
+<li>deposit is paid;</li>
+<li>project is confirmed;</li>
+<li>scope is clear;</li>
+<li>all required materials are received.</li>
+</ul>
+<p>This is the first version only, not necessarily the final website or deployment.</p>
+<p>Client delays automatically extend the timeline.</p>
+<h2 id="5-6-revisions">5.6 Revisions<a class="heading-link" href="#5-6-revisions" aria-label="Link to this section">#</a></h2>
+<p>The included revision rounds are:</p>
+<ul>
+<li>Basic: 3 revision rounds.</li>
+<li>Standard: 5 revision rounds.</li>
+<li>Premium: 7 revision rounds.</li>
+<li>Custom: <span class="placeholder">[Insert number]</span> revision rounds.</li>
+</ul>
+<p>A revision round means one collected batch of reasonable edits.</p>
+<p>Major changes, new pages, new features, full redesigns, or changes outside the original scope may require additional payment.</p>
+<h2 id="5-7-final-payment-and-deployment">5.7 Final Payment and Deployment<a class="heading-link" href="#5-7-final-payment-and-deployment" aria-label="Link to this section">#</a></h2>
+<p>Final payment is due after the website is completed according to the agreed scope, or as close as reasonably possible based on the client’s remaining revision rights, and before deployment, transfer, launch, or final handover.</p>
+<p>CrownCedar Studio will not be required to deploy, transfer, publish, or hand over final files until full payment is received.</p>
+<h2 id="5-8-hosting-and-domain">5.8 Hosting and Domain<a class="heading-link" href="#5-8-hosting-and-domain" aria-label="Link to this section">#</a></h2>
+<p>The client is responsible for paying for and maintaining domain names, hosting, email services, and third-party subscriptions.</p>
+<p>CrownCedar Studio may advise the client on what to purchase, but the client is responsible for the cost, ownership, renewal, and account access unless otherwise agreed in writing.</p>
+<h2 id="5-9-portfolio-permission">5.9 Portfolio Permission<a class="heading-link" href="#5-9-portfolio-permission" aria-label="Link to this section">#</a></h2>
+<p>After deployment, CrownCedar Studio may showcase the completed website in its portfolio, website, social media, proposals, or marketing materials.</p>
+<p>If the client does not want the website shown, the client must request this in writing.</p>
+<h2 id="5-10-no-guaranteed-results">5.10 No Guaranteed Results<a class="heading-link" href="#5-10-no-guaranteed-results" aria-label="Link to this section">#</a></h2>
+<p>The client understands that CrownCedar Studio does not guarantee SEO ranking, traffic, leads, sales, revenue, conversions, business growth, customer trust, or advertising results.</p>
+<h2 id="5-11-intellectual-property">5.11 Intellectual Property<a class="heading-link" href="#5-11-intellectual-property" aria-label="Link to this section">#</a></h2>
+<p>Until full payment is received, all work remains owned by CrownCedar Studio.</p>
+<p>After full payment, the client receives ownership or usage rights to the final website deliverables created specifically for the client, subject to third-party licenses and CrownCedar Studio’s retained rights in reusable code, templates, methods, and systems.</p>
+<h2 id="5-12-cancellation">5.12 Cancellation<a class="heading-link" href="#5-12-cancellation" aria-label="Link to this section">#</a></h2>
+<p>If the client cancels after work begins, deposits and payments already made are non-refundable unless CrownCedar Studio decides otherwise in writing or mandatory applicable law requires otherwise.</p>
+<p>If CrownCedar Studio cancels before work begins and cannot provide the service, the deposit may be refunded.</p>
+<h2 id="5-13-governing-law">5.13 Governing Law<a class="heading-link" href="#5-13-governing-law" aria-label="Link to this section">#</a></h2>
+<p>This agreement is governed by the laws of Lebanon.</p>
+<p>Disputes shall be handled before the competent Lebanese courts unless both parties agree otherwise in writing.</p>
+<h2 id="5-14-acceptance">5.14 Acceptance<a class="heading-link" href="#5-14-acceptance" aria-label="Link to this section">#</a></h2>
+<p>By signing below, replying with written approval, paying the deposit, or sending confirmation by WhatsApp/email, the client agrees to this agreement.</p>
+<p>Client Name: __________________________
+Client Signature: _______________________
+Date: _________________________________</p>
+<p>CrownCedar Studio: _____________________
+Date: _________________________________</p>
+<h2 id="5-15-simple-whatsapp-confirmation-version">5.15 Simple WhatsApp Confirmation Version<a class="heading-link" href="#5-15-simple-whatsapp-confirmation-version" aria-label="Link to this section">#</a></h2>
+<p>Please copy and send this to the client before taking payment:</p>
+<p>“Hello [Client Name], to confirm your website project with CrownCedar Studio:</p>
+<p>Business: [Business Name]
+Package: <span class="placeholder">[Basic / Standard / Premium / Custom]</span>
+Total price: USD <span class="placeholder">[Amount]</span>
+Deposit: USD <span class="placeholder">[Amount]</span>
+Remaining payment before deployment: USD <span class="placeholder">[Amount]</span>
+First version: within 48 hours after deposit + all required materials are received
+Included revisions: <span class="placeholder">[3 / 5 / 7 / custom]</span> rounds
+Hosting/domain: paid by the client unless agreed otherwise
+Deposit: non-refundable once work starts unless CrownCedar Studio agrees otherwise in writing or mandatory law requires otherwise
+Final payment: required before deployment/launch/handover
+Results: no guaranteed SEO ranking, leads, sales, revenue, or business growth
+Portfolio: CrownCedar Studio may showcase the completed website after deployment unless you ask us not to in writing
+Content: you confirm that all logos, photos, text, claims, and materials you provide are legal and authorized for use</p>
+<p>Please reply ‘I agree’ to confirm.”</p>
+<hr />
+<h1 id="6-demo-disclaimer">6. Demo Disclaimer<a class="heading-link" href="#6-demo-disclaimer" aria-label="Link to this section">#</a></h1>
+<h2 id="6-1-demo-purpose">6.1 Demo Purpose<a class="heading-link" href="#6-1-demo-purpose" aria-label="Link to this section">#</a></h2>
+<p>Some websites, pages, screenshots, mockups, business examples, and designs shown by CrownCedar Studio are demo projects created for presentation, portfolio style, marketing, education, or service demonstration.</p>
+<p>Demo projects are intended to show design style, layout quality, possible website structure, and the type of work CrownCedar Studio can create.</p>
+<h2 id="6-2-fictional-demo-businesses">6.2 Fictional Demo Businesses<a class="heading-link" href="#6-2-fictional-demo-businesses" aria-label="Link to this section">#</a></h2>
+<p>Unless clearly stated as a real client project, demo businesses are fictional or demonstration concepts.</p>
+<p>Any names, logos, locations, prices, reviews, testimonials, doctors, clinics, restaurants, gyms, car dealerships, companies, products, or business details used in demo projects are examples only.</p>
+<p>They do not represent real businesses, real clients, real customer results, real reviews, real partnerships, real endorsements, or real commercial outcomes unless expressly stated.</p>
+<h2 id="6-3-real-client-work">6.3 Real Client Work<a class="heading-link" href="#6-3-real-client-work" aria-label="Link to this section">#</a></h2>
+<p>Some portfolio items may show real client work after deployment.</p>
+<p>Real client projects may include the client’s business name, website link, screenshots, project category, and short description, unless the client requests otherwise in writing.</p>
+<h2 id="6-4-no-affiliation">6.4 No Affiliation<a class="heading-link" href="#6-4-no-affiliation" aria-label="Link to this section">#</a></h2>
+<p>Demo websites are not affiliated with, endorsed by, sponsored by, or connected to any real business, brand, organization, person, clinic, restaurant, gym, dealership, professional, or public figure unless expressly stated.</p>
+<p>Any resemblance to real businesses or persons is accidental.</p>
+<h2 id="6-5-images-and-placeholder-content">6.5 Images and Placeholder Content<a class="heading-link" href="#6-5-images-and-placeholder-content" aria-label="Link to this section">#</a></h2>
+<p>Demo images, text, icons, logos, names, maps, reviews, and content may be placeholders, AI-generated examples, stock-style assets, or sample content.</p>
+<p>Demo content should not be treated as factual, professional advice, medical advice, legal advice, financial advice, or verified business information.</p>
+<h2 id="6-6-no-guaranteed-results">6.6 No Guaranteed Results<a class="heading-link" href="#6-6-no-guaranteed-results" aria-label="Link to this section">#</a></h2>
+<p>Demo websites do not guarantee that a client will receive the same design, ranking, traffic, sales, leads, conversions, revenue, or business outcome.</p>
+<p>Every project depends on the selected package, client content, budget, scope, industry, timeline, revisions, and technical requirements.</p>
+<h2 id="6-7-use-of-demo-pages">6.7 Use of Demo Pages<a class="heading-link" href="#6-7-use-of-demo-pages" aria-label="Link to this section">#</a></h2>
+<p>Users may view demo pages for inspiration and service evaluation only.</p>
+<p>No one may copy, resell, claim, or reuse CrownCedar Studio demo designs, code, layouts, text, or concepts without written permission.</p>
+<hr />
+<h1 id="7-short-footer-legal-notice">7. Short Footer Legal Notice<a class="heading-link" href="#7-short-footer-legal-notice" aria-label="Link to this section">#</a></h1>
+<p>Use this in your website footer:</p>
+<p>CrownCedar Studio is currently operated as a freelance web design project in Lebanon. We provide custom website design and development services. Results such as SEO rankings, leads, sales, traffic, or revenue are not guaranteed. Demo projects are for showcase purposes unless marked as real client work. By contacting us or starting a project, you agree to our Terms, Privacy Policy, Refund Policy, and Demo Disclaimer.</p>
+<hr />
+<h1 id="8-checkout-project-start-consent-text">8. Checkout / Project Start Consent Text<a class="heading-link" href="#8-checkout-project-start-consent-text" aria-label="Link to this section">#</a></h1>
+<p>Use this before taking a deposit:</p>
+<p>By paying the deposit and sending project materials, I confirm that I want CrownCedar Studio to begin custom website work immediately. I understand that the website is custom-made according to my business, instructions, and materials. I understand that the deposit becomes non-refundable once work begins unless CrownCedar Studio agrees otherwise in writing or mandatory applicable law requires otherwise.</p>
+
+        </article>
+      </main>
+    </div>
+
+    <footer class="footer-note">
+      © 2026 CrownCedar Studio. This legal page is prepared for a freelance web design project in Lebanon and should be reviewed by a lawyer before use for registered-company operations or international clients.
+    </footer>
+  </div>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+      anchor.addEventListener('click', function(event) {
+        const id = this.getAttribute('href');
+        if (id.length > 1) {
+          const target = document.querySelector(id);
+          if (target) {
+            event.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            history.pushState(null, '', id);
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
